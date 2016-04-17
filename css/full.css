@@ -1,0 +1,1374 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+/* line 38, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+/* line 39, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+:after, :before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  clear: both; }
+
+/* line 40, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+a:after, a:before, br:after, br:before, img:after, img:before, span:after, span:before, table:after, table:before, td:after, td:before, tr:after, tr:before {
+  content: none; }
+
+/* line 41, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+h1, h2, h3, h4, h5 {
+  font-size: 1em;
+  font-weight: inherit;
+  text-align: center;
+  font-family: "Roboto";
+  font-weight: 300;
+  letter-spacing: 0.01em; }
+
+/* line 42, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #141414; }
+
+/* line 43, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: 0 !important; }
+
+/* line 44, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+button, input, textarea {
+  outline: none; }
+
+/* line 45, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+section {
+  width: 100%;
+  min-width: 980px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  min-height: 600px;
+  height: 100vh;
+  background-size: cover !important; }
+  /* line 23, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  section > div {
+    max-width: 980px;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    margin: 0 auto; }
+    /* line 29, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    section > div > div {
+      width: 100%;
+      position: absolute;
+      height: 600px;
+      top: 50%;
+      margin-top: -300px; }
+
+/* line 49, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+#maket {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(../maket.jpg) no-repeat top center;
+  height: 13200px;
+  opacity: 0.5;
+  z-index: 10; }
+
+/* line 60, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.header {
+  background-image: url(../img/bg1.jpg); }
+  /* line 62, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .header .logo {
+    background-image: url(../img/logo.png);
+    width: 192px;
+    height: 83px;
+    float: left;
+    margin-left: 75px;
+    margin-top: -10px; }
+  /* line 70, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .header .call {
+    float: right;
+    margin-right: 77px;
+    margin-top: -12px; }
+  /* line 75, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .header .phone {
+    float: right;
+    font-family: "Roboto";
+    font-size: 27px;
+    margin-bottom: 10px; }
+  /* line 81, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .header .callback {
+    width: 199px;
+    height: 39px;
+    background-color: #89a831;
+    border: 1px solid #7a9d17;
+    display: block;
+    clear: both;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 34px;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.25s; }
+    /* line 95, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .header .callback:hover {
+      background-color: #799821; }
+      /* line 97, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .header .callback:hover:after {
+        opacity: 1; }
+    /* line 101, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .header .callback:after {
+      content: '';
+      display: block;
+      background-image: url(../img/callbackico.png);
+      width: 19px;
+      height: 17px;
+      position: absolute;
+      left: 10px;
+      top: 9px;
+      transition: all 0.25s;
+      opacity: 0; }
+  /* line 114, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .header h2 {
+    clear: both;
+    font-family: "Roboto";
+    font-size: 54px;
+    font-weight: 300;
+    line-height: 67px;
+    margin-top: 68px; }
+    /* line 121, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .header h2 span {
+      display: inline-block;
+      margin-left: -75px;
+      padding-left: 59px;
+      margin-right: -55px;
+      padding-right: 55px;
+      position: relative; }
+      /* line 128, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .header h2 span:after {
+        content: '';
+        background: url(../img/paint.png) no-repeat left 4px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        width: 100%;
+        transition: all 0.25s;
+        height: 100%;
+        z-index: -1; }
+  /* line 142, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .header .prich {
+    width: 394px;
+    height: 96px;
+    background-color: #89a831;
+    color: white;
+    margin: 223px auto 0;
+    position: relative;
+    padding-left: 110px;
+    padding: 6px 0 6px 109px; }
+    /* line 151, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .header .prich p {
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 32px; }
+    /* line 156, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .header .prich span {
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 23px; }
+  /* line 161, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .header .smeta {
+    width: 122px;
+    height: 180px;
+    position: absolute;
+    background-image: url(../img/smeta.png);
+    left: -19px;
+    top: -29px; }
+
+/* line 170, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.why {
+  background-image: url(../img/bg2.jpg);
+  color: white; }
+  /* line 173, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .why h2 {
+    font-size: 40px;
+    margin-top: -44px;
+    margin-bottom: 91px; }
+  /* line 177, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .why .trigw {
+    text-align: center;
+    font-size: 0; }
+    /* line 8, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .why .trigw > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top; }
+    /* line 179, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .why .trigw .trig {
+      width: 50%; }
+    /* line 182, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .why .trigw .ico {
+      width: 116px;
+      height: 116px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 100px;
+      margin: 0 auto;
+      position: relative;
+      margin-bottom: 19px; }
+      /* line 190, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .why .trigw .ico:after {
+        position: absolute;
+        background: white;
+        width: 100px;
+        height: 100px;
+        left: 8px;
+        top: 8px;
+        border-radius: 100px;
+        z-index: -1; }
+    /* line 201, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .why .trigw img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      width: 100px;
+      height: 100px;
+      border-radius: 50px; }
+    /* line 210, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .why .trigw p {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 26px;
+      margin-bottom: 81px; }
+
+/* line 218, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.calculate {
+  color: white;
+  background-image: url(../img/bg3.jpg); }
+  /* line 221, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .calculate h2 {
+    font-size: 36px;
+    line-height: 41px;
+    margin-top: -21px;
+    margin-bottom: 129px; }
+  /* line 227, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .calculate .step {
+    background: white;
+    margin: 0 auto;
+    width: 830px;
+    text-align: center;
+    height: 323px; }
+  /* line 234, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .calculate p {
+    background-image: url(../img/step-p1.png);
+    width: 374px;
+    height: 165px;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    margin: 0px auto 0;
+    position: relative;
+    top: -79px;
+    padding-top: 48px; }
+  /* line 246, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .calculate a {
+    margin: 9px 82px; }
+
+/* line 250, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+a.g-btn {
+  width: 183px;
+  height: 53px;
+  border: 3px solid #94b92c;
+  color: #141414;
+  transition: all 0.25s;
+  background: white;
+  font-size: 20px;
+  display: inline-block;
+  border-radius: 65px;
+  line-height: 43px; }
+  /* line 261, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  a.g-btn:hover {
+    background: #89a831;
+    color: white; }
+
+/* line 266, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.we-can {
+  color: white;
+  background-image: url(../img/bg4_1.jpg);
+  text-align: center; }
+  /* line 270, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can h2 {
+    font-size: 40px;
+    margin-top: -25px; }
+  /* line 274, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can p {
+    font-size: 24px;
+    margin-top: 11px; }
+  /* line 278, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can .nav {
+    width: 831px;
+    height: 57px;
+    border: 3px solid #89a831;
+    margin: 55px auto 117px;
+    border-radius: 100px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 0; }
+    /* line 8, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .we-can .nav > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top; }
+  /* line 287, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can a {
+    width: 20%;
+    height: 100%;
+    line-height: 47px;
+    font-size: 21px !important;
+    background: transparent;
+    transition: all 0.25s; }
+    /* line 294, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .we-can a:hover {
+      background: rgba(137, 168, 49, 0.46); }
+  /* line 299, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can .slides .trigw {
+    text-align: center;
+    font-size: 0; }
+    /* line 8, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .we-can .slides .trigw > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top; }
+  /* line 302, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can .slides .trig {
+    width: 21%;
+    margin: 0 3%; }
+  /* line 306, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can .slides .ico {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    margin: 0 auto 38px; }
+  /* line 314, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can .slides img {
+    border-radius: 100px;
+    width: 84px;
+    height: 84px; }
+  /* line 319, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .we-can .slides span {
+    font-size: 22px;
+    line-height: 24px; }
+
+/* line 325, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.attention {
+  background-image: url(../img/bg5.jpg); }
+  /* line 327, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .attention h2 {
+    font-size: 40px;
+    line-height: 47px;
+    margin-top: 12px;
+    margin-bottom: 36px; }
+  /* line 333, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .attention .trigw {
+    text-align: center;
+    font-size: 0; }
+    /* line 8, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .attention .trigw > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top; }
+  /* line 336, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .attention .trig {
+    width: 300px;
+    margin: 0 137px;
+    position: relative;
+    height: 253px; }
+    /* line 341, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .attention .trig:nth-child(2n) {
+      margin-right: 0; }
+    /* line 344, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .attention .trig:nth-child(2n-1) {
+      margin-left: 0; }
+    /* line 348, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .attention .trig:nth-child(2) img {
+      position: relative;
+      top: 16px;
+      left: 10px; }
+  /* line 357, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .attention p {
+    font-size: 24px;
+    line-height: 24px;
+    position: absolute;
+    width: 100%;
+    top: 198px; }
+
+/* line 365, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.economy {
+  background-image: url(../img/bg6.jpg);
+  text-align: center; }
+  /* line 368, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .economy h2 {
+    font-size: 40px;
+    line-height: 47px;
+    margin-top: 35px; }
+  /* line 373, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .economy h4 {
+    font-family: "Roboto";
+    font-size: 24px;
+    line-height: 57px; }
+  /* line 378, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .economy p {
+    color: #89a831;
+    font-family: "Roboto";
+    font-size: 24px;
+    line-height: 33px; }
+  /* line 384, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .economy a {
+    display: inline-block;
+    width: 441px;
+    height: 170px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s;
+    margin: 47px 12px 10px;
+    text-align: left;
+    padding-left: 179px;
+    padding-top: 48px;
+    position: relative; }
+    /* line 397, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .economy a:hover {
+      box-shadow: 0 1px 16px #a2c835; }
+    /* line 401, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .economy a:nth-child(4) img {
+      top: 24px;
+      left: 37px; }
+    /* line 406, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .economy a img {
+      position: absolute;
+      top: 15px;
+      left: 34px; }
+    /* line 411, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .economy a span {
+      color: #7c9c22;
+      font-family: "Roboto";
+      font-size: 20px;
+      line-height: 22px; }
+  /* line 418, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .economy form {
+    background-image: url(../img/s6-form.png);
+    width: 1296px;
+    height: 215px;
+    margin-left: -107px;
+    margin-top: 86px;
+    padding-left: 107px;
+    padding-right: 278px;
+    padding-top: 38px; }
+    /* line 427, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .economy form span {
+      color: white;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 33px; }
+
+/* line 436, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+input {
+  width: 248px;
+  height: 47px;
+  background-color: white;
+  border: 1px solid #c2c2c2;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.14);
+  border-radius: 50px;
+  font-size: 14px;
+  font-style: italic;
+  padding-left: 40px;
+  margin-right: 32px; }
+
+/* line 448, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+button {
+  width: 198px;
+  height: 47px;
+  border: 3px solid white;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: white;
+  background: transparent;
+  transition: all 0.25s;
+  border-radius: 100px; }
+  /* line 458, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  button:hover {
+    font-family: "Roboto";
+    font-size: 20px; }
+
+/* line 463, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.problems {
+  background-image: url(../img/bg7.jpg); }
+  /* line 466, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems h2 {
+    font-size: 40px;
+    margin-top: -5px;
+    line-height: 48px; }
+  /* line 471, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems .slidew {
+    margin: 120px auto 0;
+    width: 492px;
+    position: relative;
+    left: 28px; }
+  /* line 477, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems .slide {
+    position: relative; }
+  /* line 480, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems h4 {
+    font-size: 48px;
+    text-align: left;
+    position: relative;
+    margin-bottom: 87px; }
+    /* line 485, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .problems h4:after {
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      background: #93af44;
+      top: 76px;
+      left: 2px; }
+  /* line 494, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems .imgw {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 160px;
+    top: 47px; }
+  /* line 501, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0); }
+  /* line 507, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems p {
+    font-size: 23px;
+    color: #89a831;
+    margin-bottom: 15px;
+    font-family: "Roboto"; }
+  /* line 513, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems span {
+    color: #474747;
+    font-size: 16px;
+    line-height: 22px;
+    }
+  /* line 518, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .problems .nav {
+    position: absolute;
+    top: 220px;
+    width: 59px;
+    height: 59px;
+    border-radius: 100px;
+    border: 3px solid #89a831;
+    transition: all 0.25s;
+    background-image: url(../img/s7-left.png); }
+    /* line 527, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .problems .nav.left {
+      left: 74px; }
+      /* line 529, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .problems .nav.left:hover {
+        left: 70px; }
+    /* line 533, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .problems .nav.right {
+      transform: scale(-1, 1);
+      right: 74px; }
+      /* line 536, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .problems .nav.right:hover {
+        right: 70px; }
+
+/* line 542, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.gallery {
+  background: #f5f5f5; }
+  /* line 544, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .gallery h2 {
+    font-size: 40px;
+    margin-top: -48px; }
+  /* line 548, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .gallery .nav {
+    text-align: center;
+    font-size: 0;
+    width: 569px;
+    height: 70px;
+    background-color: whitesmoke;
+    border: 3px solid #89a831;
+    margin: 51px auto 0;
+    border-radius: 100px;
+    overflow: hidden; }
+    /* line 8, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .gallery .nav > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top; }
+    /* line 557, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .gallery .nav a {
+      width: 50%;
+      font-size: 27px;
+      color: #656565;
+      font-family: "Roboto";
+      font-weight: 300;
+      line-height: 61px;
+      height: 100%;
+      background: transparent;
+      transition: all 0.25s; }
+      /* line 567, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .gallery .nav a:hover {
+        color: white;
+        background: #9cc53b; }
+  /* line 573, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .gallery .nav-s {
+    text-align: center;
+    font-size: 0;
+    margin-top: 45px; }
+    /* line 8, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .gallery .nav-s > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top; }
+    /* line 576, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .gallery .nav-s a {
+      font-family: "Roboto";
+      font-size: 21px;
+      font-weight: 300;
+      margin: 0 64px;
+      border-bottom: 1px dashed;
+      position: relative;
+      transition: all 0.25s; }
+      /* line 584, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .gallery .nav-s a:hover {
+        border-color: transparent; }
+      /* line 587, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .gallery .nav-s a:after {
+        content: '';
+        background: url(../img/s8-nav-s.png);
+        position: absolute;
+        left: -42px;
+        top: -38px;
+        width: 215px;
+        height: 82px;
+        opacity: 0;
+        transition: all 0.25s;
+        z-index: -1; }
+      /* line 599, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .gallery .nav-s a.active {
+        color: white;
+        border-color: transparent; }
+        /* line 602, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .gallery .nav-s a.active:after {
+          opacity: 1; }
+  /* line 608, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .gallery .slidew {
+    margin-top: 36px;
+    position: relative; }
+    /* line 611, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .gallery .slidew .sld-nav {
+      position: absolute;
+      background-color: white;
+      background-image: url(../img/s8-left.png);
+      width: 47px;
+      height: 47px;
+      border: 3px solid #89a831;
+      top: 136px;
+      border-radius: 30px;
+      transition: all 0.25s;
+      z-index: 5; }
+      /* line 622, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .gallery .slidew .sld-nav.left {
+        left: 20px; }
+        /* line 624, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .gallery .slidew .sld-nav.left:hover {
+          left: 16px; }
+      /* line 628, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .gallery .slidew .sld-nav.right {
+        right: 20px;
+        transform: scale(-1, 1); }
+        /* line 631, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .gallery .slidew .sld-nav.right:hover {
+          right: 16px; }
+  /* line 637, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .gallery .slider {
+    height: 316px;
+    position: relative;
+    left: -505px;
+    width: 2020px;
+    text-align: center;
+    font-size: 0; }
+    /* line 8, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .gallery .slider > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top; }
+  /* line 644, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .gallery .slide {
+    width: 475px;
+    margin-right: 30px;
+    position: relative;
+    transition: all 0.25s;
+    opacity: 0.4; }
+    /* line 650, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .gallery .slide:after {
+      opacity: 0;
+      position: absolute;
+      height: 100%;
+      width: 100px;
+      z-index: 2;
+      top: 0;
+      transform: opacity 0.25s;
+      width: 135px; }
+    /* line 660, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .gallery .slide.active {
+      opacity: 1; }
+      /* line 663, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .gallery .slide.active.left:after {
+        opacity: 1;
+        background-image: url(../img/s8-sld-left.png);
+        left: 0; }
+      /* line 670, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .gallery .slide.active.right:after {
+        opacity: 1;
+        background-image: url(../img/s8-sld-right.png);
+        right: 0; }
+  /* line 678, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .gallery img {
+    display: block; }
+
+/* line 682, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.about-us {
+  background-image: url(../img/bg9.jpg);
+  color: white; }
+  /* line 685, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .about-us h2 {
+    font-size: 40px;
+    margin-top: -18px; }
+  /* line 689, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .about-us .trigw {
+    position: relative;
+    height: 500px;
+    margin-top: 89px; }
+  /* line 694, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .about-us .trig {
+    position: absolute; }
+    /* line 696, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .about-us .trig p {
+      font-family: "Roboto";
+      font-weight: 300; }
+    /* line 702, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .about-us .trig .green {
+      font-size: 24px;
+      font-family: "Roboto";
+      font-weight: 300;
+      color: #a6d43b;
+      display: inline-block; }
+    /* line 709, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .about-us .trig:nth-child(1) {
+      width: 350px;
+      height: 190px;
+      left: 97px;
+      top: -4px; }
+      /* line 714, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(1):before {
+        width: 45px;
+        height: 1px;
+        background: #93b83a;
+        position: absolute;
+        left: 332px;
+        bottom: 243px;
+        z-index: -1;
+        transform: rotate(-51deg); }
+      /* line 724, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(1):after {
+        width: 45px;
+        height: 1px;
+        background: #93b83a;
+        position: absolute;
+        left: 408px;
+        bottom: 345px;
+        z-index: -1;
+        transform: rotate(-51deg); }
+      /* line 734, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(1) p {
+        font-size: 144px;
+        line-height: 144px;
+        position: relative; }
+        /* line 738, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .about-us .trig:nth-child(1) p:before {
+          background-image: url(../img/s9-i1-p1.png);
+          width: 8px;
+          height: 51px;
+          position: absolute;
+          right: 104px;
+          top: 59px;
+          z-index: -1; }
+        /* line 747, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .about-us .trig:nth-child(1) p:after {
+          background-image: url(../img/s9-i1-p2.png);
+          width: 102px;
+          height: 66px;
+          position: absolute;
+          right: 16px;
+          top: 58px; }
+      /* line 756, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(1) .green {
+        margin-top: 9px;
+        margin-left: 8px; }
+    /* line 761, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .about-us .trig:nth-child(2) {
+      width: 303px;
+      height: 192px;
+      right: 97px;
+      top: 7px; }
+      /* line 766, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(2) p {
+        font-size: 87px;
+        line-height: 100px;
+        vertical-align: top;
+        padding-left: 69px;
+        margin-bottom: -42px;
+        position: relative; }
+        /* line 773, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .about-us .trig:nth-child(2) p span {
+          font-size: 45px;
+          vertical-align: top;
+          line-height: 64px;
+          margin-left: 10px; }
+        /* line 779, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .about-us .trig:nth-child(2) p:before {
+          background-image: url(../img/s9-i2.png);
+          width: 48px;
+          height: 64px;
+          position: absolute;
+          left: 6px;
+          top: 21px;
+          z-index: -1; }
+      /* line 789, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(2) .green {
+        margin-left: 127px;
+        font-size: 22px; }
+    /* line 795, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .about-us .trig:nth-child(3) {
+      width: 284px;
+      height: 112px;
+      left: 64px;
+      top: 312px; }
+      /* line 800, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(3) p {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: 69px;
+        line-height: 69px;
+        width: 88px;
+        padding-top: 38px;
+        position: relative;
+        margin-right: 16px; }
+        /* line 810, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .about-us .trig:nth-child(3) p:before {
+          background-image: url(../img/s9-i3.png);
+          width: 82px;
+          height: 40px;
+          position: absolute;
+          left: 3px;
+          top: 3px;
+          z-index: -1; }
+      /* line 820, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(3) .green {
+        padding-top: 50px;
+        line-height: 20px; }
+      /* line 824, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(3):before {
+        width: 312px;
+        height: 1px;
+        background: #93b83a;
+        position: absolute;
+        left: 249px;
+        bottom: 183px;
+        z-index: -1;
+        transform: rotate(-51deg); }
+    /* line 835, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .about-us .trig:nth-child(4) {
+      width: 277px;
+      height: 112px;
+      right: 138px;
+      top: 316px; }
+      /* line 840, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(4) p {
+        font-size: 120px;
+        line-height: 120px;
+        letter-spacing: -11px; }
+        /* line 844, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .about-us .trig:nth-child(4) p:before {
+          background-image: url(../img/s9-i4.png);
+          width: 69px;
+          height: 90px;
+          position: absolute;
+          right: 75px;
+          top: 19px;
+          z-index: -1; }
+        /* line 853, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+        .about-us .trig:nth-child(4) p span {
+          display: inline-block;
+          vertical-align: bottom;
+          font-size: 51px;
+          line-height: 61px;
+          margin-left: 52px;
+          letter-spacing: normal; }
+      /* line 862, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(4) .green {
+        font-size: 28px;
+        margin-top: 6px;
+        margin-left: 35px; }
+      /* line 867, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .about-us .trig:nth-child(4):before {
+        width: 165px;
+        height: 1px;
+        background: #93b83a;
+        position: absolute;
+        left: 193px;
+        bottom: 290px;
+        z-index: -1;
+        transform: rotate(-51deg); }
+
+/* line 880, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.deadline {
+  text-align: center;
+  background-image: url(../img/bg10.jpg); }
+  /* line 883, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .deadline h2 {
+    color: white;
+    font-size: 40px;
+    margin-top: -47px;
+    margin-bottom: 90px; }
+  /* line 889, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .deadline .formw {
+    text-align: center;
+    font-size: 0;
+    background: white;
+    position: relative;
+    width: 894px;
+    margin: 0 auto;
+    height: 412px; }
+    /* line 8, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .deadline .formw > * {
+      font-size: 1rem;
+      display: inline-block;
+      vertical-align: top; }
+    /* line 896, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .deadline .formw > h4 {
+      display: block;
+      background-image: url(../img/s10-h4.png);
+      width: 570px;
+      height: 159px;
+      color: white;
+      font-size: 21px;
+      line-height: 26px;
+      text-align: center;
+      margin: 0px auto 0;
+      position: relative;
+      top: -72px;
+      padding-top: 51px;
+      margin-bottom: -46px; }
+    /* line 911, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .deadline .formw > p {
+      display: block;
+      font-size: 24px; }
+    /* line 915, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .deadline .formw:after {
+      position: absolute;
+      background-image: url(../img/s10-kompas.png);
+      width: 51px;
+      height: 51px;
+      left: 421px;
+      top: 177px; }
+    /* line 923, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .deadline .formw:before {
+      position: absolute;
+      background-image: url(../img/s10-strelka.png);
+      width: 9px;
+      height: 33px;
+      left: 442px;
+      top: 186px; }
+  /* line 933, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .deadline a {
+    margin: 28px 84px;
+    font-size: 20px !important; }
+  /* line 937, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .deadline form {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: url(../img/s10-form.png);
+    height: 147px;
+    padding-top: 57px; }
+
+/* line 947, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.rewievs {
+  background: #f4f8f8; }
+  /* line 961, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .rewievs h2 {
+    font-size: 40px;
+    margin-top: 17px; }
+  /* line 965, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .rewievs .sliderw {
+    margin: 55px auto 0;
+    width: 769px;
+    height: 525px; }
+  /* line 970, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .rewievs .slide {
+    width: 769px;
+    height: 525px; }
+    /* line 973, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .rewievs .slide img {
+      width: 100%;
+      height: 100%; }
+    /* line 977, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .rewievs .slide a {
+      background-image: url(../img/play.png);
+      display: block;
+      width: 92px;
+      height: 92px;
+      border-radius: 100px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -46px;
+      margin-top: -46px;
+      opacity: 0.5;
+      transition: all 0.25s; }
+      /* line 990, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .rewievs .slide a:hover {
+        opacity: 1; }
+    /* line 995, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .rewievs .slide p {
+      padding: 0 167px;
+      font-family: "Roboto";
+      font-size: 21px;
+      margin-bottom: 6px; }
+      /* line 1000, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .rewievs .slide p span {
+        display: block;
+        font-size: 18px;
+        color: inherit;
+        padding: 0; }
+    /* line 1007, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .rewievs .slide span {
+      color: #6d6d6d;
+      padding: 0 167px;
+      font-size: 18px; }
+  /* line 1013, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .rewievs .slide-img {
+    padding: 6px;
+    height: 396px;
+    position: relative;
+    margin-bottom: 39px;
+    background: white;
+    box-shadow: 0 0 29px rgba(0, 0, 0, 0.18); }
+  /* line 1022, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .rewievs .nav {
+    position: absolute;
+    top: 290px;
+    width: 59px;
+    height: 59px;
+    border-radius: 100px;
+    border: 3px solid #89a831;
+    transition: all 0.25s;
+    background-image: url(../img/s7-left.png); }
+    /* line 1031, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .rewievs .nav.left {
+      left: 0px; }
+      /* line 1033, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .rewievs .nav.left:hover {
+        left: -4px; }
+    /* line 1037, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .rewievs .nav.right {
+      transform: scale(-1, 1);
+      right: 0px; }
+      /* line 1040, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+      .rewievs .nav.right:hover {
+        right: -4px; }
+
+/* line 1046, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+.contacts {
+  position: relative;
+  background: gray; }
+  /* line 1049, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts h2 {
+    background: url(../img/cont-h2.png) no-repeat top center;
+    font-size: 37px;
+    color: white;
+    height: 73px;
+    width: 488px;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -337px, 0); }
+  /* line 1062, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts form {
+    position: absolute;
+    width: 304px;
+    left: 50%;
+    top: 50%;
+    height: 348px;
+    margin-top: -266px;
+    margin-left: 113px;
+    text-align: center;
+    z-index: 3; }
+    /* line 1072, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .contacts form:after {
+      position: absolute;
+      width: 100%;
+      height: 348px;
+      opacity: 0.91;
+      background-color: white;
+      top: 0;
+      left: 0;
+      z-index: -1; }
+  /* line 1083, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts p {
+    margin-top: 18px;
+    font-size: 19px;
+    margin-bottom: 16px; }
+  /* line 1088, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts input {
+    margin-right: 0;
+    margin-bottom: 19px;
+    font-style: normal;
+    padding-left: 20px; }
+  /* line 1094, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts textarea {
+    width: 245px;
+    height: 73px;
+    background-color: white;
+    border: 1px solid #c2c2c2;
+    border-radius: 2px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.14);
+    padding: 14px 19px;
+    font-size: 14px;
+    resize: none; }
+  /* line 1105, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts button {
+    width: 244px;
+    height: 45px;
+    background-color: #89a831;
+    font-size: 22px;
+    margin-top: 19px;
+    border: none; }
+  /* line 1113, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts div.callback {
+    position: absolute;
+    width: 100%;
+    top: 348px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    height: 95px;
+    background: rgba(0, 0, 0, 0.8); }
+  /* line 1123, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts .phone {
+    display: block;
+    font-family: "Roboto";
+    font-size: 23px; }
+  /* line 1128, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts a.callback {
+    display: inline-block;
+    font-size: 17px;
+    margin-top: 1px;
+    border-bottom: 1px dashed white;
+    transition: all 0.25s;
+    position: relative; }
+    /* line 1135, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .contacts a.callback:after {
+      content: '';
+      background-image: url(../img/call-f.png);
+      width: 11px;
+      height: 16px;
+      position: absolute;
+      left: -16px;
+      top: 6px; }
+    /* line 1144, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+    .contacts a.callback:hover {
+      border-bottom: 1px dashed transparent; }
+  /* line 1148, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts > div#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    max-width: 100%;
+    height: auto;
+    transform: none; }
+  /* line 1158, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #775b55; }
+  /* line 1165, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts .f-wrap {
+    position: relative;
+    height: 100%;
+    max-width: 980px;
+    margin: 0 auto; }
+  /* line 1171, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts .copyright {
+    float: left;
+    color: white;
+    font-size: 14px;
+    line-height: 80px; }
+  /* line 1177, /Volumes/Workspace/CACHE/GITHUB/remont/css/style.scss */
+  .contacts .gulf {
+    background-image: url(../img/logo_g.png);
+    width: 191px;
+    height: 42px;
+    margin-top: 19px;
+    float: right;
+    display: block; }
+
+/*# sourceMappingURL=style.css.map */
+body,button,input,textarea,.header .prich span{font-weight: 300;}
+.phone,.header .prich p{font-weight: 500;}
+.header .prich{padding: 6px 0 6px 109px;width: 350px;}
+section > div > div{
+    height: 640px;
+    padding: 20px 0;
+    margin-top: -320px;
+}
+.why .trigw p{
+    font-size: 18px;
+    text-shadow: 0 0 5px #6D6A69,0 0 2px #6D6A69;
+}
+.calculate p{
+    font-size: 28px;
+}
+a.g-btn{
+    line-height: 47px;
+}
+.we-can a{
+    font-size: 19px!important;
+}
+.we-can .slides span{
+    font-size: 19px;
+}
+.attention p{
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: -16px;
+}
+.gallery .nav a{
+	font-size: 25px;
+}
+.gallery .nav-s a{
+    font-size: 19px;
+    /* padding: 0 4px; */
+    line-height: 29px;
+    margin: 0 64px;
+}
+.gallery .nav-s a:after{
+    left: -46px;
+}
+.about-us .trig:nth-child(3) .green{
+    line-height: 34px;
+    position: relative;
+    top: -11px;
+}
+.about-us .trig:nth-child(4) .green{
+    margin-left: 29px;
+}
+.deadline a{
+    font-size: 18px!important;
+}
+.deadline .formw > h4{
+    line-height: 33px;
+    font-size: 22px;
+    padding-top: 46px;
+}
+button{
+    padding-bottom: 3px;
+    font-size: 19px;
+}
+button:hover{
+    padding-bottom: 3px;
+    font-size: 19px;
+}
+.economy a span{
+    line-height: 28px;
+    position: relative;
+    top: -7px;
+}
+.economy form span{
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+.why h2{
+    margin-top: 0;
+}
+.calculate h2{
+    margin-top: 20px;
+}
+.we-can h2{
+    margin-top: 0px;
+    margin-bottom: 38px;
+}
+.economy h2{
+    margin-top: 0px;
+}
+.problems h2{
+    margin-top: 26px;
+}
+.problems .nav{
+    top: 267px;
+}
+.gallery h2{
+    margin-top: 0;
+}
+.about-us h2{
+    margin-top: -6px;
+}
+.deadline h2{
+    margin-top: 0;
+    margin-bottom: 120px;
+}
+.rewievs h2{
+    margin-top: -15px;
+}
+.rewievs .nav{
+    top: 284px;
+}
+.contacts h2{
+    transform: translate3d(-50%, -321px, 0);
+}
+.contacts form{
+    margin-top: -228px;
+}
+.contacts a.callback{
+    margin-left: 15px;
+}
+.header .head{
+    height: 100px;
+    padding: 6px 0 0;
+    position: absolute;
+    top: 20px;
+    margin-top: 0;
+}
+.header h2{
+    margin-top: 143px;
+}
+.contacts button:hover{
+    font-size:19px;
+}

@@ -1,0 +1,131 @@
+body,button,input,textarea,.header .prich span{font-weight: 300;}
+.phone,.header .prich p{font-weight: 500;}
+.header .prich{padding: 6px 0 6px 109px;width: 350px;}
+section > div > div{
+    height: 640px;
+    padding: 20px 0;
+    margin-top: -320px;
+}
+.why .trigw p{
+    font-size: 18px;
+    text-shadow: 0 0 5px #6D6A69,0 0 2px #6D6A69;
+}
+.calculate p{
+    font-size: 28px;
+}
+a.g-btn{
+    line-height: 47px;
+}
+.we-can a{
+    font-size: 19px!important;
+}
+.we-can .slides span{
+    font-size: 19px;
+}
+.attention p{
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: -16px;
+}
+.gallery .nav a{
+	font-size: 25px;
+}
+.gallery .nav-s a{
+    font-size: 19px;
+    /* padding: 0 4px; */
+    line-height: 29px;
+    margin: 0 64px;
+}
+.gallery .nav-s a:after{
+    left: -46px;
+}
+.about-us .trig:nth-child(3) .green{
+    line-height: 34px;
+    position: relative;
+    top: -11px;
+}
+.about-us .trig:nth-child(4) .green{
+    margin-left: 29px;
+}
+.deadline a{
+    font-size: 18px!important;
+}
+.deadline .formw > h4{
+    line-height: 33px;
+    font-size: 22px;
+    padding-top: 46px;
+}
+button{
+    padding-bottom: 3px;
+    font-size: 19px;
+}
+button:hover{
+    padding-bottom: 3px;
+    font-size: 19px;
+}
+.economy a span{
+    line-height: 28px;
+    position: relative;
+    top: -7px;
+}
+.economy form span{
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+.why h2{
+    margin-top: 0;
+}
+.calculate h2{
+    margin-top: 20px;
+}
+.we-can h2{
+    margin-top: 0px;
+    margin-bottom: 38px;
+}
+.economy h2{
+    margin-top: 0px;
+}
+.problems h2{
+    margin-top: 26px;
+}
+.problems .nav{
+    top: 267px;
+}
+.gallery h2{
+    margin-top: 0;
+}
+.about-us h2{
+    margin-top: -6px;
+}
+.deadline h2{
+    margin-top: 0;
+    margin-bottom: 120px;
+}
+.rewievs h2{
+    margin-top: -15px;
+}
+.rewievs .nav{
+    top: 284px;
+}
+.contacts h2{
+    transform: translate3d(-50%, -321px, 0);
+}
+.contacts form{
+    margin-top: -228px;
+}
+.contacts a.callback{
+    margin-left: 15px;
+}
+.header .head{
+    height: 100px;
+    padding: 6px 0 0;
+    position: absolute;
+    top: 20px;
+    margin-top: 0;
+}
+.header h2{
+    margin-top: 143px;
+}
+.contacts button:hover{
+    font-size:19px;
+}
