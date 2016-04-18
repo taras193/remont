@@ -85,7 +85,8 @@ module.exports = function(grunt) {
 		      '.jshintrc',
 		      'package.json',
 		      'for_terminal',
-		      'Gruntfile.js'
+		      'Gruntfile.js',
+		      '.DS_Store'
 		    ]
 		  }
 		},
@@ -118,7 +119,8 @@ module.exports = function(grunt) {
 		      '.jshintrc',
 		      'package.json',
 		      'for_terminal',
-		      'Gruntfile.js'
+		      'Gruntfile.js',
+		      '.DS_Store'
 		    ]
 		  }
 		},
@@ -130,6 +132,10 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+			sass: {
+				files: 'css/sass/*.scss',
+				tasks: ['sass','concat','cssmin']
+			},
 		    scripts: {
 		        files: ['js/libs/*.js'],
 		        tasks: ['concat', 'uglify'],
@@ -145,24 +151,20 @@ module.exports = function(grunt) {
 			    }
 
 			},
-			sass: {
-				files: 'css/sass/*.scss',
-				tasks: ['sass']
-			},
-			'ftp-deploy': {
-				files: ['js/*.js','css/*.css','ajax/*.*','*.html','!**/node_modules/**'],
+		/*	'ftp-deploy': {
+				files: ['js/*.js','css/*.css','ajax/*.*','*.html','!**/   /*   node_modules  */  /**'],
 				tasks: ['ftp-deploy'],
 				options: {
 			        spawn: false,
 			    },
 			},
 			ftpush: {
-				files: ['img/*.*','!**/node_modules/**'],
+				files: ['img/*.*','!**/   /*   node_modules  */  /**'],
 				tasks: ['ftpush'],
 				options: {
 			        spawn: false,
 			    },
-			}
+			}  */
 		}
 
     });
