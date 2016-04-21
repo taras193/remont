@@ -27,10 +27,10 @@ module.exports = function(grunt) {
 		    {
 		      src: 'css/libs.css',
 		      dest: 'css/libs.min.css'
-		    },
-		    {
-		      src: 'css/full.css',
-		      dest: 'css/full.min.css'
+		   // },
+		   // {
+		   //   src: 'css/full.css',
+		   //   dest: 'css/full.min.css'
 		    }]
 		  }
 		},
