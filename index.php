@@ -7,7 +7,7 @@
     <script>
     !function(e,t,n){function r(){for(;u[0]&&"loaded"==u[0][l];)o=u.shift(),o[f]=!a.parentNode.insertBefore(o,a)}for(var i,s,o,u=[],a=e.scripts[0],f="onreadystatechange",l="readyState";i=n.shift();)s=e.createElement(t),"async"in a?(s.async=!1,e.head.appendChild(s)):a[l]?(u.push(s),s[f]=r):e.write("<"+t+' src="'+i+'"></'+t+">"),s.src=i}(document,"script",
     ["js/libs.min.js",
-    "js/main.js",
+    "js/main.min.js",
     "https://maps.googleapis.com/maps/api/js?sensor=false",
     "js/map.js"]);
     </script>
@@ -84,7 +84,7 @@
                 <h2>Сделайте ориентировочный<br> просчет стоимости</h2>
                 <div class="step animation">
                     <div class="stepw active" data-step="0">
-                        <p>Что вы хотите<br>отремонтировать?</p>
+                        <p>Что Вы хотите<br>отремонтировать?</p>
                         <a class="g-btn step-btn" data-nextstep="1" data-choise="0" href="">Дом</a>
                         <a class="g-btn step-btn" data-nextstep="1" data-choise="1" href="">Квартиру</a>                      
                     </div>
@@ -111,8 +111,7 @@
                         <a class="back" data-prevstep="1" href="">назад</a>                 
                     </div>
                     <div class="stepw" data-step="3">
-                        <p>При всем желании, Вы не узнаете точных цен на ремонт именно для Вас в Интернете. Ни один онлайн-калькулятор не даст Вам даже приблизительной цены.</p>
-                        <span>Оставьте заявку и мы сориентируем Вас по стоимости ремонта за м<sup>2</sup> вашей квартиры (дома) в течение 15 минут.</span>
+                        <p>Оставьте заявку и мы сориентируем Вас по стоимости ремонта за м<sup>2</sup> <span class="calc-type-text" data-choosen="1">вашей квартиры</span> <span class="calc-type-text" data-choosen="0">вашего дома</span> в течение 15 минут.</p>
                         <form action="ajax/mail.php" method="post">
                             <input type="text" name="phone" placeholder="Введите телефон">
                             <input type="text" name="name" placeholder="Введите имя">
@@ -150,12 +149,12 @@
                                     <a class="fancy" href="img/gallery/g_1_1_2.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_1_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_1_2_1.jpg" data-fancybox-group="g1_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_1_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_1_2_2.jpg" data-fancybox-group="g1_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_2_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_1_2_1.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_2_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_1_2_2.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_2_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_1_3_1.jpg" data-fancybox-group="g1_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_1_3_2.jpg" data-fancybox-group="g1_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_3_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_1_3_1.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_3_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_1_3_2.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_3_2_s.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -170,12 +169,12 @@
                                     <a class="fancy" href="img/gallery/g_2_1_2.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_1_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_2_2_1.jpg" data-fancybox-group="g2_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_2_2_2.jpg" data-fancybox-group="g2_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_2_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_2_2_1.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_2_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_2_2_2.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_2_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_2_3_1.jpg" data-fancybox-group="g2_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_2_3_2.jpg" data-fancybox-group="g2_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_3_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_2_3_1.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_3_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_2_3_2.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_3_2_s.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -190,12 +189,12 @@
                                     <a class="fancy" href="img/gallery/g_3_1_2.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_1_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_3_2_1.jpg" data-fancybox-group="g3_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_3_2_2.jpg" data-fancybox-group="g3_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_2_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_3_2_1.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_2_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_3_2_2.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_2_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_3_3_1.jpg" data-fancybox-group="g3_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_3_3_2.jpg" data-fancybox-group="g3_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_3_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_3_3_1.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_3_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_3_3_2.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_3_2_s.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -210,12 +209,12 @@
                                     <a class="fancy" href="img/gallery/g_4_1_2.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_1_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_4_2_1.jpg" data-fancybox-group="g4_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_4_2_2.jpg" data-fancybox-group="g4_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_2_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_4_2_1.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_2_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_4_2_2.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_2_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_4_3_1.jpg" data-fancybox-group="g4_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_4_3_2.jpg" data-fancybox-group="g4_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_3_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_4_3_1.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_3_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_4_3_2.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_3_2_s.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -230,16 +229,16 @@
                                     <a class="fancy" href="img/gallery/g_5_1_2.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_1_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_5_2_1.jpg" data-fancybox-group="g5_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_5_2_2.jpg" data-fancybox-group="g5_2"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_2_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_5_2_1.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_2_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_5_2_2.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_2_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_5_3_1.jpg" data-fancybox-group="g5_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_5_3_2.jpg" data-fancybox-group="g5_3"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_3_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_5_3_1.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_3_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_5_3_2.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_3_2_s.jpg" alt=""></a>
                                 </div>
                                 <div class="slide" data-sld="3">
-                                    <a class="fancy" href="img/gallery/g_5_4_1.jpg" data-fancybox-group="g5_4"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_4_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_5_4_2.jpg" data-fancybox-group="g5_4"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_4_2_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_5_4_1.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_4_1_s.jpg" alt=""></a>
+                                    <a class="fancy" href="img/gallery/g_5_4_2.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_4_2_s.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +304,7 @@
                         <div class="trigw" data-sld="2">
                             <div class="trig">
                                 <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig2_2_1.jpg" alt=""></div>
-                                <span>Атмосфера<br>спокойствия и<br>любви</span>
+                                <span>Атмосфера<br>спокойствия</span>
                             </div>
                             <div class="trig">
                                 <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig2_3_2.jpg" alt=""></div>
@@ -578,17 +577,28 @@
                 <button>Отправить</button>
             </form>
         </div>
+        <div class="pop" id="smet">
+            <div class="close"></div>
+            <p>Оставьте заявку<br>на расчет сметы</p>
+            <span>и мы Вам перезвоним</span>
+            <form action="ajax/mail.php" method="post">
+                <input name="name" placeholder="Введите имя" type="text">
+                <input name="phone" placeholder="Введите телефон" type="text">
+                <input type="hidden" name="frm" value="Заказать звонок">
+                <button>Отправить</button>
+            </form>
+        </div>
         <div class="pop" id="pop1">
             <div class="close"></div>
             <p>3D визуализация.</p>
-            <span>С помощью визуализации, Вы сможете практически на 100% увидеть тот результат, который вы получите. Именно благодаря 3D макету, Вы сможете грамотно контролировать ход ремонта. Да, это трата, но трата, которая, в конечном счете, приведет к экономии ваших средств, поверьте нашему опыту.</span>
-            <a href="" class="new-btn fancy_pop" data-gal="0">Посмотреть пример</a>
+            <span>С помощью визуализации, Вы сможете практически на 100% увидеть тот результат, который Вы получите. Именно благодаря 3D макету, Вы сможете грамотно контролировать ход ремонта. Да, это трата, но трата, которая, в конечном счете, приведет к экономии ваших средств, поверьте нашему опыту.</span>
+            <a href="" class="new-btn fancy_pop" data-gal="0">Посмотреть примеры</a>
         </div>
         <div class="pop" id="pop2">
             <div class="close"></div>
             <p>План коммуникаций.</p>
-            <span>Без полностью подготовленного плана коммуникаций строительная бригада действует вслепую План включает в себя полные геометрические расчеты помещения. Учитывает проводку. Зачастую на этапе составления плана коммуникаций всплывают подводные камни, без учета которых ремонт бы здорово затянулся.</span>
-            <a href="" class="new-btn fancy_pop" data-gal="1">Посмотреть пример</a>
+            <span>Без полностью подготовленного плана коммуникаций, строительная бригада действует вслепую. План включает в себя полные геометрические расчеты помещения, учитывает проводку. Зачастую, на этапе составления плана коммуникаций всплывают подводные камни, без учета которых ремонт бы здорово затянулся.</span>
+            <a href="" class="new-btn fancy_pop" data-gal="1">Посмотреть примеры</a>
         </div>
         <div class="pop" id="conf_pop">
             <div class="close"></div>
@@ -605,12 +615,12 @@
     </div>
     <div class="menu-btn"></div>
     <div class="menu">
+        <div class="close-menu"></div>
         <a href="#sec1" class="menu-a">Главная</a>
-        <a href="#sec2" class="menu-a">Почему мы</a>
+        <a href="#sec2" class="menu-a">Почему мы?</a>
         <a href="#sec4" class="menu-a">Примеры работ</a>
         <a href="#sec7" class="menu-a">Дизайн-проект</a>
         <a href="#sec9" class="menu-a">О нас</a>
-        <a href="#sec11" class="menu-a">Отзывы</a>
         <a href="#sec12" class="menu-a">Контакты</a>
     </div>
 </body>

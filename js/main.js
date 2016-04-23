@@ -1,6 +1,6 @@
 //acинхронная загрузка css
 //$('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.min.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
-$('<link rel=stylesheet type=text/css href=css/full.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
+$('<link rel=stylesheet type=text/css href=css/full.min.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 
 
 //инициализация
@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 console.log('document.ready');
 	
-setTimeout(initalize(),1000);
+initalize();
 
 
 //we-can слайдинг
@@ -72,8 +72,9 @@ $('.calculate .step-btn').click(function(e){
 	$('.step-lint[data-step="'+cur_step+'"]').attr('data-choosen',$(this).data('choise')).removeClass('active').next().addClass('active');
     
     if (next_step =="1") {
-        $('.calculate .stepw .plot').hide();
-        $('.calculate .stepw .plot[data-choosen="'+$(this).data('choise')+'"]').show();
+      var choise = $(this).data('choise');
+        $('.calculate .stepw .plot,.calculate .calc-type-text').hide();
+        $('.calculate .stepw .plot[data-choosen="'+choise+'"],.calculate .calc-type-text[data-choosen="'+choise+'"]').show();
     }
   $('input[data-step="'+next_step+'"]').val($(this).text());
 
@@ -101,7 +102,6 @@ $('.calculate .back').click(function(e){
 // gallery sliders
 
 
-//problems slider
 $('.fancy').fancybox({helpers:{overlay:{locked:false},title:null},'loop': false});
 
 $('.gallery .nav a').click(function(e){
@@ -436,6 +436,11 @@ $('.conf-btn').click(function(e){
   $('#conf_pop').arcticmodal();
 });
 
+$('.header .prich').click(function(e){
+  e.preventDefault();
+  $('#smet').arcticmodal();
+});
+
 //pop-fancy
 
 $('.fancy_pop[data-gal="0"]').click(function(e){
@@ -449,21 +454,37 @@ $('.fancy_pop[data-gal="1"]').click(function(e){
 });
 
 //menu
-
+var menu_active = 0;
 $('.menu-btn').click(function(){
-  $('.menu').toggleClass('active');
+  if (!$('.menu').hasClass('active')) {
+    $(this).addClass('as-close');
+    $('.menu').addClass('active');
+    menu_active = 1;
+  } else{
+    $(this).removeClass('as-close');
+    $('.menu').removeClass('active');
+    menu_active = 0;
+  }
 });
-
+$('section').click(function(){
+  if (menu_active == 1) {
+    $('.menu').removeClass('active');
+    $('.menu-btn').removeClass('as-close');
+    menu_active = 0;
+  }
+});
 $('.menu .menu-a').click(function(e){
   e.preventDefault();
-  $("html, body").animate({ scrollTop: $($(this).attr('href')).offset().top}, 500);
+  $("html, body").animate({ scrollTop: $($(this).attr('href')).offset().top}, 1000);
   $('.menu').removeClass('active');
+    $('.menu-btn').removeClass('as-close');
+    menu_active = 0;
 });
 
 //sound-btn
 
-$.ionSound({sounds:["bip-2"], path:"js/sounds/", volume:0.2});
-$('.callback,.g-btn,form button,.gallery .nav a,.economy a,.rewievs .slide a').hover(function(){$.ionSound.play('bip-2');},function(){});
+$.ionSound({sounds:["bip-2"], path:"js/sounds/", volume:0.05});
+$('.header .prich,.callback,.g-btn,form button,.gallery .nav a,.economy a,.rewievs .slide a').hover(function(){$.ionSound.play('bip-2');},function(){});
 
 //submits etc
 
@@ -516,12 +537,17 @@ function stabilize(){
   var posTop = eTop - $(window).scrollTop();
 
     if(posTop>-$(window).height()/2&&posTop<$(window).height()/2){
-      $("html, body").animate({ scrollTop: $(this).offset().top}, 500);
+      $("html, body").animate({ scrollTop: $(this).offset().top}, 250);
     }
 
   });
 
 }
+
+
+$("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+  $("html, body").stop();
+});
 
 $(window).scroll(function(){
 

@@ -16,9 +16,35 @@ module.exports = function(grunt) {
 		  fullcss: {
 		    src: ['css/libs.css','css/style.css','css/scripts.css'],
 		    dest: 'css/full.css'
+		  },
+		  fullcss: {
+		    src: ['css/libs.js','css/main.js'],
+		    dest: 'css/full.js'
 		  }
         },
         cssmin: {
+        	options:{
+advanced: false,
+aggressiveMerging: false,
+benchmark: false,
+compatibility: false,
+debug: false,
+inliner: false,
+keepBreaks: true,
+keepSpecialComments: false,
+mediaMerging: false,
+processImport: false,
+processImportFrom: false,
+rebase: false,
+relativeTo: false,
+restructuring: false,
+root: false,
+roundingPrecision: false,
+semanticMerging: false,
+shorthandCompacting: false,
+sourceMap: false,
+sourceMapInlineSources: false
+        	},
 		  target: {
 		    files: [{
 		      src: 'css/style.css',
@@ -27,10 +53,10 @@ module.exports = function(grunt) {
 		    {
 		      src: 'css/libs.css',
 		      dest: 'css/libs.min.css'
-		   // },
-		   // {
-		   //   src: 'css/full.css',
-		   //   dest: 'css/full.min.css'
+		    },
+		    {
+		      src: 'css/full.css',
+		      dest: 'css/full.min.css'
 		    }]
 		  }
 		},
@@ -38,6 +64,10 @@ module.exports = function(grunt) {
 		    build: {
 		        src: 'js/libs.js',
 		        dest: 'js/libs.min.js'
+		    },
+		    full: {
+		        src: 'js/main.js',
+		        dest: 'js/main.min.js'
 		    }
 		},
 		sass: {
@@ -127,7 +157,7 @@ module.exports = function(grunt) {
 		autoprefixer: {
             dist: {
                 files: {
-                    'css/style.css': 'css/style.css'
+                    'css/full.css': 'css/full.css'
                 }
             }
         },
@@ -182,7 +212,7 @@ module.exports = function(grunt) {
 
     // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
     grunt.registerTask('default', ['concat','uglify','cssmin','watch']);
-    grunt.registerTask('fin', ['autoprefixer','concat','uglify','cssmin','imagemin']);
+    grunt.registerTask('fin', ['concat','autoprefixer','uglify','cssmin','imagemin']);
     grunt.registerTask('ftp', ['ftp-deploy','ftpush']);
 
 };

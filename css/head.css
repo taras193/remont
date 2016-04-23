@@ -118,7 +118,7 @@ button:hover{padding-bottom:3px;font-size:19px;background:#83b11a}
 .contacts a.callback{margin-left:15px}
 .header .head{height:100px;padding:6px 0 0;position:absolute;top:20px;margin-top:0;z-index:5;text-align:center}
 .header h2{margin-top:143px;text-shadow:#fff 0 0 2px;font-size:46px}
-.header h2.animation{opacity:0;-webkit-transition:opacity 1s,top .75s;transition:opacity 1s,top .75s;position:relative;top:100px}
+.header h2.animation{opacity:1;-webkit-transition:opacity 1s,top .75s;transition:opacity 1s,top .75s;position:relative;top:0px}
 .header h2.animation.animated{opacity:1;top:0}
 .header h2.animation span::after{width:0;-webkit-transition:all .5s 1s;transition:all .5s 1s}
 .header h2.animation.animated span::after{width:100%}

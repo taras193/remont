@@ -94,6 +94,7 @@ button:hover{
 }
 .economy h2{
     margin-top: 0px;
+    font-size: 38px;
 }
 .problems h2{
     margin-top: 26px;
@@ -145,10 +146,10 @@ button:hover{
     font-size:19px;
 }
 .header h2.animation{
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s,top 0.75s;
     position: relative;
-    top: 100px;
+    top: 0px;
 }
 .header h2.animation.animated{
     opacity: 1;
@@ -335,7 +336,7 @@ button:hover{
     width: 50%;
     max-width: 140px;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     opacity: 0;
     transition: all 0.25s;
@@ -370,6 +371,7 @@ button:hover{
     top: 50%;
     margin-top: -9px;
     /* transition: all 0.25s; */
+    transition: opacity 0s;
 }
 .site-nav:hover{
     background-position: 24px center;
@@ -547,10 +549,10 @@ button:hover{
     width: 94px;
 }
 .about-us .trig:nth-child(1):before{
-    bottom: 224px;
+    bottom: 225px;
 }
 .about-us .trig:nth-child(1):after{
-	
+	bottom: 327px;
 }
 .deadline .formw{
     background: rgba(255, 255, 255, 0.2);
@@ -580,11 +582,20 @@ button:hover{
     background-color: #775A54;
 }
 .site-nav.down.animation.animated:before{
-	animation: alternate draggable 0.5s infinite cubic-bezier(.7,.01,1,1);
+	/*animation: alternate draggable 0.5s infinite cubic-bezier(.7,.01,1,1);*/
+	animation: downtrack 4s infinite linear,alternate blim 0.7s infinite cubic-bezier(1, 0.03, 0, 0.99);
 }
 @keyframes draggable{
-	0%{margin-top: -9px;}
-	100%{margin-top: 1px;}
+	/* 0%{margin-top: -9px;}
+	100%{margin-top: 1px;} */
+}
+@keyframes downtrack{
+    0%{top: 0%}
+    100%{top: 100%}
+}
+@keyframes blim{
+    0%{opacity: 1}
+    100%{opacity: 0}
 }
 .loaded #loader{
 	/* top: 200%; */
@@ -618,7 +629,6 @@ section.calculate> div.backgrounds > div.step-lint{
     top: 0;
     opacity: 0;
     margin-top: 0;
-    =: #502626
     z-index: 2;
     padding: 0;
     transition: all 0.25s;
@@ -639,10 +649,12 @@ section.calculate> div.backgrounds > div.step-lint.active{
     background: rgba(255, 255, 255, 0.4);
     transition: all 0.35s;
     transform: translateY(-100%);
+    z-index: -1;
 }
 .calculate .stepw.active{
     opacity: 1;
     transform: translateY(0);
+    z-index: 1;
 }
 .calculate .stepw.disactive{
     transform: translateY(100%);
@@ -723,17 +735,17 @@ section.calculate> div.backgrounds > div.step-lint[data-step="1"]{background-ima
     margin-top: 0;
     top: 0!important;
     height: 125px;
-    font-size: 20px;
-    padding: 15px 137px 0;
+    font-size: 24px;
+    padding: 60px 50px 0;
     line-height: 32px;
 }
 .calculate .stepw[data-step="3"] span{
-    font-size: 16px;
-    margin-top: 0;
-    display: block;
-    padding: 0px 170px;
-    line-height: 25px;
-    position: relative;
+    /* font-size: 16px; */
+    /* margin-top: 0; */
+    display: inline;
+    /* padding: 0px 170px; */
+    /* line-height: 25px; */
+    /* position: relative; */
     z-index: 2;
 }
 .calculate a.back{
@@ -919,36 +931,36 @@ section.deadline>div.backgrounds>div.choise-bg{
     opacity: 1;
     top: 0;
 }
-.pop#zz{
+.pop#zz,.pop#smet{
     width: 304px;
     padding: 0;
 }
-.pop#zz p{
+.pop#zz p,.pop#smet p{
     text-align: center;
     padding-top: 29px;
     font-size: 26px;
     color: #141414;
 }
-.pop#zz span{
+.pop#zz span,.pop#smet span{
     margin-top: 3px;
     text-align: center;
     color: #646464;
     margin-bottom: 32px;
 }
-.pop#zz form{
+.pop#zz form,.pop#smet form{
     text-align: center;
 }
-.pop#zz input{
+.pop#zz input,.pop#smet input{
     margin-right: 0;
     margin-bottom: 20px;
     font-style: normal;
 }
-.pop#zz button{
+.pop#zz button,.pop#smet button{
     width: 246px;
     background-color: #89a831;
     border: none;
 }
-.pop#zz button:hover{background: #83B11A;}
+.pop#zz button:hover,.pop#smet button:hover{background: #83B11A;}
 .header .logo{
     margin-right: -24px;
     width: 227px;
@@ -1041,6 +1053,7 @@ section>#map>div{
     opacity: 1;
     transition: all 0.25s;
     cursor: pointer;
+    background-size: initial!important;
 }
 .fancybox-close:hover{
     transform:rotate(-180deg);
@@ -1060,6 +1073,7 @@ section>#map>div{
     opacity: 1;
     visibility: visible;
     background-position: center!important;
+    background-size: initial!important;
     }
 .fancybox-next span {
     transform: scale(-1,1);
@@ -1084,9 +1098,11 @@ section>#map>div{
     width: 980px;
     opacity: 0;
     transition: opacity 0.25s;
+    z-index: -1;
 }
 .gallery .slidew.active{
     opacity: 1;
+    z-index: 1;
 }
 .header .call{
     margin-right: 20px;
@@ -1101,7 +1117,7 @@ section>#map>div{
       color: white;
       z-index: 2;
       bottom: 30px;
-      left: 260px;
+      left: 245px;
       }
       .pop a.new-btn:hover {
         text-decoration: underline;
@@ -1110,7 +1126,7 @@ section>#map>div{
         content: '';
         background: url(../img/s8-nav-s.png) no-repeat center;
         position: absolute;
-        left: -45px;
+        left: -38px;
         top: -41px;
         width: 300px;
         height: 82px;
@@ -1150,8 +1166,8 @@ section>#map>div{
     position: fixed;
     z-index: 6;
     background-image: url(../img/menu-btn.png);
-    top: 5px;
-    left: 5px;
+    top: 15px;
+    left: 15px;
     cursor: pointer;
     transition: all 0.25s;
     margin-left: -50px;
@@ -1162,15 +1178,16 @@ section>#map>div{
 .menu-btn.active{
     margin-left: 0;
 }
+.menu-btn.as-close{background-image: url(../img/close-menu.png);transform: rotate(-360deg);}
 .menu{
     position: fixed;
     top: 0;
     left: 0;
     /* width: 300px; */
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
+    /* height: 100%; */
+    background: rgba(0, 0, 0, 0.25);
     z-index: 5;
-    padding: 40px 0px;
+    padding: 60px 0px 15px;
     transition: all 0.25s;
     transform: translateX(-100%);
 }
@@ -1179,10 +1196,13 @@ section>#map>div{
 .menu a.menu-a{
     display: block;
     color: white;
-    font-size: 20px;
-    padding: 5px 25px 5px 5px;
+    height: 36px;
+    font-size: 17px;
+    padding: 0px 25px 0px 15px;
     transition: all 0.25s;
     background: transparent;
+    width: 176px;
+    line-height: 36px;
 }
 .menu a.menu-a:hover{
     background: rgba(255,255,255,0.1);
@@ -1195,4 +1215,28 @@ input{transition: all 0.25s}
 #okgo p{
     font-size: 24px;
     line-height: 36px;
+}
+.close-menu{
+    background-image: url(../img/close.png);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -45px;
+    top: 15px;
+    display: none;
+
+}
+.about-us .trig:nth-child(2) p span{
+    margin-bottom: 35px;
+    display: inline-block;
+}
+.contacts>div#map{
+    top: -50px;
+}
+.header .prich{cursor: pointer;transition: all 0.25s;}
+.header .prich:hover{
+    background-color: #799821;
+}
+.attention h2{
+    font-size: 37px;
 }
