@@ -8,7 +8,7 @@
     <script>
     !function(e,t,n){function r(){for(;u[0]&&"loaded"==u[0][l];)o=u.shift(),o[f]=!a.parentNode.insertBefore(o,a)}for(var i,s,o,u=[],a=e.scripts[0],f="onreadystatechange",l="readyState";i=n.shift();)s=e.createElement(t),"async"in a?(s.async=!1,e.head.appendChild(s)):a[l]?(u.push(s),s[f]=r):e.write("<"+t+' src="'+i+'"></'+t+">"),s.src=i}(document,"script",
     ["js/libs.min.js",
-    "js/main.min.js",
+    "js/main.js",
     "https://maps.googleapis.com/maps/api/js?sensor=false",
     "js/map.js"]);
     </script>
@@ -26,7 +26,7 @@
                     <span class="phone">8 800 000 99 44</span>
                     <a href="#zz" class="callback">Заказать звонок</a>
                 </div>
-                <p class="desc">Ремонт под ключ от 4000 руб./м<sup>2</sup></p>
+                <p class="desc">Евроремонт под ключ от 4000 руб./м<sup>2</sup></p>
             </div>
             <div>
                 <h2 class="animation">Почему в 90% случаев люди переплачивают<br><span>в 2 - 3</span> раза за ремонт ?</h2>
@@ -580,8 +580,8 @@
         </div>
         <div class="pop" id="smet">
             <div class="close"></div>
-            <p>Оставьте заявку<br>на расчет сметы</p>
-            <span>и мы Вам перезвоним</span>
+            <p>Стоимость работ, просчитанная в смете, окончательная, прописывается в договоре и к изменению не подлежит.</p>
+            <span>Закажите выезд специалиста сметчика и узнайте точную стоимость ремонта уже завтра.</span>
             <form action="ajax/mail.php" method="post">
                 <input name="name" placeholder="Введите имя" type="text">
                 <input name="phone" placeholder="Введите телефон" type="text">
@@ -614,11 +614,12 @@
                 <p>Спасибо за заявку, наш менеджер свяжется с Вами в ближайшее время</p>
         </div>
     </div>
-    <div class="menu-btn"></div>
+    <div class="menu-btn active"></div>
     <div class="menu">
         <div class="close-menu"></div>
         <a href="#sec1" class="menu-a">Главная</a>
         <a href="#sec2" class="menu-a">Почему мы?</a>
+        <a href="#sec3" class="menu-a">Узнать стоимость</a>
         <a href="#sec4" class="menu-a">Примеры работ</a>
         <a href="#sec7" class="menu-a">Дизайн-проект</a>
         <a href="#sec9" class="menu-a">О нас</a>

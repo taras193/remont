@@ -330,6 +330,9 @@ button:hover{
 .site-nav .up{}
 .site-nav .down{}
 .site-nav:after{position: absolute;width: 80px;height: 100%;top: 0;z-index: -1;}
+.gallery .site-nav,.problems .site-nav,.rewievs .site-nav,.contacts .site-nav{
+    z-index: 4;
+}
 .site-nav{
     /* position: fixed; */
     position: absolute;
@@ -935,6 +938,14 @@ section.deadline>div.backgrounds>div.choise-bg{
     width: 304px;
     padding: 0;
 }
+
+.pop#smet{
+    height: 500px;
+    width: 450px;
+}
+.pop#smet p{font-size: 24px!important;padding: 0 25px;line-height: 28px;}
+.pop#smet span{padding: 0px 35px;font-size: 20px!important;line-height: 28px!important;margin-top: 20px!important;}
+
 .pop#zz p,.pop#smet p{
     text-align: center;
     padding-top: 29px;
@@ -968,7 +979,7 @@ section.deadline>div.backgrounds>div.choise-bg{
 }
 .header .head p.desc{
     margin: 0 auto;
-    width: 340px;
+    width: 380px;
     text-align: center;
     display: inline-block;
     font-size: 20px;
@@ -992,6 +1003,7 @@ section>#map>div{
     margin-left: 15px;
     width: 980px!important;
     transition: all 0.4s ease-in-out;
+    z-index: -1;
 }
 .gallery .slide.active{}
 .gallery a.fancy:nth-child(1){
@@ -1201,7 +1213,7 @@ section>#map>div{
     padding: 0px 25px 0px 15px;
     transition: all 0.25s;
     background: transparent;
-    width: 176px;
+    width: 200px;
     line-height: 36px;
 }
 .menu a.menu-a:hover{

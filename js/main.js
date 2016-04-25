@@ -1,6 +1,6 @@
 //acинхронная загрузка css
-//$('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.min.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
-$('<link rel=stylesheet type=text/css href=css/full.min.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
+$('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.min.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
+//$('<link rel=stylesheet type=text/css href=css/full.min.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 
 
 //инициализация
@@ -551,11 +551,11 @@ $("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touch
 
 $(window).scroll(function(){
 
-if ($(window).scrollTop()-$(window).height()>= 0) {
-  $('.menu-btn').addClass('active');
-}else{
-  $('.menu-btn').removeClass('active');
-}
+//if ($(window).scrollTop()-$(window).height()>= 0) {
+//  $('.menu-btn').addClass('active');
+//}else{
+//  $('.menu-btn').removeClass('active');
+//}
 
   clearTimeout($.data(this, 'scrollTimer'));
   

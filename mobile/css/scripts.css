@@ -1017,6 +1017,12 @@ section.deadline>div.backgrounds>div.choise-bg{
     padding: 0;
     height: 446px;
 }
+.pop#smet{
+    height: 610px;
+    width: 450px;
+}
+.pop#smet p{font-size: 26px!important;padding: 0 25px;}
+.pop#smet span{padding: 0 20px;font-size: 22px!important;line-height: 28px!important;margin-top: 20px!important;}
 .pop#zz p,.pop#smet p{
     text-align: center;
     padding-top: 29px;
@@ -1053,7 +1059,7 @@ section.deadline>div.backgrounds>div.choise-bg{
 }
 .header .head p.desc{
     margin: 0 auto;
-    width: 340px;
+    width: 380px;
     text-align: center;
     display: inline-block;
     font-size: 20px;
@@ -1319,7 +1325,7 @@ section>#map>div{
     padding: 0px 25px 0px 15px;
     transition: all 0.25s;
     background: transparent;
-    width: 176px;
+    width: 200px;
     line-height: 36px;
 }
 .menu a.menu-a:hover{
@@ -1370,5 +1376,4 @@ input{transition: all 0.25s}
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 5;
-}
+    z-index: 5;}

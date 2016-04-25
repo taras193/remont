@@ -46,7 +46,7 @@ button:hover{background:#83b11a}
 .header h2.animation span::after{width:243px;transition:all .5s 1s}
 .header h2.animation.animated span::after{width:100%}
 .header .logo{margin-right:-30px;width:227px;margin-left:16px;margin-top:0}
-.header .head p.desc{margin:0 auto;width:340px;text-align:center;display:inline-block;font-size:20px;padding-top:20px}
+.header .head p.desc{margin:0 auto;width:380px;text-align:center;display:inline-block;font-size:20px;padding-top:20px}
 .header .call{margin-right:13px;margin-top:3px}
 input{transition:all .25s}
 .header .prich{cursor:pointer;transition:all .25s}
