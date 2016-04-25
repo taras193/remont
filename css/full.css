@@ -1378,8 +1378,6 @@ button:hover{
     /* color: transparent; */
 }
 .calculate .step.animation.animated a:nth-child(3){
-    left: 0;
-    bottom: 0;
     -webkit-transform: rotate(0);
             transform: rotate(0);
     opacity: 1;
@@ -1916,7 +1914,7 @@ section.calculate> div.backgrounds > div.step-lint[data-step="1"]{background-ima
 .calculate .stepw[data-step="3"] span{
     /* font-size: 16px; */
     /* margin-top: 0; */
-    display: inline!important;
+    display: inline;
     /* padding: 0px 170px; */
     /* line-height: 25px; */
     /* position: relative; */

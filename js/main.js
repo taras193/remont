@@ -73,8 +73,8 @@ $('.calculate .step-btn').click(function(e){
     
     if (next_step =="1") {
       var choise = $(this).data('choise');
-        $('.calculate .stepw .plot,.calculate .calc-type-text').hide();
-        $('.calculate .stepw .plot[data-choosen="'+choise+'"],.calculate .calc-type-text[data-choosen="'+choise+'"]').show();
+        $('.calculate .stepw .plot,.calculate .calc-type-text').hide(); console.log('wtf')
+        $('.calculate .stepw .plot[data-choosen="'+choise+'"],.calc-type-text[data-choosen="'+choise+'"]').show();
     }
   $('input[data-step="'+next_step+'"]').val($(this).text());
 
@@ -273,8 +273,8 @@ g_slider5 = $('.gallery .slidew .slider#gall-sld5').bxSlider({
           $('.gallery .slidew .slider#gall-sld5 .slide').removeClass('active');
           $('.gallery .slidew .slider#gall-sld5 .slide[data-sld="'+newIndex+'"]').removeClass('fadeouted');
           $('.gallery .slidew .slider#gall-sld5 .slide[data-sld="'+newIndex+'"]').addClass('active');
-        if (newIndex == 2) {$('#g-sld5r').fadeOut(250)}
-        if (newIndex == 1) {$('#g-sld5l').fadeIn(250)}
+        if (newIndex == 3) {$('#g-sld5r').fadeOut(250)}
+        if (newIndex == 2) {$('#g-sld5l').fadeIn(250)}
       },
       onSlidePrev:function($slideElement, oldIndex, newIndex){
           $('.gallery .slidew .slider#gall-sld5 .slide').addClass('fadeouted');

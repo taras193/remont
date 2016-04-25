@@ -370,7 +370,7 @@ button:hover{padding-bottom:3px;font-size:19px;background:#83B11A}
 .calculate .step.animation.animated p{top:-79px;-webkit-transform:scale(1,1);transform:scale(1,1)}
 .calculate .step.animation a{position:relative}
 .calculate .step.animation a:nth-child(3){-webkit-transform-origin:bottom left;transform-origin:bottom left;-webkit-transition:.5s -webkit-transform .75s,.5s bottom .75s,.5s left .75s,.75s opacity .25s,.25s color 1.25s;transition:.5s transform .75s,.5s bottom .75s,.5s left .75s,.75s opacity .25s,.25s color 1.25s;-webkit-transition:.25s -webkit-transform 1s,.25s bottom .75s,.25s left 1.25s,.5s opacity .5s;transition:.25s transform 1s,.25s bottom .75s,.25s left 1.25s,.5s opacity .5s;opacity:0}
-.calculate .step.animation.animated a:nth-child(3){left:0;bottom:0;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}
+.calculate .step.animation.animated a:nth-child(3){-webkit-transform:rotate(0);transform:rotate(0);opacity:1}
 .calculate .step.animation a:nth-child(2){-webkit-transform-origin:bottom right;transform-origin:bottom right;-webkit-transition:.5s -webkit-transform .75s,.5s bottom .75s,.5s right .75s,.75s opacity .25s,.25s color 1.25s;transition:.5s transform .75s,.5s bottom .75s,.5s right .75s,.75s opacity .25s,.25s color 1.25s;-webkit-transition:.25s -webkit-transform 1s,.25s bottom .75s,.25s right 1.25s,.5s opacity .5s,background .25s,color .25s;transition:.25s transform 1s,.25s bottom .75s,.25s right 1.25s,.5s opacity .5s,background .25s,color .25s;opacity:0;-webkit-transition:0s -webkit-transform 1s,0s bottom .75s,0s right 1.25s,.5s opacity .5s,background .25s,color .25s;transition:0s transform 1s,0s bottom .75s,0s right 1.25s,.5s opacity .5s,background .25s,color .25s}
 .calculate .step.animation.animated a:nth-child(2){right:0;bottom:0;-webkit-transform:rotate(0);transform:rotate(0);opacity:1}
 .about-us .trig:nth-child(1) p:before{right:105px}
@@ -512,7 +512,7 @@ section.calculate>div.backgrounds>div.step-lint[data-step="1"]{background-image:
 .plot a.g-btn{margin:9px 5px}
 .stepw[data-step="3"] form{position:absolute;width:100%;bottom:0;left:0;background-image:url(../img/s10-form.png);height:147px;padding-top:51px}
 .calculate .stepw[data-step="3"] p{background-image:none;width:100%;margin-top:0;top:0!important;height:125px;font-size:24px;padding:60px 50px 0;line-height:32px}
-.calculate .stepw[data-step="3"] span{display:inline!important;z-index:2}
+.calculate .stepw[data-step="3"] span{display:inline;z-index:2}
 .calculate a.back{margin:0;position:absolute!important;font-size:15px;background-size:22px;bottom:10px;left:14px;color:rgba(255,255,255,.6)}
 .problems .nav{font-size:0;color:transparent}
 .problems .nav a{display:block;position:absolute;width:100%;height:100%}
