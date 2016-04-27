@@ -2,6 +2,11 @@
 $('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.min.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 //$('<link rel=stylesheet type=text/css href=css/full.min.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 
+//трек функция для целей
+function track(event){
+  yaCounter37031980.reachGoal(event);
+  ga('send','event','submit',event);
+}
 
 //инициализация
 var initalized = 0;
@@ -483,8 +488,8 @@ $('.menu .menu-a').click(function(e){
 
 //sound-btn
 
-$.ionSound({sounds:["bip-2"], path:"js/sounds/", volume:0.05});
-$('.header .prich,.callback,.g-btn,form button,.gallery .nav a,.economy a,.rewievs .slide a').hover(function(){$.ionSound.play('bip-2');},function(){});
+//$.ionSound({sounds:["bip-2"], path:"js/sounds/", volume:0.05});
+//$('.header .prich,.callback,.g-btn,form button,.gallery .nav a,.economy a,.rewievs .slide a').hover(function(){$.ionSound.play('bip-2');},function(){});
 
 //submits etc
 
@@ -517,9 +522,11 @@ $('form').submit(function(e){
         var type=$(this).attr('method');
         var url=$(this).attr('action');
         var data=$(this).serialize();
+        var $event=$(this).find('input[name="event"]').val();
         $.ajax({type: type, url: url, data: data,
         success : function(){
             $.arcticmodal('close');$('#okgo').arcticmodal();
+            track($event);
         }
     }); 
     }

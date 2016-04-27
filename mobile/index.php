@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <?php include_once("../track/body.php") ?>
     <section class="header" id="sec1">
         <div>
             <div class="head">
@@ -107,6 +108,7 @@
                             <input type="text" name="phone" placeholder="Введите телефон">
                             <input type="text" name="name" placeholder="Введите имя">
                             <button>Отправить</button>
+                            <input type="hidden" name="event" value="calc">
                             <input type="hidden" name="frm" value="Калькулятор">
                             <input type="hidden" name="step1" data-step="1">
                             <input type="hidden" name="step2" data-step="2">
@@ -447,6 +449,7 @@
                     <span>Получите подробную консультацию о необходимости дизайн проекта прямо сейчас</span>
                     <input type="text" name="phone" placeholder="Введите телефон">
                     <input type="text" name="name" placeholder="Введите имя">
+                    <input type="hidden" name="event" value="diz_proj">         
                     <input type="hidden" name="frm" value="Дизайн-проект">
                     <button>Отправить</button>
                 </form>
@@ -546,13 +549,14 @@
                         <input type="text" name="phone" placeholder="Введите телефон">
                         <input type="text" name="name" placeholder="Введите имя">
                         <input type="hidden" name="frm" value="Горят сроки?">
+                        <input type="hidden" name="event" value="gor_srok">       
                         <button>Отправить</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <section class="rewievs" id="sec11">
+    <section class="rewievs" id="sec11" style="display:none">
         <div>
             <div>
                 <h2>Посмотрите истории наших заказчиков</h2>
@@ -610,6 +614,7 @@
             <input type="text" name="phone" placeholder="Введите телефон">
             <textarea name="mess" placeholder="Введите вопрос"></textarea>
             <input type="hidden" name="frm" value="Контактная информация">
+            <input type="hidden" name="event" value="kont_info">     
             <button>Отправить</button>
             <div class="callback">
                 <span class="phone">8 800 000 99 44</span>
@@ -634,6 +639,7 @@
                 <input name="name" placeholder="Введите имя" type="text">
                 <input name="phone" placeholder="Введите телефон" type="text">
                 <input type="hidden" name="frm" value="Заказать звонок">
+                <input type="hidden" name="event" value="zak_zvon"> 
                 <button>Отправить</button>
             </form>
         </div>
@@ -644,7 +650,8 @@
             <form action="ajax/mail.php" method="post">
                 <input name="name" placeholder="Введите имя" type="text">
                 <input name="phone" placeholder="Введите телефон" type="text">
-                <input type="hidden" name="frm" value="Заказать звонок">
+                <input type="hidden" name="frm" value="Смета">
+                <input type="hidden" name="event" value="smeta"> 
                 <button>Отправить</button>
             </form>
         </div>
