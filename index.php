@@ -26,7 +26,7 @@
                     <span class="phone">8 800 000 99 44</span>
                     <a href="#zz" class="callback" data-event="zak_zvon">Заказать звонок</a>
                 </div>
-                <p class="desc">Евроремонт под ключ от 5500 руб./м<sup>2</sup></p>
+                <p class="desc">Элитный ремонт под ключ от 5500 руб./м<sup>2</sup></p>
             </div>
             <div>
                 <h2 class="animation">Почему в 90% случаев люди переплачивают<br><span>в 2 - 3</span> раза за ремонт ?</h2>
@@ -114,8 +114,8 @@
                     <div class="stepw" data-step="3">
                         <p>Оставьте заявку и мы сориентируем Вас по стоимости ремонта за м<sup>2</sup> <span class="calc-type-text" data-choosen="1">вашей квартиры</span> <span class="calc-type-text" data-choosen="0">вашего дома</span> в течение 15 минут.</p>
                         <form action="ajax/mail.php" method="post">
-                            <input type="text" name="phone" placeholder="Введите телефон">
                             <input type="text" name="name" placeholder="Введите имя">
+                            <input type="text" name="phone" placeholder="Введите телефон">
                             <button>Отправить</button>
                             <input type="hidden" name="event" value="calc">
                             <input type="hidden" name="frm" value="Калькулятор">
@@ -390,8 +390,8 @@
                 <a href="#pop2"><img src="img/blank.png" class="lazy" data-original="img/s6-a2.jpg" alt=""><span>Полностью<br>разработанный план<br>коммуникаций</span></a>
                 <form action="ajax/mail.php" method="post">
                     <span>Получите подробную консультацию о необходимости дизайн проекта прямо сейчас</span>
-                    <input type="text" name="phone" placeholder="Введите телефон">
                     <input type="text" name="name" placeholder="Введите имя">
+                    <input type="text" name="phone" placeholder="Введите телефон">
                     <input type="hidden" name="event" value="diz_proj">      
                     <input type="hidden" name="frm" value="Дизайн-проект">
                     <button>Отправить</button>
@@ -489,8 +489,8 @@
                     <a href="" class="g-btn" data-choise="0">За МКАД</a>
                     <a href="" class="g-btn" data-choise="1">В черте Мкад</a>
                     <form action="ajax/mail.php" method="post">
-                        <input type="text" name="phone" placeholder="Введите телефон">
                         <input type="text" name="name" placeholder="Введите имя">
+                        <input type="text" name="phone" placeholder="Введите телефон">
                         <input type="hidden" name="frm" value="Горят сроки?">
                         <input type="hidden" name="event" value="gor_srok">   
                         <button>Отправить</button>
@@ -519,7 +519,7 @@
         <footer>
             <div class="f-wrap">
                 <div class="logo-f"></div>
-                <a href="http://gulfstream.bz/" target="_blank" class="gulf">Разработка сайта:</a>
+                <a href="#" target="_blank" class="gulf">Разработка сайта:</a>
                 <a class="conf-btn">Политика конфиденциальности</a>
                 <span class="copyright">Все права защищены</span>
             </div>
