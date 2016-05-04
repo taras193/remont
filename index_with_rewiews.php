@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <?php include_once("track/body.php") ?>
     <div id="loader"><div class="cssload-cube"><div class="cssload-plane-1"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div><div class="cssload-plane-2"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div><div class="cssload-plane-3"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div></div></div>
     <section class="header" id="sec1">
         <div class="site-nav down animation"></div>
@@ -24,9 +25,9 @@
                 <div class="logo"></div>
                 <div class="call">
                     <span class="phone">8 800 000 99 44</span>
-                    <a href="#zz" class="callback" data-event="zak_zvon">Заказать звонок</a>
+                    <a href="#zz" class="callback">Заказать звонок</a>
                 </div>
-                <p class="desc">Евроремонт под ключ от 5500 руб./м<sup>2</sup></p>
+                <p class="desc">Евроремонт под ключ от 4000 руб./м<sup>2</sup></p>
             </div>
             <div>
                 <h2 class="animation">Почему в 90% случаев люди переплачивают<br><span>в 2 - 3</span> раза за ремонт ?</h2>
@@ -499,6 +500,51 @@
             </div>
         </div>
     </section>
+    <section class="rewievs" id="sec11" style="display:none">
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
+        <div>
+            <div>
+                <h2>Посмотрите истории наших заказчиков</h2>
+                <div class="sliderw">
+                    <div id="wrap-sld2">
+                        <div class="slide active" data-sld="0">
+                            <div>
+                                <div class="slide-img">
+                                    <a href="m5BM360HHw0"></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
+                                </div>
+                                <p>Валерий Константинопольский<span>Мытищи</span></p>
+                                <span>Ремонт спальни</span>
+                            </div>
+                        </div>
+                        <div class="slide" data-sld="1">
+                            <div>
+                                <div class="slide-img">
+                                    <a href="m5BM360HHw0"></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
+                                </div>
+                                <p>Валерий Константинопольский<span>Мытищи</span></p>
+                                <span>Ремонт спальни</span>
+                            </div>
+                        </div>
+                        <div class="slide" data-sld="2">
+                            <div>
+                                <div class="slide-img">
+                                    <a href="m5BM360HHw0"></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
+                                </div>
+                                <p>Валерий Константинопольский<span>Мытищи</span></p>
+                                <span>Ремонт спальни</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav left" id="sld2l"></div>
+                <div class="nav right" id="sld2r"></div>
+            </div>
+        </div>
+    </section>
     <section class="contacts" id="sec12">
         <div class="site-nav up"></div>
         <div id="map"></div>
@@ -513,7 +559,7 @@
             <button>Отправить</button>
             <div class="callback">
                 <span class="phone">8 800 000 99 44</span>
-                <a href="#zz" class="callback" data-event="zak_zvon_f">заказать звонок</a>
+                <a href="#zz" class="callback">заказать звонок</a>
             </div>
         </form>
         <footer>
@@ -534,7 +580,7 @@
                 <input name="name" placeholder="Введите имя" type="text">
                 <input name="phone" placeholder="Введите телефон" type="text">
                 <input type="hidden" name="frm" value="Заказать звонок">
-                <input type="hidden" name="event" id="zz_event" value="zak_zvon"> 
+                <input type="hidden" name="event" value="zak_zvon"> 
                 <button>Отправить</button>
             </form>
         </div>
@@ -586,6 +632,5 @@
         <a href="#sec9" class="menu-a">О нас</a>
         <a href="#sec12" class="menu-a">Контакты</a>
     </div>
-    <?php include_once("track/body.php") ?>
 </body>
 </html>

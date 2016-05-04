@@ -16,7 +16,6 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <?php include_once("../track/body.php") ?>
     <section class="header" id="sec1">
         <div>
             <div class="head">
@@ -25,7 +24,7 @@
                     <span class="phone">8 800 000 99 44</span>
                     <a href="#zz" class="callback">Заказать звонок</a>
                 </div>
-                <p class="desc">Евроремонт под ключ от 4000 руб./м<sup>2</sup></p>
+                <p class="desc">Евроремонт под ключ от 5500 руб./м<sup>2</sup></p>
             </div>
             <div>
                 <h2>Почему в 90% случаев люди переплачивают<br><span>в 2 - 3</span> раза<br>за ремонт ?</h2>
@@ -556,54 +555,6 @@
             </div>
         </div>
     </section>
-    <section class="rewievs" id="sec11" style="display:none">
-        <div>
-            <div>
-                <h2>Посмотрите истории наших заказчиков</h2>
-                <div class="sliderw">
-                    <div id="wrap-sld2">
-                        <div class="slide active" data-sld="0">
-                            <div>
-                                <div class="slide-img">
-                                    <a href="m5BM360HHw0"></a>
-                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
-                                </div>
-                                <p>Валерий Константинопольский<span>Мытищи</span></p>
-                                <span>Ремонт спальни</span>
-                            </div>
-                        </div>
-                        <div class="slide" data-sld="1">
-                            <div>
-                                <div class="slide-img">
-                                    <a href="m5BM360HHw0"></a>
-                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
-                                </div>
-                                <p>Валерий Константинопольский<span>Мытищи</span></p>
-                                <span>Ремонт спальни</span>
-                            </div>
-                        </div>
-                        <div class="slide" data-sld="2">
-                            <div>
-                                <div class="slide-img">
-                                    <a href="m5BM360HHw0"></a>
-                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
-                                </div>
-                                <p>Валерий Константинопольский<span>Мытищи</span></p>
-                                <span>Ремонт спальни</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="nav left" id="sld2l"></div>
-                <div class="nav right" id="sld2r"></div>
-                <div class="sld-pager">
-                    <a href="" data-slide-index="0"></a>
-                    <a href="" data-slide-index="1"></a>
-                    <a href="" data-slide-index="2"></a>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="contacts" id="sec12">
         <div id="map"></div>
         <div id="contact-btn">Задать вопрос</div>
@@ -691,5 +642,6 @@
         <a href="#sec9" class="menu-a">О нас</a>
         <a href="#sec12" class="menu-a">Контакты</a>
     </div>
+    <?php include_once("../track/body.php") ?>
 </body>
 </html>

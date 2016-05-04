@@ -27,6 +27,8 @@ function initalize(){
 	    //флаг ициализации
 	    initalized = 1;
 		console.log('initalized');
+
+
 	}
 }
 
@@ -35,6 +37,9 @@ $(window).load(function(){
   console.log('window.load');
 
   initalize();
+
+  k50Tracker.change();
+
 
 });
 
@@ -428,6 +433,9 @@ $.arcticmodal('setDefault', {
 });
 
 $('.economy a,a.callback').click(function(e){
+    if ($(this).hasClass('callback')) {
+      $('#zz_event').val($(this).data('event'));
+    }
     e.preventDefault();
     $($(this).attr('href')).arcticmodal();
 });
@@ -538,14 +546,15 @@ $('form').submit(function(e){
 
 function stabilize(){
 
-  $('section').each(function(index, el) {
+  $('section:not(.rewievs)').each(function(index, el) {
   
   var eTop = $(this).offset().top; 
   var posTop = eTop - $(window).scrollTop();
 
     if(posTop>-$(window).height()/2&&posTop<$(window).height()/2){
       $("html, body").animate({ scrollTop: $(this).offset().top}, 250);
-    }
+      //console.log($(this).attr('class'));
+  }
 
   });
 

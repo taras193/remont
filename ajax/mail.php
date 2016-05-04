@@ -29,7 +29,7 @@ $headers.= "X-Mailer: PHP/" . phpversion()."\r\n";
 $headers.= "MIME-Version: 1.0" . "\r\n";
 $headers.= "Content-type: text/plain; charset=utf-8\r\n";
 
-$to = "triowork2@gmail.com";
+$to = "grand-euro@mail.ru";
 
 $message = "Форма: $frm\n\n";
 $message .= "Имя: $name\n";
@@ -54,4 +54,10 @@ $message .= "Ссылка на сайт: $url\n";
 $message .= "Заголовок: $title\n";
 
 mail ($to,$subject,$message,$headers);
+
+
+$vowels = array("+", "-", "(", ")"," ");
+$phone = str_replace($vowels, "", $phone);
+
+require_once('amocrm_api.php');
 ?>

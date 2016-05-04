@@ -27,6 +27,7 @@ function initalize(){
 	    //флаг ициализации
 	    initalized = 1;
 		console.log('initalized');
+
 	}
 }
 
@@ -35,6 +36,8 @@ $(window).load(function(){
   console.log('window.load');
 
   initalize();
+
+  k50Tracker.change();
 
 });
 

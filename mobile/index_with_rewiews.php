@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Grand - строительная компания</title>
-    <script>if (screen.width <= 699) {document.location = "mobile/"+document.location.search;}</script>
+    <script>if (screen.width > 699) {document.location = "../"+document.location.search;}</script>
     <style><? include('css/head.css'); ?></style>
     <script>
     !function(e,t,n){function r(){for(;u[0]&&"loaded"==u[0][l];)o=u.shift(),o[f]=!a.parentNode.insertBefore(o,a)}for(var i,s,o,u=[],a=e.scripts[0],f="onreadystatechange",l="readyState";i=n.shift();)s=e.createElement(t),"async"in a?(s.async=!1,e.head.appendChild(s)):a[l]?(u.push(s),s[f]=r):e.write("<"+t+' src="'+i+'"></'+t+">"),s.src=i}(document,"script",
@@ -12,24 +12,23 @@
     "https://maps.googleapis.com/maps/api/js?sensor=false",
     "js/map.js"]);
     </script>
-    <meta id="viewport" name="viewport" content="width=980">
+    <meta id="viewport" name="viewport" content="width=480">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <div id="loader"><div class="cssload-cube"><div class="cssload-plane-1"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div><div class="cssload-plane-2"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div><div class="cssload-plane-3"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div></div></div>
+    <?php include_once("../track/body.php") ?>
     <section class="header" id="sec1">
-        <div class="site-nav down animation"></div>
         <div>
             <div class="head">
                 <div class="logo"></div>
                 <div class="call">
                     <span class="phone">8 800 000 99 44</span>
-                    <a href="#zz" class="callback" data-event="zak_zvon">Заказать звонок</a>
+                    <a href="#zz" class="callback">Заказать звонок</a>
                 </div>
-                <p class="desc">Евроремонт под ключ от 5500 руб./м<sup>2</sup></p>
+                <p class="desc">Евроремонт под ключ от 4000 руб./м<sup>2</sup></p>
             </div>
             <div>
-                <h2 class="animation">Почему в 90% случаев люди переплачивают<br><span>в 2 - 3</span> раза за ремонт ?</h2>
+                <h2>Почему в 90% случаев люди переплачивают<br><span>в 2 - 3</span> раза<br>за ремонт ?</h2>
                 <div class="prich">
                     <div class="smeta"></div>
                     <p>Главная причина:</p>
@@ -39,12 +38,10 @@
         </div>
     </section>
     <section class="why" id="sec2">
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Причины, почему с нами выгодно работать</h2>
-                <div class="trigw animation">
+                <div class="trigw">
                     <div class="trig">
                         <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_1.jpg" alt=""></div>
                         <p>Первоначальная смета<br>не увеличивается</p>
@@ -68,22 +65,16 @@
     <section class="calculate" id="sec3">
         <div class="backgrounds">
             <div class="step-lint active" data-step="0" data-choise="" data-choosen="">
-                <div class="step-bg" data-choise="0"></div>
-                <div class="step-bg" data-choise="1"></div>
             </div>
             <div class="step-lint" data-step="1" data-choise="" data-choosen="">
-                <div class="step-bg" data-choise="0" data-choosen=""></div>
-                <div class="step-bg" data-choise="1" data-choosen=""></div>
             </div>
             <div class="step-lint" data-step="2" data-choosen=""></div>
             <div class="step-lint" data-step="3" data-choosen=""></div>
         </div>
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Сделайте ориентировочный<br> просчет стоимости</h2>
-                <div class="step animation">
+                <div class="step">
                     <div class="stepw active" data-step="0">
                         <p>Что Вы хотите<br>отремонтировать?</p>
                         <a class="g-btn step-btn" data-nextstep="1" data-choise="0" href="">Дом</a>
@@ -130,11 +121,9 @@
         </div>
     </section>
     <section class="gallery" id="sec4">
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
-                <h2>Примеры наших работ «до» и «после»</h2>
+                <h2>Примеры наших<br>работ «до» и «после»</h2>
                 <div class="nav">
                     <a href="" data-slider="0">Ванные</a>
                     <a href="" data-slider="1">Гостиные</a>
@@ -147,105 +136,179 @@
                         <div class="slider-wrap">
                             <div class="slider" id="gall-sld1">
                                 <div class="slide active" data-sld="0">
-                                    <a class="fancy" href="img/gallery/g_1_1_1.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_1_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_1_1_2.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_1_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_1_1_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_1_2_1.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_1_2_2.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_2_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_1_2_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_1_3_1.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_1_3_2.jpg" data-fancybox-group="g1_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_3_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_2_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="3">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_2_2_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="4">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_3_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="5">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_1_3_2_s.jpg" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sld-nav left" id="g-sld1l"></div>
                         <div class="sld-nav right" id="g-sld1r"></div>
+                        <div class="sld-pager">
+                            <a href="" data-slide-index="0"></a>
+                            <a href="" data-slide-index="1"></a>
+                            <a href="" data-slide-index="2"></a>
+                            <a href="" data-slide-index="3"></a>
+                            <a href="" data-slide-index="4"></a>
+                            <a href="" data-slide-index="5"></a>
+                        </div>
                     </div>
                     <div class="slidew" data-slider="1">
                         <div class="slider-wrap">
                             <div class="slider" id="gall-sld2">
                                 <div class="slide active" data-sld="0">
-                                    <a class="fancy" href="img/gallery/g_2_1_1.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_1_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_2_1_2.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_1_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_1_1_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_2_2_1.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_2_2_2.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_2_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_1_2_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_2_3_1.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_2_3_2.jpg" data-fancybox-group="g2_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_3_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_2_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="3">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_2_2_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="4">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_3_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="5">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_2_3_2_s.jpg" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sld-nav left" id="g-sld2l"></div>
                         <div class="sld-nav right" id="g-sld2r"></div>
+                        <div class="sld-pager">
+                            <a href="" data-slide-index="0"></a>
+                            <a href="" data-slide-index="1"></a>
+                            <a href="" data-slide-index="2"></a>
+                            <a href="" data-slide-index="3"></a>
+                            <a href="" data-slide-index="4"></a>
+                            <a href="" data-slide-index="5"></a>
+                        </div>
                     </div>
                     <div class="slidew active" data-slider="2">
                         <div class="slider-wrap">
                             <div class="slider" id="gall-sld3">
                                 <div class="slide active" data-sld="0">
-                                    <a class="fancy" href="img/gallery/g_3_1_1.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_1_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_3_1_2.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_1_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_1_1_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_3_2_1.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_3_2_2.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_2_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_1_2_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_3_3_1.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_3_3_2.jpg" data-fancybox-group="g3_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_3_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_2_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="3">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_2_2_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="4">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_3_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="5">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_3_3_2_s.jpg" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sld-nav left" id="g-sld3l"></div>
                         <div class="sld-nav right" id="g-sld3r"></div>
+                        <div class="sld-pager">
+                            <a href="" data-slide-index="0"></a>
+                            <a href="" data-slide-index="1"></a>
+                            <a href="" data-slide-index="2"></a>
+                            <a href="" data-slide-index="3"></a>
+                            <a href="" data-slide-index="4"></a>
+                            <a href="" data-slide-index="5"></a>
+                        </div>
                     </div>
                     <div class="slidew" data-slider="3">
                         <div class="slider-wrap">
                             <div class="slider" id="gall-sld4">
                                 <div class="slide active" data-sld="0">
-                                    <a class="fancy" href="img/gallery/g_4_1_1.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_1_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_4_1_2.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_1_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_1_1_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_4_2_1.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_4_2_2.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_2_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_1_2_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_4_3_1.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_4_3_2.jpg" data-fancybox-group="g4_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_3_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_2_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="3">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_2_2_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="4">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_3_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="5">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_4_3_2_s.jpg" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sld-nav left" id="g-sld4l"></div>
                         <div class="sld-nav right" id="g-sld4r"></div>
+                        <div class="sld-pager">
+                            <a href="" data-slide-index="0"></a>
+                            <a href="" data-slide-index="1"></a>
+                            <a href="" data-slide-index="2"></a>
+                            <a href="" data-slide-index="3"></a>
+                            <a href="" data-slide-index="4"></a>
+                            <a href="" data-slide-index="5"></a>
+                        </div>
                     </div>
                     <div class="slidew" data-slider="4">
                         <div class="slider-wrap">
                             <div class="slider" id="gall-sld5">
                                 <div class="slide active" data-sld="0">
-                                    <a class="fancy" href="img/gallery/g_5_1_1.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_1_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_5_1_2.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_1_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_1_1_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="1">
-                                    <a class="fancy" href="img/gallery/g_5_2_1.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_2_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_5_2_2.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_2_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_1_2_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="2">
-                                    <a class="fancy" href="img/gallery/g_5_3_1.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_3_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_5_3_2.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_3_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_2_1_s.jpg" alt="">
                                 </div>
                                 <div class="slide" data-sld="3">
-                                    <a class="fancy" href="img/gallery/g_5_4_1.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_4_1_s.jpg" alt=""></a>
-                                    <a class="fancy" href="img/gallery/g_5_4_2.jpg" data-fancybox-group="g5_1"><img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_4_2_s.jpg" alt=""></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_2_2_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="4">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_3_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="5">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_3_2_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="6">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_4_1_s.jpg" alt="">
+                                </div>
+                                <div class="slide" data-sld="7">
+                                    <img src="img/blank.png" class="lazy" data-original="img/gallery/g_5_4_2_s.jpg" alt="">
                                 </div>
                             </div>
                         </div>
                         <div class="sld-nav left" id="g-sld5l"></div>
                         <div class="sld-nav right" id="g-sld5r"></div>
+                        <div class="sld-pager">
+                            <a href="" data-slide-index="0"></a>
+                            <a href="" data-slide-index="1"></a>
+                            <a href="" data-slide-index="2"></a>
+                            <a href="" data-slide-index="3"></a>
+                            <a href="" data-slide-index="4"></a>
+                            <a href="" data-slide-index="5"></a>
+                            <a href="" data-slide-index="6"></a>
+                            <a href="" data-slide-index="7"></a>
+                        </div>
                     </div>
                     
                 </div>
@@ -260,8 +323,6 @@
             <div class="slide" data-sld="3"></div>
             <div class="slide" data-sld="4"></div>
         </div>
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Мы всегда находим наилучшее решение</h2>
@@ -350,10 +411,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
     <section class="attention" id="sec6">
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>В процессе ремонта обязательно надо учитывать</h2>
@@ -379,20 +438,18 @@
         </div>
     </section>
     <section class="economy" id="sec7">
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Сэкономьте на ремонте, заказав дизайн-проект!</h2>
                 <h4>100% гарантия сохранности изначальной сметы при заказе дизайн-проекта.</h4>
-                <p>Дизайн-проект стоит 1100 руб./м<sup>2</sup> включает в себя:</p>
+                <p>Дизайн-проект стоит<br>1100 руб./м<sup>2</sup> включает в себя:</p>
                 <a href="#pop1"><img src="img/blank.png" class="lazy" data-original="img/s6-a.jpg" alt=""><span>3D визуализацию,<br>идентичную конечному<br>результату</span></a>
                 <a href="#pop2"><img src="img/blank.png" class="lazy" data-original="img/s6-a2.jpg" alt=""><span>Полностью<br>разработанный план<br>коммуникаций</span></a>
                 <form action="ajax/mail.php" method="post">
                     <span>Получите подробную консультацию о необходимости дизайн проекта прямо сейчас</span>
                     <input type="text" name="phone" placeholder="Введите телефон">
                     <input type="text" name="name" placeholder="Введите имя">
-                    <input type="hidden" name="event" value="diz_proj">      
+                    <input type="hidden" name="event" value="diz_proj">         
                     <input type="hidden" name="frm" value="Дизайн-проект">
                     <button>Отправить</button>
                 </form>
@@ -400,8 +457,6 @@
         </div>
     </section>
     <section class="problems" id="sec8">
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Проблемы, с которыми сталкиваются, работая<br>с частными бригадами</h2>
@@ -443,16 +498,20 @@
                 </div>
                 <div class="nav left" id="sld1l"></div>
                 <div class="nav right" id="sld1r"></div>
+                <div class="sld-pager">
+                    <a href="" data-slide-index="0"></a>
+                    <a href="" data-slide-index="1"></a>
+                    <a href="" data-slide-index="2"></a>
+                    <a href="" data-slide-index="3"></a>
+                </div>
             </div>
         </div>
     </section>
     <section class="about-us" id="sec9">
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
-                <h2>Информация о нашей компании</h2>
-                <div class="trigw animation">
+                <h2>Информация о<br>нашей компании</h2>
+                <div class="trigw">
                     <div class="trig">
                         <p>600</p>
                         <span class="green">крупных проектов</span>
@@ -478,30 +537,76 @@
             <div class="choise-bg" data-choise="0"></div>
             <div class="choise-bg" data-choise="1"></div>
         </div>
-        <div class="site-nav up"></div>
-        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Горят сроки?</h2>
                 <div class="formw" data-choise="" data-choosen="">
-                    <h4>Закажите бесплатный выезд эксперта сметчика<br> на ваш объект прямо сейчас!</h4>
+                    <h4>Закажите бесплатный выезд эксперта<br> сметчика на ваш объект прямо сейчас!</h4>
                     <p>Где находится Объект?</p>
-                    <a href="" class="g-btn" data-choise="0">За МКАД</a>
+                    <a href="" class="g-btn active" data-choise="0">За МКАД</a>
                     <a href="" class="g-btn" data-choise="1">В черте Мкад</a>
                     <form action="ajax/mail.php" method="post">
                         <input type="text" name="phone" placeholder="Введите телефон">
                         <input type="text" name="name" placeholder="Введите имя">
                         <input type="hidden" name="frm" value="Горят сроки?">
-                        <input type="hidden" name="event" value="gor_srok">   
+                        <input type="hidden" name="event" value="gor_srok">       
                         <button>Отправить</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+    <section class="rewievs" id="sec11" style="display:none">
+        <div>
+            <div>
+                <h2>Посмотрите истории наших заказчиков</h2>
+                <div class="sliderw">
+                    <div id="wrap-sld2">
+                        <div class="slide active" data-sld="0">
+                            <div>
+                                <div class="slide-img">
+                                    <a href="m5BM360HHw0"></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
+                                </div>
+                                <p>Валерий Константинопольский<span>Мытищи</span></p>
+                                <span>Ремонт спальни</span>
+                            </div>
+                        </div>
+                        <div class="slide" data-sld="1">
+                            <div>
+                                <div class="slide-img">
+                                    <a href="m5BM360HHw0"></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
+                                </div>
+                                <p>Валерий Константинопольский<span>Мытищи</span></p>
+                                <span>Ремонт спальни</span>
+                            </div>
+                        </div>
+                        <div class="slide" data-sld="2">
+                            <div>
+                                <div class="slide-img">
+                                    <a href="m5BM360HHw0"></a>
+                                    <img src="img/blank.png" class="lazy" data-original="img/s11_i1.jpg" alt="">
+                                </div>
+                                <p>Валерий Константинопольский<span>Мытищи</span></p>
+                                <span>Ремонт спальни</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav left" id="sld2l"></div>
+                <div class="nav right" id="sld2r"></div>
+                <div class="sld-pager">
+                    <a href="" data-slide-index="0"></a>
+                    <a href="" data-slide-index="1"></a>
+                    <a href="" data-slide-index="2"></a>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="contacts" id="sec12">
-        <div class="site-nav up"></div>
         <div id="map"></div>
+        <div id="contact-btn">Задать вопрос</div>
         <h2>Контактная информация</h2>
         <form action="ajax/mail.php" method="post">
             <p>Остались вопросы? Пишите</p>
@@ -509,11 +614,11 @@
             <input type="text" name="phone" placeholder="Введите телефон">
             <textarea name="mess" placeholder="Введите вопрос"></textarea>
             <input type="hidden" name="frm" value="Контактная информация">
-            <input type="hidden" name="event" value="kont_info">   
+            <input type="hidden" name="event" value="kont_info">     
             <button>Отправить</button>
             <div class="callback">
                 <span class="phone">8 800 000 99 44</span>
-                <a href="#zz" class="callback" data-event="zak_zvon_f">заказать звонок</a>
+                <a href="#zz" class="callback">заказать звонок</a>
             </div>
         </form>
         <footer>
@@ -534,7 +639,7 @@
                 <input name="name" placeholder="Введите имя" type="text">
                 <input name="phone" placeholder="Введите телефон" type="text">
                 <input type="hidden" name="frm" value="Заказать звонок">
-                <input type="hidden" name="event" id="zz_event" value="zak_zvon"> 
+                <input type="hidden" name="event" value="zak_zvon"> 
                 <button>Отправить</button>
             </form>
         </div>
@@ -586,6 +691,5 @@
         <a href="#sec9" class="menu-a">О нас</a>
         <a href="#sec12" class="menu-a">Контакты</a>
     </div>
-    <?php include_once("track/body.php") ?>
 </body>
 </html>
