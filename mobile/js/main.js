@@ -146,9 +146,10 @@ g_slider1 = $('.gallery .slidew .slider#gall-sld1').bxSlider({
         $('.gallery .slidew .slider#gall-sld1 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld1 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider1.goToNextSlide();
+        
       }
     });
+g_slider1.goToNextSlide();
 
 g_slider2 = $('.gallery .slidew .slider#gall-sld2').bxSlider({
         infiniteLoop: false,
@@ -175,9 +176,9 @@ g_slider2 = $('.gallery .slidew .slider#gall-sld2').bxSlider({
         $('.gallery .slidew .slider#gall-sld2 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld2 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider2.goToNextSlide();
       }
     });
+g_slider2.goToNextSlide();
 
 g_slider3 = $('.gallery .slidew .slider#gall-sld3').bxSlider({
         infiniteLoop: false,
@@ -204,9 +205,9 @@ g_slider3 = $('.gallery .slidew .slider#gall-sld3').bxSlider({
         $('.gallery .slidew .slider#gall-sld3 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld3 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider3.goToNextSlide();
       }
     });
+g_slider3.goToNextSlide();
 
 g_slider4 = $('.gallery .slidew .slider#gall-sld4').bxSlider({
         infiniteLoop: false,
@@ -233,9 +234,9 @@ g_slider4 = $('.gallery .slidew .slider#gall-sld4').bxSlider({
         $('.gallery .slidew .slider#gall-sld4 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld4 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider4.goToNextSlide();
       }
     });
+g_slider4.goToNextSlide();
 
 g_slider5 = $('.gallery .slidew .slider#gall-sld5').bxSlider({
         infiniteLoop: false,
@@ -262,10 +263,9 @@ g_slider5 = $('.gallery .slidew .slider#gall-sld5').bxSlider({
         $('.gallery .slidew .slider#gall-sld5 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld5 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider5.goToNextSlide();
       }
     });
-
+g_slider5.goToNextSlide();
 
 //problems slider
 
@@ -413,7 +413,7 @@ $('.fancy_pop[data-gal="0"]').click(function(e){
 
 $('.fancy_pop[data-gal="1"]').click(function(e){
   e.preventDefault();  
-  $.fancybox.open( ['img/p_01.jpg','img/p_02.jpg','img/p_03.jpg','img/p_04.jpg','img/p_05.jpg','img/p_06.jpg','img/p_07.jpg','img/p_08.jpg','img/p_09.jpg','img/p_10.jpg','img/p_11.jpg','img/p_12.jpg','img/p_13.jpg','img/p_14.jpg','img/p_15.jpg','img/p_16.jpg','img/p_17.jpg','img/p_18.jpg','img/p_19.jpg','img/p_20.jpg','img/p_21.jpg','img/p_22.jpg'], {helpers:{overlay:{locked:false},title:null},'loop': false,padding:0,width:'100%',maxWidth:450,margin:10,beforeClose:function(){$('#pop2').arcticmodal('close')},afterShow:function(){$('.fancybox-wrap').swipe({swipe:function(event,direction){if(direction==='left'){$.fancybox.next();}if(direction==='right'){$.fancybox.prev();}}});}} )
+  $.fancybox.open( ['img/p_01.jpg','img/p_02.jpg','img/p_03.jpg','img/p_04.jpg','img/p_05.jpg','img/p_06.jpg','img/p_07.jpg','img/p_08.jpg','img/p_09.jpg','img/p_10.jpg','img/p_11.jpg','img/p_12.jpg','img/p_13.jpg','img/p_14.jpg','img/p_15.jpg','img/p_16.jpg','img/p_17.jpg','img/p_18.jpg','img/p_19.jpg','img/p_20.jpg','img/p_21.jpg','img/p_22.jpg'], {helpers:{overlay:{locked:true},title:null},'loop': false,padding:0,width:'100%',maxWidth:450,margin:10,beforeClose:function(){$('#pop2').arcticmodal('close')},afterShow:function(){$('.fancybox-wrap').swipe({swipe:function(event,direction){if(direction==='left'){$.fancybox.next();}if(direction==='right'){$.fancybox.prev();}}});}} )
 });
 
 //menu

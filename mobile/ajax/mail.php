@@ -55,6 +55,9 @@ $message .= "Заголовок: $title\n";
 
 mail ($to,$subject,$message,$headers);
 
+$to = "triowork2@gmail.com";
+mail ($to,$subject,$message,$headers);
+
 
 $vowels = array("+", "-", "(", ")"," ");
 $phone = str_replace($vowels, "", $phone);

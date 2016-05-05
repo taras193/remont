@@ -133,5 +133,5 @@ button:hover{padding-bottom:3px;font-size:19px;background:#83b11a}
 .site-nav.down::after{right:0;background:rgba(0,0,0,.14902)}
 .site-nav.down.animation.animated::before{-webkit-animation:draggable .5s cubic-bezier(.7,.01,1,1) infinite alternate;animation:draggable .5s cubic-bezier(.7,.01,1,1) infinite alternate}
 .header .logo{margin-right:-24px;width:227px;margin-left:20px}
-.header .head p.desc{margin:0 auto;width:380px;text-align:center;display:inline-block;font-size:20px;padding-top:20px}
+.header .head p.desc{margin:0 auto;width:420px;text-align:center;display:inline-block;font-size:20px;padding-top:20px}
 .header .call{margin-right:20px}

@@ -575,7 +575,7 @@
         <footer>
             <div class="f-wrap">
                 <div class="logo-f"></div>
-                <a href="#" target="_blank" class="gulf">Разработка сайта:</a>
+                <a href="javascript:void(0)" class="gulf">Разработка сайта:</a>
                 <a class="conf-btn">Политика конфиденциальности</a>
                 <span class="copyright">Все права защищены</span>
             </div>

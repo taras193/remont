@@ -155,9 +155,9 @@ g_slider1 = $('.gallery .slidew .slider#gall-sld1').bxSlider({
         $('.gallery .slidew .slider#gall-sld1 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld1 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider1.goToNextSlide();
       }
     });
+g_slider1.goToNextSlide();
 
 g_slider2 = $('.gallery .slidew .slider#gall-sld2').bxSlider({
         infiniteLoop: false,
@@ -191,9 +191,9 @@ g_slider2 = $('.gallery .slidew .slider#gall-sld2').bxSlider({
         $('.gallery .slidew .slider#gall-sld2 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld2 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider2.goToNextSlide();
       }
     });
+g_slider2.goToNextSlide();
 
 g_slider3 = $('.gallery .slidew .slider#gall-sld3').bxSlider({
         infiniteLoop: false,
@@ -227,9 +227,9 @@ g_slider3 = $('.gallery .slidew .slider#gall-sld3').bxSlider({
         $('.gallery .slidew .slider#gall-sld3 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld3 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider3.goToNextSlide();
       }
     });
+g_slider3.goToNextSlide();
 
 g_slider4 = $('.gallery .slidew .slider#gall-sld4').bxSlider({
         infiniteLoop: false,
@@ -263,9 +263,9 @@ g_slider4 = $('.gallery .slidew .slider#gall-sld4').bxSlider({
         $('.gallery .slidew .slider#gall-sld4 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld4 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider4.goToNextSlide();
       }
     });
+g_slider4.goToNextSlide();
 
 g_slider5 = $('.gallery .slidew .slider#gall-sld5').bxSlider({
         infiniteLoop: false,
@@ -299,9 +299,9 @@ g_slider5 = $('.gallery .slidew .slider#gall-sld5').bxSlider({
         $('.gallery .slidew .slider#gall-sld5 .slide').addClass('fadeouted');
         $('.gallery .slidew .slider#gall-sld5 .slide.active').removeClass('fadeouted');
         $('.gallery').addClass('loaded-slider');
-        g_slider5.goToNextSlide();
       }
     });
+g_slider5.goToNextSlide();
 
 
 //problems slider
