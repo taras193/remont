@@ -2,6 +2,17 @@
 $('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.min.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 //$('<link rel=stylesheet type=text/css href=css/full.min.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 
+//мобильное устройство?
+var isMobile = false; 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+isMobile = true;
+}
+
+if (isMobile == true) {
+  $('.animation').addClass('animated');
+  $('<style>.animation,.animation *{transition:0s all 0s!important;animation-duration:0s!important;animation-delay:0s!important}section .site-nav.down,section .site-nav.up{display:none!important}section{height:800px!important}</style>').appendTo('head');
+}
+
 //трек функция для целей
 function track(event){
   yaCounter37031980.reachGoal(event);
@@ -21,8 +32,9 @@ function initalize(){
 		$('body').addClass('loaded').addClass('pre-loaded');
 
 		//анимация
-
-		setTimeout(function(){$('.animation').viewportChecker({classToAdd: 'animated'})},1000); 
+  if (isMobile != true) {
+    setTimeout(function(){$('.animation').viewportChecker({classToAdd: 'animated'})},1000); 
+  }
 
 	    //флаг ициализации
 	    initalized = 1;
@@ -564,17 +576,18 @@ function stabilize(){
 $("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
   $("html, body").stop();
 });
+if (isMobile != true) {
+  $(window).scroll(function(){
 
-$(window).scroll(function(){
+  //if ($(window).scrollTop()-$(window).height()>= 0) {
+  //  $('.menu-btn').addClass('active');
+  //}else{
+  //  $('.menu-btn').removeClass('active');
+  //}
 
-//if ($(window).scrollTop()-$(window).height()>= 0) {
-//  $('.menu-btn').addClass('active');
-//}else{
-//  $('.menu-btn').removeClass('active');
-//}
+    clearTimeout($.data(this, 'scrollTimer'));
+    
+    $.data(this, 'scrollTimer',setTimeout(stabilize,1500));
 
-  clearTimeout($.data(this, 'scrollTimer'));
-  
-  $.data(this, 'scrollTimer',setTimeout(stabilize,1500));
-
-});
+  });
+}

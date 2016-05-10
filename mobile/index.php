@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Grand - строительная компания</title>
-    <script>if (screen.width > 699) {document.location = "../"+document.location.search;}</script>
+    <script>if (screen.width > 750) {document.location = "../"+document.location.search;}</script>
     <style><? include('css/head.css'); ?></style>
     <script>
     !function(e,t,n){function r(){for(;u[0]&&"loaded"==u[0][l];)o=u.shift(),o[f]=!a.parentNode.insertBefore(o,a)}for(var i,s,o,u=[],a=e.scripts[0],f="onreadystatechange",l="readyState";i=n.shift();)s=e.createElement(t),"async"in a?(s.async=!1,e.head.appendChild(s)):a[l]?(u.push(s),s[f]=r):e.write("<"+t+' src="'+i+'"></'+t+">"),s.src=i}(document,"script",
     ["js/libs.min.js",
-    "js/main.js",
+    "js/main.min.js",
     "https://maps.googleapis.com/maps/api/js?sensor=false",
     "js/map.js"]);
     </script>
@@ -21,7 +21,7 @@
             <div class="head">
                 <div class="logo"></div>
                 <div class="call">
-                    <span class="phone">8 800 000 99 44</span>
+                    <span class="phone">8 495 602 91 18</span>
                     <a href="#zz" class="callback">Заказать звонок</a>
                 </div>
                 <p class="desc">Элитный ремонт под ключ от 5500 руб./м<sup>2</sup></p>
@@ -568,7 +568,7 @@
             <input type="hidden" name="event" value="kont_info">     
             <button>Отправить</button>
             <div class="callback">
-                <span class="phone">8 800 000 99 44</span>
+                <span class="phone">8 495 602 91 18</span>
                 <a href="#zz" class="callback">заказать звонок</a>
             </div>
         </form>

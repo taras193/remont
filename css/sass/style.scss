@@ -339,13 +339,13 @@ a.g-btn {
         margin: 0 137px;
         position: relative;
         height: 253px;
-        &:nth-child(2n){
+        &:nth-of-type(2n){
             margin-right: 0;
         }        
-        &:nth-child(2n-1){
+        &:nth-of-type(2n-1){
             margin-left: 0;
         }
-         &:nth-child(2){
+         &:nth-of-type(2){
              img{
                  position: relative;
                  top: 16px;
@@ -398,7 +398,7 @@ a.g-btn {
         &:hover{
             box-shadow: 0 1px 16px #a2c835;
         }
-        &:nth-child(4){
+        &:nth-of-type(4){
             img{
                 top: 24px;
                 left: 37px;                
@@ -707,7 +707,7 @@ a.g-btn {
             color: #a6d43b;
             display: inline-block;
         }
-        &:nth-child(1){
+        &:nth-of-type(1){
             width: 350px;
             height: 190px;
             left: 97px;
@@ -759,7 +759,7 @@ a.g-btn {
                 margin-left: 8px;
             }
         }
-        &:nth-child(2){ 
+        &:nth-of-type(2){ 
             width: 303px;
             height: 192px;
             right: 97px;
@@ -793,7 +793,7 @@ a.g-btn {
                 
             }
         }
-        &:nth-child(3){  
+        &:nth-of-type(3){  
             width: 284px;
             height: 112px;
             left: 64px;
@@ -833,7 +833,7 @@ a.g-btn {
                 transform: rotate(-51deg);
             }
         }
-        &:nth-child(4){  
+        &:nth-of-type(4){  
             width: 277px;
             height: 112px;
             right: 138px;

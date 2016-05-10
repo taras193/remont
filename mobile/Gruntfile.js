@@ -155,10 +155,27 @@ module.exports = function(grunt) {
 		  }
 		},
 		autoprefixer: {
+			options: {
+				browsers: ['ie >= 8','last 10 versions','> 0.1%']
+			},
             dist: {
-                files: {
-                    'css/full.css': 'css/full.css'
-                }
+                files: [
+	                {
+	                    'css/full.css': 'css/full.css'
+	                },
+	                {
+	                    'css/style.css': 'css/style.css'
+	                },
+	                {
+	                    'css/head.css': 'css/head.css'
+	                },
+	                {
+	                    'css/libs.css': 'css/libs.css'
+	                },
+	                {
+	                    'css/scripts.css': 'css/scripts.css'
+	                }
+                ]
             }
         },
         watch: {

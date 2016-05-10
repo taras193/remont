@@ -24,26 +24,26 @@ module.exports = function(grunt) {
         },
         cssmin: {
         	options:{
-advanced: false,
-aggressiveMerging: false,
-benchmark: false,
-compatibility: false,
-debug: false,
-inliner: false,
-keepBreaks: true,
-keepSpecialComments: false,
-mediaMerging: false,
-processImport: false,
-processImportFrom: false,
-rebase: false,
-relativeTo: false,
-restructuring: false,
-root: false,
-roundingPrecision: false,
-semanticMerging: false,
-shorthandCompacting: false,
-sourceMap: false,
-sourceMapInlineSources: false
+				advanced: false,
+				aggressiveMerging: false,
+				benchmark: false,
+				compatibility: false,
+				debug: false,
+				inliner: false,
+				keepBreaks: true,
+				keepSpecialComments: false,
+				mediaMerging: false,
+				processImport: false,
+				processImportFrom: false,
+				rebase: false,
+				relativeTo: false,
+				restructuring: false,
+				root: false,
+				roundingPrecision: false,
+				semanticMerging: false,
+				shorthandCompacting: false,
+				sourceMap: false,
+				sourceMapInlineSources: false
         	},
 		  target: {
 		    files: [{
@@ -159,10 +159,27 @@ sourceMapInlineSources: false
 		  }
 		},
 		autoprefixer: {
+			options: {
+				browsers: ['ie >= 8','last 10 versions','> 0.1%']
+			},
             dist: {
-                files: {
-                    'css/full.css': 'css/full.css'
-                }
+                files: [
+	                {
+	                    'css/full.css': 'css/full.css'
+	                },
+	                {
+	                    'css/style.css': 'css/style.css'
+	                },
+	                {
+	                    'css/head.css': 'css/head.css'
+	                },
+	                {
+	                    'css/libs.css': 'css/libs.css'
+	                },
+	                {
+	                    'css/scripts.css': 'css/scripts.css'
+	                }
+                ]
             }
         },
         watch: {
