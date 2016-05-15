@@ -10,7 +10,7 @@ isMobile = true;
 
 if (isMobile == true) {
   $('.animation').addClass('animated');
-  $('<style>.animation,.animation *{transition:0s all 0s!important;animation-duration:0s!important;animation-delay:0s!important}section .site-nav.down,section .site-nav.up{display:none!important}section{height:800px!important}</style>').appendTo('head');
+  $('<style>.animation,.animation *{-webkit-transition:0s all 0s!important;transition:0s all 0s!important;-webkit-animation-duration:0s!important;animation-duration:0s!important;-webkit-animation-delay:0s!important;animation-delay:0s!important}section .site-nav.down,section .site-nav.up{display:none!important}section{height:800px!important}</style>').appendTo('head');
 }
 
 //трек функция для целей

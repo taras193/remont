@@ -478,6 +478,20 @@ button:hover{
     right: 0;
     background: rgba(0, 0, 0, 0.15);
 }
+.site-nav.down:nth-of-type(1):after{
+    animation-iteration-count: infinite;
+    animation-name:nav-click;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+@keyframes nav-click{
+    0%{ box-shadow:inset 0 0 0px}
+    4%{ box-shadow:inset 0 0 10px rgba(0,0,0,0.4)}
+    20%{ box-shadow:inset 0 0 0px}
+    100%{ box-shadow:inset 0 0 0px}
+
+}
 .why .trigw .ico{
     /* background: none; */
 }
@@ -490,6 +504,7 @@ button:hover{
 .we-can a:hover{background: none;}
 .we-can .nav{
     position: relative;
+    width: 830px;
 }
 .we-can .nav:after{
     position: absolute;
@@ -671,10 +686,24 @@ button:hover{
     background-color: #775A54;
 }
 .site-nav.down.animation.animated:before{
-    /*animation: alternate draggable 0.5s infinite cubic-bezier(.7,.01,1,1);*/
+    animation: alternate draggable 0.5s infinite cubic-bezier(.7,.01,1,1);
     -webkit-animation: downtrack 4s infinite linear,alternate blim 0.7s infinite cubic-bezier(1, 0.03, 0, 0.99);
-            animation: downtrack 4s infinite linear,alternate blim 0.7s infinite cubic-bezier(1, 0.03, 0, 0.99);
+    animation: downtrack 3s infinite linear,alternate blim 1.5s infinite cubic-bezier(1, 0.03, 0, 0.99);
+    /*animation-delay: 2.5s;
+    animation-direction: alternate;
+    animation-duration: .5s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-name: draggable2;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(.7,.01,1,1);*/
 }
+
+@keyframes draggable2{
+    0%{margin-top: -10px;}
+    100%{margin-top: 10px;}
+    }
+
 @-webkit-keyframes draggable{
     /* 0%{margin-top: -9px;}
     100%{margin-top: 1px;} */
@@ -692,12 +721,12 @@ button:hover{
     100%{top: 100%}
 }
 @-webkit-keyframes blim{
-    0%{opacity: 1}
-    100%{opacity: 0}
+    0%{opacity: 0}
+    100%{opacity: 1}
 }
 @keyframes blim{
-    0%{opacity: 1}
-    100%{opacity: 0}
+    0%{opacity: 0}
+    100%{opacity: 1}
 }
 .loaded #loader{
     /* top: 200%; */
