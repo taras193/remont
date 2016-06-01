@@ -49,7 +49,7 @@ section{
 
 #maket {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
     background: url(../maket.jpg) no-repeat top center;
@@ -60,6 +60,7 @@ section{
 
 .header {
     background-image: url(../img/bg1.jpg);
+    color: white;
     .logo {
         background-image: url(../img/logo.png);
         width: 192px;
@@ -141,31 +142,196 @@ section{
         }
     }
     .prich {
-        width: 394px;
-        height: 96px;
+        width: 405px;
+        height: 73px;
         background-color: #89a831;
         color: white;
         margin: 223px auto 0;
         position: relative;
         padding-left: 110px;
-        padding: 6px 0  6px 109px;
+        padding: 6px 0  6px 123px;
         p {
-            font-size: 27px;
-font-weight: 700;
-line-height: 32px;
-        }
-        span {font-size: 19px;
-font-weight: 400;
-line-height: 23px;
+            font-size: 19px;
+            font-weight: 300;
+            line-height: 24px;
         }
     }
     .smeta {
-        width: 122px;
-        height: 180px;
+        width: 91px;
+        height: 135px;
         position: absolute;
         background-image: url(../img/smeta.png);
-        left: -19px;
-        top: -29px;
+        left: -8px;
+        top: -23px
+    }
+}
+.new-calc {	
+    background-color: #EBEBEB;
+    h2 {
+        font-size: 40px;
+	    line-height: 48px;
+	    padding-top: 6px;
+    }
+    .calc-n-wrap {
+        margin-top: 13px;
+        height: 483px;
+        box-shadow: 0 0 9px rgba(7, 7, 7, 0.03);
+        border-radius: 7px;
+        background: white;
+        padding: 0 90px;
+        position:relative;
+	    overflow: hidden;
+    }
+    .squere {
+        text-align: left;
+        .left {
+            float: left;
+	        width: 655px;
+	        margin-top: 25px;
+        }
+        .slider-h {           
+            text-align: left;
+            font-size: 24px;
+            color: #1b1a1a;
+            padding-left: 44px;
+        }
+        .slider {
+                background-image: url(../img/squere-s.png);
+                width: 599px;
+                height: 31px;
+                margin-left: 44px;
+                margin-top: 33px;
+                position: relative;
+        }
+        .slider-range {
+            	position: absolute;
+                left: 0;
+                width: 36%;
+                background: #9dc038;
+                height: 5px;
+                top: 1px;
+                border-radius: 3px;
+                z-index: 2;
+        }
+        .slider-handle {
+            text-align: center;
+            background-image: url(../img/slider-hand.png);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: -11px;
+            left: 36%;
+            margin-left: -15px;
+            z-index:3;
+            cursor: pointer;
+        }
+        .rignt {
+            	float: left;
+                width: 113px;
+                height: 47px;
+                border: 1px solid #c2c2c2;
+                box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.14);
+                border-radius: 30px;
+                margin-top: 69px;
+                margin-left: 7px;
+                text-align: center;
+                line-height: 47px;
+                font-size: 22px;
+        }
+        .grey {
+            color: #bfbfbf;
+        }
+    }
+    .sq {
+    }
+    .price {
+        .left {
+            	float: left;
+                width: 500px;
+                margin-top: 31px;
+        }
+        .slider-h {
+             text-align: left;
+            font-size: 24px;
+            color: #1b1a1a;
+            padding-left: 44px;
+        }
+        .slider {
+            background-image: url(../img/price-s.png);
+            width: 448px;
+            height: 34px;
+            margin-top: 21px;
+            margin-left: 42px;
+            position:relative;
+        }
+        .slider-range {
+            position: absolute;
+            left: 0;
+            width: 68%;
+            background: #9dc038;
+            height: 5px;
+            top: 1px;
+            border-radius: 3px;
+            z-index: 2;
+            left: 14%;
+
+        }
+        .slider-handle {
+             text-align: center;
+            background-image: url(../img/slider-hand.png);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: -11px;
+            left: 36%;
+            margin-left: -15px;
+            z-index: 3;
+            left: 14%;
+            cursor: pointer;
+        }
+        .rignt {
+             float: left;
+            width: 266px;
+            height: 47px;
+            border: 1px solid #c2c2c2;
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.14);
+            border-radius: 30px;
+            margin-top: 61px;
+            margin-left: 8px;
+            text-align: center;
+            line-height: 47px;
+            font-size: 22px;
+            
+        }
+        .grey {
+            color: #bfbfbf;
+        }
+    }
+    .l-price {
+    }
+    .h-price {
+    }
+    form {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        height: 174px;
+        padding: 0 106px;
+        z-index: 2;
+	    background: #F3F3F3;
+        .form-h{
+            text-align: center;
+            font-size: 24px;
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+    }
+    input {
+    }
+    button {
+	   background: #89a831;
+	   border-color: #89a831;
     }
 }
 .why {
@@ -231,19 +397,20 @@ line-height: 23px;
         width: 830px;
         text-align: center;
         height: 323px;
+        p {
+            background-image: url(../img/step-p1.png);
+            width: 374px;
+            height: 165px;
+            font-size: 30px;
+            line-height: 41px;
+            text-align: center;
+            margin: 0px auto 0;
+            position: relative;
+            top: -79px;
+            padding-top: 48px;
+        }
     }
-    p {
-        background-image: url(../img/step-p1.png);
-        width: 374px;
-        height: 165px;
-        font-size: 30px;
-        line-height: 41px;
-        text-align: center;
-        margin: 0px auto 0;
-        position: relative;
-        top: -79px;
-        padding-top: 48px;
-    }
+    
     a {
         margin: 9px 82px;
     }
