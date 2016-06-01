@@ -397,6 +397,27 @@ $('.header .prich').click(function(e){
   $('#smet').arcticmodal();
 });
 
+//new-calc
+$('.select-pop ul li').click(function(){
+  $($(this).parent().data('input')).html($(this).text());
+
+  $("#n-squere").val($('#squere-val').text().replace(/(\r\n|\n|\r)/gm,""));
+  $("#n-price").val($('#price-val').text().replace(/(\r\n|\n|\r)/gm,""));
+
+  $.arcticmodal('close');
+});
+$('#squere-val').click(function(event) {
+    $('#squere-pop').arcticmodal();
+});
+$('#l-price').click(function(event) {
+    $('#l-price-pop').arcticmodal();
+});
+$('#h-price').click(function(event) {
+    $('#h-price-pop').arcticmodal();
+});
+
+$("#n-squere").val($('#squere-val').text().replace(/(\r\n|\n|\r)/gm,""));
+$("#n-price").val($('#price-val').text().replace(/(\r\n|\n|\r)/gm,""));
 //pop-fancy
 
 $('.fancy_pop[data-gal="0"]').click(function(e){

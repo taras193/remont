@@ -122,16 +122,6 @@ button:hover{padding-bottom:3px;font-size:19px;background:#83b11a}
 .header h2.animation.animated{opacity:1;top:0}
 .header h2.animation span::after{width:0;-webkit-transition:all .5s 1s;transition:all .5s 1s}
 .header h2.animation.animated span::after{width:100%}
-.site-nav::after{position:absolute;width:80px;height:100%;top:0;z-index:-1}
-.site-nav{position:absolute;width:50%;max-width:140px;height:100%;z-index:1;top:0;opacity:0;-webkit-transition:all .25s;transition:all .25s;cursor:pointer}
-.site-nav.down::before{width:32px;height:18px;right:24px;position:absolute;z-index:3;top:50%;margin-top:-9px;background:url(img/down.png) no-repeat}
-.site-nav:hover{opacity:1;background-position:24px 50%}
-.site-nav:hover::before{top:50%}
-.site-nav.down{right:0}
-.site-nav.down.animation{opacity:0;-webkit-transition:opacity .25s 2s;transition:opacity .25s 2s}
-.site-nav.down.animated{opacity:1}
-.site-nav.down::after{right:0;background:rgba(0,0,0,.14902)}
-.site-nav.down.animation.animated::before{-webkit-animation:draggable .5s cubic-bezier(.7,.01,1,1) infinite alternate;animation:draggable .5s cubic-bezier(.7,.01,1,1) infinite alternate}
 .header .logo{margin-right:-24px;width:227px;margin-left:20px}
 .header .head p.desc{margin:0 auto;width:420px;text-align:center;display:inline-block;font-size:20px;padding-top:20px}
 .header .call{margin-right:20px}

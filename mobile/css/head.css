@@ -34,7 +34,7 @@ button:hover{font-family:Roboto}
 .contacts a.callback::after{content:"";width:11px;height:16px;position:absolute;left:-16px;top:6px;background-image:url(img/call-f.png)}
 .contacts a.callback:hover{border-bottom-width:1px;border-bottom-style:dashed;border-bottom-color:transparent}
 .header .prich span,body,button,input,textarea{font-weight:300}
-.header .prich p,.phone{font-weight:500}
+.header .prich p{font-weight:500}
 .header .prich{padding:6px 0 6px 109px;width:350px;margin-top:121px}
 button{font-size:36px}
 button:hover{background:#83b11a}

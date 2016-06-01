@@ -1,5 +1,5 @@
 //acинхронная загрузка css
-//$('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
+$('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 //$('<link rel=stylesheet type=text/css href=css/full.min.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 
 //мобильное устройство?
@@ -61,7 +61,59 @@ console.log('document.ready');
 	
 initalize();
 
+//new-calculator
 
+$( "#slider-range-min" ).slider({
+  range: "min",
+  value: 300,
+  min: 52,
+  max: 735,
+  slide: function( event, ui ) {
+    $( "#squere" ).html(ui.value);
+    $("#n-squere").val($('#squere-val').text().replace(/(\r\n|\n|\r)/gm,""));
+  }
+});
+$( "#squere" ).html($("#slider-range-min").slider("value"));
+$("#n-squere").val($('#squere-val').text().replace(/(\r\n|\n|\r)/gm,""));
+
+$( "#slider-range" ).slider({
+      range: true,
+      min: 4500,
+      max: 21500,
+      values: [ 7000, 17000 ],
+      start:function(event,ui){
+        slide_start_0 = ui.values[0];
+        slide_start_1 = ui.values[1];
+      },
+      change:function(event,ui){        
+            $("#l-price").html(ui.values[0]);
+            $("#h-price").html(ui.values[1]);
+            $("#n-price").val($('#price-val').text().replace(/(\r\n|\n|\r)/gm,""));
+      },
+      slide: function( event, ui ) {        
+        if (ui.values[1] - ui.values[0] <=1000) {
+          if(slide_start_0 - ui.values[0] !=0){
+            $( "#slider-range" ).slider( "values", 0,  ui.values[1] - 1000);        
+            $("#l-price").html(ui.values[0]);
+            $("#h-price").html(ui.values[1]);
+            $("#n-price").val($('#price-val').text().replace(/(\r\n|\n|\r)/gm,""));
+            return false
+          }else{
+            $( "#slider-range" ).slider( "values", 1,  ui.values[0] + 1000);        
+            $("#l-price").html(ui.values[0]);
+            $("#h-price").html(ui.values[1]);
+            $("#n-price").val($('#price-val').text().replace(/(\r\n|\n|\r)/gm,""));
+            return false
+          }
+        }
+        $("#l-price").html(ui.values[0]);
+        $("#h-price").html(ui.values[1]);
+        $("#n-price").val($('#price-val').text().replace(/(\r\n|\n|\r)/gm,""));
+      }
+});
+  $("#l-price").html($("#slider-range").slider("values",0));
+  $("#h-price").html($("#slider-range").slider("values",1));
+  $("#n-price").val($('#price-val').text().replace(/(\r\n|\n|\r)/gm,""));
 //we-can слайдинг
 
 $('.we-can a').hover(function(){
@@ -461,11 +513,24 @@ $('.conf-btn').click(function(e){
   $('#conf_pop').arcticmodal();
 });
 
+
 $('.header .prich').click(function(e){
   e.preventDefault();
   $('#smet').arcticmodal();
 });
 
+//new-smet-pop
+//$('.header .prich').click(function(e){
+//  e.preventDefault();
+//  $('#new-smet').addClass('active');
+//  $('#new-smet-overlay').addClass('active');
+//});
+//$('#new-smet-overlay,.right-pop-close').click(function(e){
+//  e.preventDefault();
+//  $('#new-smet').removeClass('active');
+//  $('#new-smet-overlay').removeClass('active');
+//
+//});
 //pop-fancy
 
 $('.fancy_pop[data-gal="0"]').click(function(e){
@@ -578,16 +643,31 @@ $("html, body").on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touch
 });
 if (isMobile != true) {
   $(window).scroll(function(){
-
-  //if ($(window).scrollTop()-$(window).height()>= 0) {
-  //  $('.menu-btn').addClass('active');
-  //}else{
-  //  $('.menu-btn').removeClass('active');
-  //}
+// menu-btn
+  if ($(window).scrollTop()-$(window).height()>= 0) {
+    $('.menu-btn').addClass('active');
+  }else{
+    $('.menu-btn').removeClass('active');
+  }
 
     clearTimeout($.data(this, 'scrollTimer'));
     
     $.data(this, 'scrollTimer',setTimeout(stabilize,1500));
 
   });
-}
+}else{$('.menu-btn').addClass('active');}
+
+$(window).scroll(function(){
+  $('section').each(function(index, el) {
+    //var top_w  = $(window).scrollTop() - $(window).height()*index;
+    var bot_w  = $(window).scrollTop() - $(el).height()*index;
+    
+    if (bot_w >= 0 && bot_w <= $(window).height()) {
+      if (index == 1 || index == 2 || index == 6 || index == 7 || index == 8 || index == 11) {
+        $('.menu-btn').addClass('blacked');
+      }else{
+        $('.menu-btn').removeClass('blacked');
+      }
+    }
+  });
+});

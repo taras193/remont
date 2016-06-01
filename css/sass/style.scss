@@ -203,7 +203,7 @@ section{
                 margin-top: 33px;
                 position: relative;
         }
-        .slider-range {
+        .ui-slider-range {
             	position: absolute;
                 left: 0;
                 width: 36%;
@@ -213,7 +213,7 @@ section{
                 border-radius: 3px;
                 z-index: 2;
         }
-        .slider-handle {
+        .ui-slider-handle {
             text-align: center;
             background-image: url(../img/slider-hand.png);
             width: 30px;
@@ -224,6 +224,8 @@ section{
             margin-left: -15px;
             z-index:3;
             cursor: pointer;
+            border-radius:30px;
+            outline:0!important;
         }
         .rignt {
             	float: left;
@@ -257,14 +259,22 @@ section{
             padding-left: 44px;
         }
         .slider {
-            background-image: url(../img/price-s.png);
-            width: 448px;
+            width: 434px;
             height: 34px;
             margin-top: 21px;
-            margin-left: 42px;
+            margin-left: 48px;
             position:relative;
+            &:after{
+                background-image: url(../img/price-s.png);
+                position: absolute;
+                width: 444px;
+                height: 34px;
+                top: 0;
+                left: -4px;
+                z-index:0;
+            }
         }
-        .slider-range {
+        .ui-slider-range {
             position: absolute;
             left: 0;
             width: 68%;
@@ -276,7 +286,7 @@ section{
             left: 14%;
 
         }
-        .slider-handle {
+        .ui-slider-handle {
              text-align: center;
             background-image: url(../img/slider-hand.png);
             width: 30px;
@@ -288,6 +298,8 @@ section{
             z-index: 3;
             left: 14%;
             cursor: pointer;
+            border-radius:30px;
+            outline:0!important;
         }
         .rignt {
              float: left;

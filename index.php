@@ -1,21 +1,61 @@
+<?
+function getXLS($xls){
+include_once 'track/Classes/PHPExcel/IOFactory.php';
+$objPHPExcel = PHPExcel_IOFactory::load($xls);
+$objPHPExcel->setActiveSheetIndex(0);
+$aSheet = $objPHPExcel->getActiveSheet();
+
+//этот массив будет содержать массивы содержащие в себе значения ячеек каждой строки
+$array = array();
+//получим итератор строки и пройдемся по нему циклом
+foreach($aSheet->getRowIterator() as $row){
+//получим итератор ячеек текущей строки
+$cellIterator = $row->getCellIterator();
+//пройдемся циклом по ячейкам строки
+//этот массив будет содержать значения каждой отдельной строки
+$item = array();
+foreach($cellIterator as $cell){
+//заносим значения ячеек одной строки в отдельный массив
+array_push($item, iconv('utf-8', 'utf-8', $cell->getCalculatedValue()));
+}
+//заносим массив со значениями ячеек отдельной строки в «общий массв строк»
+array_push($array, $item);
+}
+return $array;
+}
+
+$xlsData = getXLS('track/multi.xls'); //извлеаем данные из XLS
+
+$din_title = 'Элитный ремонт под ключ от 5500';
+
+$p = $_GET['din_zag'];
+
+if(!empty($p)){
+
+$p = '&din_zag='.$_GET['din_zag'];
+
+for ($i=1; $i <=21 ; $i++) { 
+$xlsData_colls = $xlsData[$i];
+if($p == $xlsData_colls[1]){
+$din_title = substr($xlsData_colls[2], 0, -11);
+}
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Grand - строительная компания</title>
     <script>if (screen.width <= 750) {document.location = "mobile/"+document.location.search;}</script>
-    <!--style><? include('css/head.css'); ?></style-->
-    <!--script>
+    <style><? include('css/head.css'); ?></style>
+    <script>
     !function(e,t,n){function r(){for(;u[0]&&"loaded"==u[0][l];)o=u.shift(),o[f]=!a.parentNode.insertBefore(o,a)}for(var i,s,o,u=[],a=e.scripts[0],f="onreadystatechange",l="readyState";i=n.shift();)s=e.createElement(t),"async"in a?(s.async=!1,e.head.appendChild(s)):a[l]?(u.push(s),s[f]=r):e.write("<"+t+' src="'+i+'"></'+t+">"),s.src=i}(document,"script",
     ["js/libs.min.js",
     "js/main.js",
     "https://maps.googleapis.com/maps/api/js?sensor=false",
     "js/map.js"]);
-    </script-->
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/scripts.css">
-    <link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>
+    </script>
     <meta id="viewport" name="viewport" content="width=980">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
@@ -30,143 +70,13 @@
                     <span class="phone">8 495 602 91 18</span>
                     <a href="#zz" class="callback" data-event="zak_zvon">Заказать звонок</a>
                 </div>
-                <p class="desc">Элитный ремонт под ключ от 5500 руб./м<sup>2</sup></p>
+                <p class="desc"><? echo $din_title; ?> руб./м<sup>2</sup></p>
             </div>
             <div>
                 <h2 class="animation">Хотите, чтобы профессионалы своего дела <br>решили все вопросы ремонта вашего <br>дома на высшем уровне от А до Я?</h2>
                 <div class="prich">
                     <div class="smeta"></div>
                     <p>Наша смета не расширяется в процессе ремонта</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="new-calc">
-        <div>
-            <div>
-                <h2>Заполните форму и подберем <br>для вас лучшее решение!</h2>
-                <div class="calc-n-wrap">
-                    <div class="squere">
-                        <div class="left">
-                            <p class="slider-h">Выберите площадь вашего дома:</p>
-                            <div class="slider">
-                                <div class="slider-range"></div>
-                                <div class="slider-handle"></div>
-                            </div>
-                        </div>
-                        <p class="rignt"><span class="sq">300</span><span class="grey">&nbsp;&nbsp;м<sup>2</sup></span></p>
-                    </div>
-                    <div class="price">
-                        <div class="left">
-                            <p class="slider-h">Определите приемлемую цену за м<sup>2</sup>:</p>
-                            <div class="slider">
-                                <div class="slider-range"></div>
-                                <div class="slider-handle"></div>
-                                <div class="slider-handle"></div>
-                            </div>
-                        </div>                        
-                        <p class="rignt">
-                            <span class="l-price">7000</span>
-                            <span class="grey">&nbsp;-&nbsp;</span>
-                            <span class="h-price">17000</span>
-                            <span class="grey">&nbsp;руб/м<sup>2</sup></span>
-                        </p>
-                    </div>
-                    <form action="">
-                       <p class="form-h">Заполните вашы контактные данные:</p>
-                        <input type="text" name="phone" placeholder="Введите телефон">
-                        <input type="text" name="name" placeholder="Введите имя">
-                        <button>Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="why" id="sec2">
-        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
-        <div>
-            <div>
-                <h2>Причины, почему с нами выгодно работать</h2>
-                <div class="trigw animation">
-                    <div class="trig">
-                        <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_1.jpg" alt=""></div>
-                        <p>Первоначальная смета<br>не увеличивается</p>
-                    </div> 
-                    <div class="trig">
-                        <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_2.jpg" alt=""></div>
-                        <p>Гарантия на ремонтные работы<br>от 2х лет</p>
-                    </div> 
-                    <div class="trig">
-                        <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_3.jpg" alt=""></div>
-                        <p>Бесплатный вынос мусора и<br>очистка помещений</p>
-                    </div> 
-                    <div class="trig">
-                        <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_4.jpg" alt=""></div>
-                        <p>Скидка 10% на оригинальные<br>материалы</p>
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="calculate" id="sec3">
-        <div class="backgrounds">
-            <div class="step-lint active" data-step="0" data-choise="" data-choosen="">
-                <div class="step-bg" data-choise="0"></div>
-                <div class="step-bg" data-choise="1"></div>
-            </div>
-            <div class="step-lint" data-step="1" data-choise="" data-choosen="">
-                <div class="step-bg" data-choise="0" data-choosen=""></div>
-                <div class="step-bg" data-choise="1" data-choosen=""></div>
-            </div>
-            <div class="step-lint" data-step="2" data-choosen=""></div>
-            <div class="step-lint" data-step="3" data-choosen=""></div>
-        </div>
-        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
-        <div>
-            <div>
-                <h2>Сделайте ориентировочный<br> просчет стоимости</h2>
-                <div class="step animation">
-                    <div class="stepw active" data-step="0">
-                        <p>Что Вы хотите<br>отремонтировать?</p>
-                        <a class="g-btn step-btn" data-nextstep="1" data-choise="0" href="">Дом</a>
-                        <a class="g-btn step-btn" data-nextstep="1" data-choise="1" href="">Квартиру</a>                      
-                    </div>
-                    <div class="stepw" data-step="1">
-                        <p>Где находится<br>объект?</p>
-                        <a class="g-btn step-btn" data-nextstep="2" data-choise="0" href="">За МКАД</a>
-                        <a class="g-btn step-btn" data-nextstep="2" data-choise="1" href="">В черте МКАД</a>
-                        <a class="back" data-prevstep="0" href="">назад</a>                        
-                    </div>
-                    <div class="stepw" data-step="2">
-                        <p>Площадь вашего<br>объекта, м<sup>2</sup></p>
-                        <div class="plot" data-choosen="0">
-                            <a class="g-btn step-btn" data-nextstep="3" href="">до 300</a>
-                            <a class="g-btn step-btn" data-nextstep="3" href="">300 - 500</a>
-                            <a class="g-btn step-btn" data-nextstep="3" href="">500 - 1000</a>
-                            <a class="g-btn step-btn" data-nextstep="3" href="">от 1000</a>
-                        </div>
-                        <div class="plot" data-choosen="1">
-                            <a class="g-btn step-btn" data-nextstep="3" href="">до 70</a>
-                            <a class="g-btn step-btn" data-nextstep="3" href="">70 - 110</a>
-                            <a class="g-btn step-btn" data-nextstep="3" href="">110 - 200</a>
-                            <a class="g-btn step-btn" data-nextstep="3" href="">200 - 500</a>
-                        </div>
-                        <a class="back" data-prevstep="1" href="">назад</a>                 
-                    </div>
-                    <div class="stepw" data-step="3">
-                        <p>Оставьте заявку и мы сориентируем Вас по стоимости ремонта за м<sup>2</sup> <span class="calc-type-text" data-choosen="1">вашей квартиры</span> <span class="calc-type-text" data-choosen="0">вашего дома</span> в течение 15 минут.</p>
-                        <form action="ajax/mail.php" method="post">
-                            <input type="text" name="name" placeholder="Введите имя">
-                            <input type="text" name="phone" placeholder="Введите телефон">
-                            <button>Отправить</button>
-                            <input type="hidden" name="event" value="calc">
-                            <input type="hidden" name="frm" value="Калькулятор">
-                            <input type="hidden" name="step1" data-step="1">
-                            <input type="hidden" name="step2" data-step="2">
-                            <input type="hidden" name="step3" data-step="3">
-                        </form>
-                        <a class="back" data-prevstep="2" href="">назад</a>                     
-                    </div>
                 </div>
             </div>
         </div>
@@ -289,6 +199,136 @@
                         <div class="sld-nav right" id="g-sld5r"></div>
                     </div>
                     
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="new-calc">
+        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div>
+            <div>
+                <h2>Заполните форму и подберем <br>для вас лучшее решение!</h2>
+                <div class="calc-n-wrap">
+                    <div class="squere">
+                        <div class="left">
+                            <p class="slider-h">Выберите площадь вашего дома:</p>
+                            <div class="slider" id="slider-range-min">
+                                <!--div class="slider-range"></div-->
+                                <!--div class="slider-handle"></div-->
+                            </div>
+                        </div>
+                        <p class="rignt" id="squere-val"><span class="sq" id="squere">300</span> <span class="grey">м<sup>2</sup></span></p>
+                    </div>
+                    <div class="price">
+                        <div class="left">
+                            <p class="slider-h">Определите приемлемую цену за м<sup>2</sup>:</p>
+                            <div class="slider" id="slider-range">
+                                <!--div class="slider-range"></div>
+                                <div class="slider-handle"></div>
+                                <div class="slider-handle"></div-->
+                            </div>
+                        </div>                        
+                        <p class="rignt" id="price-val"><span class="l-price" id="l-price">7000</span> <span class="grey">-</span> <span class="h-price" id="h-price">17000</span> <span class="grey">руб/м<sup>2</sup></span></p>
+                    </div>
+                    <form action="ajax/mail.php" method="post">
+                       <p class="form-h">Заполните вашы контактные данные:</p>
+                        <input type="text" name="name" placeholder="Введите имя">
+                        <input type="text" name="phone" placeholder="Введите телефон">
+                        <input type="hidden" name="event" value="calc-new">
+                        <input type="hidden" name="frm" value="Калькулятор новый">
+                        <input type="hidden" name="squere" id="n-squere">
+                        <input type="hidden" name="price" id="n-price">
+                        <button>Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why" id="sec2">
+        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div>
+            <div>
+                <h2>Причины, почему с нами выгодно работать</h2>
+                <div class="trigw animation">
+                    <div class="trig">
+                        <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_1.jpg" alt=""></div>
+                        <p>Первоначальная смета<br>не увеличивается</p>
+                    </div> 
+                    <div class="trig">
+                        <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_2.jpg" alt=""></div>
+                        <p>Гарантия на ремонтные работы<br>от 2х лет</p>
+                    </div> 
+                    <div class="trig">
+                        <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_3.jpg" alt=""></div>
+                        <p>Бесплатный вынос мусора и<br>очистка помещений</p>
+                    </div> 
+                    <div class="trig">
+                        <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_4.jpg" alt=""></div>
+                        <p>Скидка 10% на оригинальные<br>материалы</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="calculate" id="sec3">
+        <div class="backgrounds">
+            <div class="step-lint active" data-step="0" data-choise="" data-choosen="">
+                <div class="step-bg" data-choise="0"></div>
+                <div class="step-bg" data-choise="1"></div>
+            </div>
+            <div class="step-lint" data-step="1" data-choise="" data-choosen="">
+                <div class="step-bg" data-choise="0" data-choosen=""></div>
+                <div class="step-bg" data-choise="1" data-choosen=""></div>
+            </div>
+            <div class="step-lint" data-step="2" data-choosen=""></div>
+            <div class="step-lint" data-step="3" data-choosen=""></div>
+        </div>
+        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div>
+            <div>
+                <h2>Сделайте ориентировочный<br> просчет стоимости</h2>
+                <div class="step animation">
+                    <div class="stepw active" data-step="0">
+                        <p>Что Вы хотите<br>отремонтировать?</p>
+                        <a class="g-btn step-btn" data-nextstep="1" data-choise="0" href="">Дом</a>
+                        <a class="g-btn step-btn" data-nextstep="1" data-choise="1" href="">Квартиру</a>                      
+                    </div>
+                    <div class="stepw" data-step="1">
+                        <p>Где находится<br>объект?</p>
+                        <a class="g-btn step-btn" data-nextstep="2" data-choise="0" href="">За МКАД</a>
+                        <a class="g-btn step-btn" data-nextstep="2" data-choise="1" href="">В черте МКАД</a>
+                        <a class="back" data-prevstep="0" href="">назад</a>                        
+                    </div>
+                    <div class="stepw" data-step="2">
+                        <p>Площадь вашего<br>объекта, м<sup>2</sup></p>
+                        <div class="plot" data-choosen="0">
+                            <a class="g-btn step-btn" data-nextstep="3" href="">до 300</a>
+                            <a class="g-btn step-btn" data-nextstep="3" href="">300 - 500</a>
+                            <a class="g-btn step-btn" data-nextstep="3" href="">500 - 1000</a>
+                            <a class="g-btn step-btn" data-nextstep="3" href="">от 1000</a>
+                        </div>
+                        <div class="plot" data-choosen="1">
+                            <a class="g-btn step-btn" data-nextstep="3" href="">до 70</a>
+                            <a class="g-btn step-btn" data-nextstep="3" href="">70 - 110</a>
+                            <a class="g-btn step-btn" data-nextstep="3" href="">110 - 200</a>
+                            <a class="g-btn step-btn" data-nextstep="3" href="">200 - 500</a>
+                        </div>
+                        <a class="back" data-prevstep="1" href="">назад</a>                 
+                    </div>
+                    <div class="stepw" data-step="3">
+                        <p>Оставьте заявку и мы сориентируем Вас по стоимости ремонта за м<sup>2</sup> <span class="calc-type-text" data-choosen="1">вашей квартиры</span> <span class="calc-type-text" data-choosen="0">вашего дома</span> в течение 15 минут.</p>
+                        <form action="ajax/mail.php" method="post">
+                            <input type="text" name="name" placeholder="Введите имя">
+                            <input type="text" name="phone" placeholder="Введите телефон">
+                            <button>Отправить</button>
+                            <input type="hidden" name="event" value="calc">
+                            <input type="hidden" name="frm" value="Калькулятор">
+                            <input type="hidden" name="step1" data-step="1">
+                            <input type="hidden" name="step2" data-step="2">
+                            <input type="hidden" name="step3" data-step="3">
+                        </form>
+                        <a class="back" data-prevstep="2" href="">назад</a>                     
+                    </div>
                 </div>
             </div>
         </div>
@@ -572,7 +612,7 @@
                 <button>Отправить</button>
             </form>
         </div>
-        <div class="pop" id="smet">
+        <!--div class="pop" id="smet">
             <div class="close"></div>
             <p>Стоимость работ, просчитанная в смете, окончательная, прописывается в договоре и к изменению не подлежит.</p>
             <span>Закажите выезд специалиста сметчика и узнайте точную стоимость ремонта уже завтра.</span>
@@ -583,7 +623,7 @@
                 <input type="hidden" name="event" value="smeta"> 
                 <button>Отправить</button>
             </form>
-        </div>
+        </div-->
         <div class="pop" id="pop1">
             <div class="close"></div>
             <p>3D визуализация.</p>
@@ -609,23 +649,23 @@
                 <p>Спасибо за заявку, наш менеджер свяжется с Вами в ближайшее время</p>
         </div>
     </div>
-    <div class="menu-btn active">Навигация по сайту</div>
+    <div class="menu-btn">Навигация по сайту</div>
     <div class="menu">
         <div class="close-menu"></div>
         <a href="#sec1" class="menu-a">Главная</a>
+        <a href="#sec4" class="menu-a">Примеры работ</a>
         <a href="#sec2" class="menu-a">Почему мы?</a>
         <a href="#sec3" class="menu-a">Узнать стоимость</a>
-        <a href="#sec4" class="menu-a">Примеры работ</a>
         <a href="#sec7" class="menu-a">Дизайн-проект</a>
         <a href="#sec9" class="menu-a">О нас</a>
         <a href="#sec12" class="menu-a">Контакты</a>
-    </div>    
-    <div class="right-pop">
+    </div>
+    <!--div id="new-smet-overlay"></div>
+    <div class="right-pop" id="new-smet">
         <div class="right-pop-close"></div>
         <h4 class="right-pop-h4">Наша смета не расширяется в процессе ремонта</h4>
-        <p class="right-pop-img">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p class="right-pop-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-    </div>
-    <!--?php include_once("track/body.php") ?-->
+        <p class="right-pop-img">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde</p>
+    </div-->
+    <?php include_once("track/body.php") ?>
 </body>
 </html>
