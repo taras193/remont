@@ -1,6 +1,28 @@
+.header .header-p{
+	display: inline-block;
+	border: 3px solid #89a831;
+	-webkit-border-radius: 30px;
+	        border-radius: 30px;
+	font-size: 20px;
+	width: 250px;
+	padding: 10px;
+	margin: 71px 20px 25px;
+}
+
+.header h2{
+    margin-top: 130px;
+    font-size: 42px;
+    line-height: 60px;
+    padding: 0 50px;
+}
+.header{
+	text-align: center;
+}
+.header .prich p{text-align: left}
+
 body,button,input,textarea,.header .prich span{font-weight: 300;}
 .phone{font-weight: 500}
-.header .prich{padding: 13px 20px 6px 92px;width: 370px;margin-top: 180px;/* margin-top: 130px; *//* margin-top: 156px; */position: relative;left: 10px;}
+.header .prich{padding: 13px 20px 6px 92px;width: 370px;margin-top: 40px;/* margin-top: 130px; *//* margin-top: 156px; */position: relative;/* left: 10px; */}
 section > div > div{
     height: 640px;
     padding: 20px 0;
@@ -138,11 +160,6 @@ button:hover{
     margin-top: 0;
     z-index: 5;
     text-align: center;
-}
-.header h2{
-    margin-top: 143px;
-    font-size: 46px;
-    /* margin-top: 180px; */
 }
 .contacts button{
     font-size:19px;
@@ -572,23 +589,28 @@ background: rgba(0,0,0,0.73) url(../img/arr_d_w.png) no-repeat center;}
 }
 .pre-loaded .we-can .big-slides .slide[data-sld="0"]{
     background-image: url(../img/bg4_1.jpg);
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 .pre-loaded .we-can .big-slides .slide[data-sld="1"]{
     background-image: url(../img/bg4_2.jpg);
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 .pre-loaded .we-can .big-slides .slide[data-sld="2"]{
     background-image: url(../img/bg4_3.jpg);
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 .pre-loaded .we-can .big-slides .slide[data-sld="3"]{
     background-image: url(../img/bg4_4.jpg);
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 .pre-loaded .we-can .big-slides .slide[data-sld="4"]{
     background-image: url(../img/bg4_5.jpg);
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 .why .trigw .trig{
     width: 40%;
@@ -634,7 +656,7 @@ background: rgba(0,0,0,0.73) url(../img/arr_d_w.png) no-repeat center;}
 .contacts footer{
     background: #B6B6B6;
 }
-.contacts .logo-f{background-image: url(../img/logo.png);width: 227px;height: 80px;background-position: center;background-size: 90%;float: left;}
+.contacts .logo-f{background-image: url(../img/logo.png);width: 227px;height: 80px;background-position: center;-webkit-background-size: 90% 90%;background-size: 90%;float: left;}
 .contacts .conf-btn{display: inline-block;color: white;border-bottom: 1px dashed white;-webkit-transition: all 0.25s;transition: all 0.25s;-webkit-transition: all 0.25s;transition: all 0.25s;margin-left: 50px;margin-top: 18px;margin-right: 200px;margin-bottom: 5px;cursor: pointer;}
 .contacts .conf-btn:hover{
     border-color: transparent;
@@ -703,7 +725,8 @@ background: rgba(0,0,0,0.73) url(../img/arr_d_w.png) no-repeat center;}
 }
 .deadline{
     background-color: #333333;
-    background-size: initial!important;
+    -webkit-background-size: initial initial!important;
+            background-size: initial!important;
     background-position: center;
 }
 section.calculate>div.backgrounds{
@@ -727,7 +750,8 @@ section.calculate> div.backgrounds > div.step-lint{
     padding: 0;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
-    background-size: cover!important;
+    -webkit-background-size: cover!important;
+            background-size: cover!important;
 }
 section.calculate> div.backgrounds > div.step-lint.active{
     opacity: 1;
@@ -765,7 +789,8 @@ section.calculate> div.backgrounds > div.step-lint.active{
     width: 100%;
     height: 100%;
     position: absolute;
-    background-size: cover!important;
+    -webkit-background-size: cover!important;
+            background-size: cover!important;
     -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s;
     opacity: 0;
@@ -775,8 +800,8 @@ section.calculate> div.backgrounds > div.step-lint.active{
 .calculate .step-lint .step-bg[data-choise="1"]{right: 0;}
 .pre-loaded .calculate .step-lint[data-step="0"] .step-bg[data-choise="0"]{background-image: url(../img/calc-st1-bg1.jpg);}
 .pre-loaded .calculate .step-lint[data-step="0"] .step-bg[data-choise="1"]{background-image: url(../img/calc-st1-bg2.jpg);}
-.pre-loaded .calculate .step-lint[data-step="1"] .step-bg[data-choise="0"]{background-image: url(../img/bg-zamkad.jpg);background-size: initial!important;background-position: center;}
-.pre-loaded .calculate .step-lint[data-step="1"] .step-bg[data-choise="1"]{background-image: url(../img/bg-mkad.jpg);background-size: initial!important;background-position: center;}
+.pre-loaded .calculate .step-lint[data-step="1"] .step-bg[data-choise="0"]{background-image: url(../img/bg-zamkad.jpg);-webkit-background-size: initial initial!important;background-size: initial!important;background-position: center;}
+.pre-loaded .calculate .step-lint[data-step="1"] .step-bg[data-choise="1"]{background-image: url(../img/bg-mkad.jpg);-webkit-background-size: initial initial!important;background-size: initial!important;background-position: center;}
 .calculate .step-lint.active[data-choise="0"] .step-bg[data-choise="0"]{opacity: 1;z-index: 2;}
 .calculate .step-lint.active[data-choise="1"] .step-bg[data-choise="1"]{opacity: 1;z-index: 2;}
 .calculate .step-lint.active[data-choosen="0"] .step-bg[data-choise="0"]{opacity: 1}
@@ -805,7 +830,7 @@ section.calculate> div.backgrounds > div.step-lint.active{
 .pre-loaded .calculate .stepw[data-step="2"] p{
     background-image: url(../img/calc-s3-h2.png);
 }
-section.calculate> div.backgrounds > div.step-lint[data-step="1"]{background-image: url(../img/bg10.jpg);background-size: initial!important;background-position: center;}
+section.calculate> div.backgrounds > div.step-lint[data-step="1"]{background-image: url(../img/bg10.jpg);-webkit-background-size: initial initial!important;background-size: initial!important;background-position: center;}
 .calculate .stepw[data-step="1"][data-choise="0"]:before{
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
@@ -864,7 +889,8 @@ section.calculate> div.backgrounds > div.step-lint[data-step="1"]{background-ima
     /* background: url(../img/up.png) no-repeat top center; */
     font-size: 15px;
     /* padding-top: 10px; */
-    background-size: 22px;
+    -webkit-background-size: 22px 22px;
+            background-size: 22px;
     bottom: 10px;
     left: 14px;
     /* margin-left: -20px; */
@@ -937,7 +963,8 @@ section.deadline>div.backgrounds>div.choise-bg{
     left: 0;
     top: 0;
     margin: 0;
-    background-size: cover!important;
+    -webkit-background-size: cover!important;
+            background-size: cover!important;
     opacity: 0;
     -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s;
@@ -1196,7 +1223,8 @@ section>#map>div{
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
     cursor: pointer;
-    background-size: initial!important;
+    -webkit-background-size: initial initial!important;
+            background-size: initial!important;
 }
 .fancybox-close:hover{
     -webkit-transform:rotate(-180deg);
@@ -1221,7 +1249,8 @@ section>#map>div{
     opacity: 1;
     visibility: visible;
     background-position: center!important;
-    background-size: initial!important;
+    -webkit-background-size: initial initial!important;
+            background-size: initial!important;
     }
 .fancybox-next span {
     -webkit-transform: scale(-1,1);
@@ -1285,7 +1314,8 @@ section>#map>div{
         -webkit-transition: all 0.25s;
         transition: all 0.25s;
         z-index: -1;
-        background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+                background-size: 100% 100%;
         }
 .contacts .gulf{
     background-image: url(../img/f_logo.png);

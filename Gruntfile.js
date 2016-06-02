@@ -6,20 +6,28 @@ module.exports = function(grunt) {
 
         concat: {
            js: {
-		    src: 'js/libs/*.js',
-		    dest: 'js/libs.js'
+		    src: 'src/js/libs/*.js',
+		    dest: 'src/js/libs.js'
 		  },
 		  css: {
-		    src: 'css/libs/*.css',
-		    dest: 'css/libs.css'
+		    src: 'src/css/libs/*.css',
+		    dest: 'src/css/libs.css'
 		  },
 		  fullcss: {
-		    src: ['css/libs.css','css/style.css','css/scripts.css'],
-		    dest: 'css/full.css'
+		    src: ['src/css/libs.css','src/css/style.css','src/css/media.css','src/css/scripts.css'],
+		    dest: 'src/css/full.css'
+		  },		  
+           m_js: {
+		    src: 'src/mobile/js/libs/*.js',
+		    dest: 'src/mobile/js/libs.js'
 		  },
-		  fullcss: {
-		    src: ['css/libs.js','css/main.js'],
-		    dest: 'css/full.js'
+		  m_css: {
+		    src: 'src/mobile/css/libs/*.css',
+		    dest: 'src/mobile/css/libs.css'
+		  },
+		  m_fullcss: {
+		    src: ['src/mobile/css/libs.css','src/mobile/css/style.css','src/mobile/css/media.css','src/mobile/css/scripts.css'],
+		    dest: 'src/mobile/css/full.css'
 		  }
         },
         cssmin: {
@@ -47,36 +55,97 @@ module.exports = function(grunt) {
         	},
 		  target: {
 		    files: [{
-		      src: 'css/style.css',
-		      dest: 'css/style.min.css'
+		      src: 'src/css/style.css',
+		      dest: 'src/css/style.css'
 		    },
 		    {
-		      src: 'css/libs.css',
-		      dest: 'css/libs.min.css'
+		      src: 'src/css/libs.css',
+		      dest: 'src/css/libs.min.css'
 		    },
 		    {
-		      src: 'css/full.css',
-		      dest: 'css/full.min.css'
+		      src: 'src/css/scripts.css',
+		      dest: 'src/css/scripts.css'
+		    },
+		    {
+		      src: 'src/css/head.css',
+		      dest: 'src/css/head.css'
+		    },
+		    {
+		      src: 'src/css/media.css',
+		      dest: 'src/css/media.css'
+		    },
+		    {
+		      src: 'src/css/full.css',
+		      dest: 'src/css/full.min.css'
+		    },
+		    {
+		      src: 'src/mobile/css/style.css',
+		      dest: 'src/mobile/css/style.css'
+		    },
+		    {
+		      src: 'src/mobile/css/libs.css',
+		      dest: 'src/mobile/css/libs.min.css'
+		    },
+		    {
+		      src: 'src/mobile/css/scripts.css',
+		      dest: 'src/mobile/css/scripts.css'
+		    },
+		    {
+		      src: 'src/mobile/css/media.css',
+		      dest: 'src/mobile/css/media.css'
+		    },
+		    {
+		      src: 'src/mobile/css/full.css',
+		      dest: 'src/mobile/css/full.min.css'
 		    }]
 		  }
 		},
         uglify: {
-		    build: {
-		        src: 'js/libs.js',
-		        dest: 'js/libs.min.js'
+		    jquery: {
+		       	src: 'src/js/jquery/jquery.js',
+		       	dest: 'src/js/jquery.min.js'
 		    },
-		    full: {
-		        src: 'js/main.js',
-		        dest: 'js/main.min.js'
+		    init: {
+		       	src: 'src/js/init.js',
+		       	dest: 'src/js/init.min.js'
+		    },
+		    libs: {
+		        src: 'src/js/libs.js',
+		        dest: 'src/js/libs.min.js'
+		    },
+		    main: {
+		       	src: 'src/js/main.js',
+		       	dest: 'src/js/main.min.js'
+		    },
+		    map: {
+		       	src: 'src/js/map.js',
+		       	dest: 'src/js/map.min.js'
+		    },
+		    m_jquery: {
+		       	src: 'src/mobile/js/jquery/jquery.js',
+		       	dest: 'src/mobile/js/jquery.min.js'
+		    },
+		    m_init: {
+		       	src: 'src/mobile/js/init.js',
+		       	dest: 'src/mobile/js/init.min.js'
+		    },
+		    m_libs: {
+		        src: 'src/mobile/js/libs.js',
+		        dest: 'src/mobile/js/libs.min.js'
+		    },
+		    m_main: {
+		       	src: 'src/mobile/js/main.js',
+		       	dest: 'src/mobile/js/main.min.js'
+		    },
+		    m_map: {
+		       	src: 'src/mobile/js/map.js',
+		       	dest: 'src/mobile/js/map.min.js'
 		    }
 		},
 		sass: {
 			dist: {
-				options: {            
-                    sourcemap: 'auto'
-		      	},
 				files: {
-					'css/style.css' : 'css/sass/style.scss'
+					'src/css/style.css' : 'src/css/sass/style.scss'
 				}
 			}
 		},
@@ -84,9 +153,15 @@ module.exports = function(grunt) {
 		    dynamic: {
 		        files: [{
 		            expand: true,
-		            cwd: 'img/',
+		            cwd: 'src/img/',
 		            src: ['**/*.{png,jpg,gif}'],
-		            dest: 'img/'
+		            dest: 'src/img/'
+		        },
+		        {
+		            expand: true,
+		            cwd: 'src/img/mobile/',
+		            src: ['**/*.{png,jpg,gif}'],
+		            dest: 'src/img/mobile/'
 		        }]
 		    }
 		},
@@ -98,20 +173,14 @@ module.exports = function(grunt) {
 		      port:21,
 		      authKey:"key2"		      
 		    },
-		    src: 'img/',
-		    dest: 'remont/img',
+		    src: 'src/',
+		    dest: 'stolewnica/',
 		    exclusions: [
 		      '**/.DS_Store',
 		      '**/Thumbs.db',
 		      './node_modules/**',
 		      './node_modules',
-		      './mobile/**',
-		      './mobile',
 		      './.gitignore',
-		      './css/libs',
-		      './css/libs/**',
-		      './js/libs/**',
-		      './js/libs',
 		      '.editorconfig',
 		      '.ftppass',
 		      '.grunt',
@@ -120,112 +189,95 @@ module.exports = function(grunt) {
 		      '.jshintrc',
 		      'package.json',
 		      'for_terminal',
-		      'Gruntfile.js',
-		      '.DS_Store'
-		    ]
-		  }
-		},
-		'ftp-deploy': {
-		  build: {
-		    auth: {
-		      host:'31.170.165.128',
-		      //host:'ftp.webdone.xyz',
-		      port:21,
-		      authKey:'key2'		      
-		    },
-		    src: './',
-		    dest: 'public_html/remont',
-		    exclusions: [
-		      '**/.DS_Store',
-		      '**/Thumbs.db',
-		      './node_modules/**',
-		      './node_modules',
-		      './mobile/**',
-		      './mobile',
-		      './.gitignore',
-		      './img/**',
-		      './css/libs',
-		      './css/libs/**',
-		      './js/libs/**',
-		      './js/libs',
-		      '.editorconfig',
-		      '.ftppass',
-		      '.grunt',
-		      './.git/**',
-		      './.git',
-		      '.jshintrc',
-		      'package.json',
-		      'for_terminal',
-		      'Gruntfile.js',
-		      '.DS_Store'
+		      'Gruntfile.js'
 		    ]
 		  }
 		},
 		autoprefixer: {
 			options: {
-				browsers: ['ie >= 8','last 10 versions','> 0.1%']
+				browsers: ['ie >= 8','last 10 versions','> 0.1%','ff >= 20','Android > 1']
 			},
             dist: {
                 files: [
 	                {
-	                    'css/full.css': 'css/full.css'
+	                    'src/css/full.css': 'src/css/full.css'
 	                },
 	                {
-	                    'css/style.css': 'css/style.css'
+	                    'src/css/style.css': 'src/css/style.css'
 	                },
 	                {
-	                    'css/head.css': 'css/head.css'
+	                    'src/css/head.css': 'src/css/head.css'
 	                },
 	                {
-	                    'css/libs.css': 'css/libs.css'
+	                    'src/css/libs.css': 'src/css/libs.css'
 	                },
 	                {
-	                    'css/scripts.css': 'css/scripts.css'
+	                    'src/css/scripts.css': 'src/css/scripts.css'
+	                },
+	                {
+	                    'src/css/media.css': 'src/css/media.css'
+	                },
+	                {
+	                    'src/mobile/css/full.css': 'src/mobile/css/full.css'
+	                },
+	                {
+	                    'src/mobile/css/style.css': 'src/mobile/css/style.css'
+	                },
+	                {
+	                    'src/mobile/css/head.css': 'src/mobile/css/head.css'
+	                },
+	                {
+	                    'src/mobile/css/libs.css': 'src/mobile/css/libs.css'
+	                },
+	                {
+	                    'src/mobile/css/scripts.css': 'src/mobile/css/scripts.css'
+	                },
+	                {
+	                    'src/mobile/css/media.css': 'src/mobile/css/media.css'
 	                }
                 ]
             }
         },
         watch: {
-			sass: {
-				files: 'css/sass/*.scss',
-				tasks: ['sass']
-			},
 		    scripts: {
-		        files: ['js/libs/*.js'],
+		        files: ['src/js/libs/*.js','src/js/libs/*.js','src/js/jquery/*.js','src/mobile/js/libs/*.js','src/mobile/js/libs/*.js','src/mobile/js/jquery/*.js'],
 		        tasks: ['concat', 'uglify'],
 		        options: {
 		            spawn: false,
 		        },
 		    },
+			sass: {
+				files: 'src/css/sass/*.scss',
+				tasks: ['sass']
+			},
 		    css: {
-			    files: ['css/libs/*.css'],
+			    files: ['src/css/libs/*.css','src/mobile/css/libs/*.css'],
 			    tasks: ['concat','cssmin'],
 			    options: {
 			        spawn: false,
 			    }
-
-			},
-		/*	'ftp-deploy': {
-				files: ['js/*.js','css/*.css','ajax/*.*','*.html','!**/   /*   node_modules  */  /**'],
-				tasks: ['ftp-deploy'],
-				options: {
-			        spawn: false,
-			    },
-			},
-			ftpush: {
-				files: ['img/*.*','!**/   /*   node_modules  */  /**'],
-				tasks: ['ftpush'],
-				options: {
-			        spawn: false,
-			    },
-			}  */
+			}//,
+			//'ftp-deploy': {
+			//	files: ['js/*.js','css/*.css','ajax/*.*','*.html','!**/node_modules/**'],
+			//	tasks: ['ftp-deploy'],
+			//	options: {
+			//        spawn: false,
+			//    },
+			//},
+			//ftpush: {
+			//	files: ['img/*.*','!**/node_modules/**'],
+			//	tasks: ['ftpush'],
+			//	options: {
+			//        spawn: false,
+			//    },
+			//}
 		}
 
     });
 
     // 3. Тут мы указываем Grunt, что хотим использовать этот плагин
-	grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -236,7 +288,8 @@ module.exports = function(grunt) {
 
     // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('fin', ['concat','autoprefixer','uglify','cssmin']);
+    grunt.registerTask('fin', ['autoprefixer','concat','uglify','cssmin','imagemin']);
     grunt.registerTask('ftp', ['ftp-deploy','ftpush']);
+    grunt.registerTask('css-long', ['css_longhand']);
 
 };
