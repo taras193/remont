@@ -4,25 +4,21 @@
     <meta charset="UTF-8">
     <title>Grand - строительная компания</title>
     <script>if (screen.width <= 750) {document.location = "mobile/"+document.location.search;}</script>
-    <!--style><? include('css/head.css'); ?></style-->
-    <!--script>
+    <style><? include('css/head.css'); ?></style>
+    <script>
     !function(e,t,n){function r(){for(;u[0]&&"loaded"==u[0][l];)o=u.shift(),o[f]=!a.parentNode.insertBefore(o,a)}for(var i,s,o,u=[],a=e.scripts[0],f="onreadystatechange",l="readyState";i=n.shift();)s=e.createElement(t),"async"in a?(s.async=!1,e.head.appendChild(s)):a[l]?(u.push(s),s[f]=r):e.write("<"+t+' src="'+i+'"></'+t+">"),s.src=i}(document,"script",
     ["js/libs.min.js",
     "js/main.js",
     "https://maps.googleapis.com/maps/api/js?sensor=false",
     "js/map.js"]);
-    </script-->
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/scripts.css">
-    <link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>
+    </script>
     <meta id="viewport" name="viewport" content="width=980">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
     <div id="loader"><div class="cssload-cube"><div class="cssload-plane-1"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div><div class="cssload-plane-2"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div><div class="cssload-plane-3"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div></div></div>
     <section class="header" id="sec1">
-        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav down animation"></div>
         <div>
             <div class="head">
                 <div class="logo"></div>
@@ -33,57 +29,18 @@
                 <p class="desc">Элитный ремонт под ключ от 5500 руб./м<sup>2</sup></p>
             </div>
             <div>
-                <h2 class="animation">Хотите, чтобы профессионалы своего дела <br>решили все вопросы ремонта вашего <br>дома на высшем уровне от А до Я?</h2>
+                <h2 class="animation">Почему в 90% случаев люди переплачивают<br><span>в 2 - 3</span> раза за ремонт ?</h2>
                 <div class="prich">
                     <div class="smeta"></div>
-                    <p>Наша смета не расширяется в процессе ремонта</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="new-calc">
-        <div>
-            <div>
-                <h2>Заполните форму и подберем <br>для вас лучшее решение!</h2>
-                <div class="calc-n-wrap">
-                    <div class="squere">
-                        <div class="left">
-                            <p class="slider-h">Выберите площадь вашего дома:</p>
-                            <div class="slider">
-                                <div class="slider-range"></div>
-                                <div class="slider-handle"></div>
-                            </div>
-                        </div>
-                        <p class="rignt"><span class="sq">300</span><span class="grey">&nbsp;&nbsp;м<sup>2</sup></span></p>
-                    </div>
-                    <div class="price">
-                        <div class="left">
-                            <p class="slider-h">Определите приемлемую цену за м<sup>2</sup>:</p>
-                            <div class="slider">
-                                <div class="slider-range"></div>
-                                <div class="slider-handle"></div>
-                                <div class="slider-handle"></div>
-                            </div>
-                        </div>                        
-                        <p class="rignt">
-                            <span class="l-price">7000</span>
-                            <span class="grey">&nbsp;-&nbsp;</span>
-                            <span class="h-price">17000</span>
-                            <span class="grey">&nbsp;руб/м<sup>2</sup></span>
-                        </p>
-                    </div>
-                    <form action="">
-                       <p class="form-h">Заполните вашы контактные данные:</p>
-                        <input type="text" name="phone" placeholder="Введите телефон">
-                        <input type="text" name="name" placeholder="Введите имя">
-                        <button>Отправить</button>
-                    </form>
+                    <p>Главная причина:</p>
+                    <span>расширение сметы<br>в процессе ремонта</span>
                 </div>
             </div>
         </div>
     </section>
     <section class="why" id="sec2">
-        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Причины, почему с нами выгодно работать</h2>
@@ -121,7 +78,8 @@
             <div class="step-lint" data-step="2" data-choosen=""></div>
             <div class="step-lint" data-step="3" data-choosen=""></div>
         </div>
-        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Сделайте ориентировочный<br> просчет стоимости</h2>
@@ -172,7 +130,8 @@
         </div>
     </section>
     <section class="gallery" id="sec4">
-        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Примеры наших работ «до» и «после»</h2>
@@ -301,7 +260,8 @@
             <div class="slide" data-sld="3"></div>
             <div class="slide" data-sld="4"></div>
         </div>
-        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Мы всегда находим наилучшее решение</h2>
@@ -392,7 +352,8 @@
         </div>
     </section>
     <section class="attention" id="sec6">
-        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>В процессе ремонта обязательно надо учитывать</h2>
@@ -418,7 +379,8 @@
         </div>
     </section>
     <section class="economy" id="sec7">
-        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Сэкономьте на ремонте, заказав дизайн-проект!</h2>
@@ -438,7 +400,8 @@
         </div>
     </section>
     <section class="problems" id="sec8">
-        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Проблемы, с которыми сталкиваются, работая<br>с частными бригадами</h2>
@@ -484,7 +447,8 @@
         </div>
     </section>
     <section class="about-us" id="sec9">
-        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Информация о нашей компании</h2>
@@ -514,7 +478,8 @@
             <div class="choise-bg" data-choise="0"></div>
             <div class="choise-bg" data-choise="1"></div>
         </div>
-        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
+        <div class="site-nav up"></div>
+        <div class="site-nav down"></div>
         <div>
             <div>
                 <h2>Горят сроки?</h2>
@@ -535,6 +500,7 @@
         </div>
     </section>
     <section class="contacts" id="sec12">
+        <div class="site-nav up"></div>
         <div id="map"></div>
         <h2>Контактная информация</h2>
         <form action="ajax/mail.php" method="post">
@@ -609,7 +575,7 @@
                 <p>Спасибо за заявку, наш менеджер свяжется с Вами в ближайшее время</p>
         </div>
     </div>
-    <div class="menu-btn active">Навигация по сайту</div>
+    <div class="menu-btn active"></div>
     <div class="menu">
         <div class="close-menu"></div>
         <a href="#sec1" class="menu-a">Главная</a>
@@ -619,13 +585,7 @@
         <a href="#sec7" class="menu-a">Дизайн-проект</a>
         <a href="#sec9" class="menu-a">О нас</a>
         <a href="#sec12" class="menu-a">Контакты</a>
-    </div>    
-    <div class="right-pop">
-        <div class="right-pop-close"></div>
-        <h4 class="right-pop-h4">Наша смета не расширяется в процессе ремонта</h4>
-        <p class="right-pop-img">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p class="right-pop-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
     </div>
-    <!--?php include_once("track/body.php") ?-->
+    <?php include_once("track/body.php") ?>
 </body>
 </html>

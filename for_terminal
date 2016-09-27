@@ -40,7 +40,6 @@ npm install grunt-contrib-watch --save-dev
 npm install grunt-autoprefixer --save-dev
 npm install grunt-ftpush --save-dev
 npm install grunt-ftp-deploy --save-dev
-npm install grunt-sass --save-dev
 
 grunt 'ftp-deploy' -d
 grunt ftpush -d

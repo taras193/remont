@@ -1,5 +1,5 @@
 //acинхронная загрузка css
-//$('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
+$('<link rel=stylesheet type=text/css href=css/libs.min.css><link rel=stylesheet type=text/css href=css/style.min.css><link rel=stylesheet type=text/css href=css/scripts.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 //$('<link rel=stylesheet type=text/css href=css/full.min.css><link rel=stylesheet type=text/css href=https://fonts.googleapis.com/css?family=Roboto:300,500&subset=latin,cyrillic>').appendTo('head');
 
 //мобильное устройство?
@@ -33,7 +33,7 @@ function initalize(){
 
 		//анимация
   if (isMobile != true) {
-   	setTimeout(function(){$('.animation').viewportChecker({classToAdd: 'animated'})},1000); 
+    setTimeout(function(){$('.animation').viewportChecker({classToAdd: 'animated'})},1000); 
   }
 
 	    //флаг ициализации

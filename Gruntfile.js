@@ -72,9 +72,6 @@ module.exports = function(grunt) {
 		},
 		sass: {
 			dist: {
-				options: {            
-                    sourcemap: 'auto'
-		      	},
 				files: {
 					'css/style.css' : 'css/sass/style.scss'
 				}
@@ -188,7 +185,7 @@ module.exports = function(grunt) {
         watch: {
 			sass: {
 				files: 'css/sass/*.scss',
-				tasks: ['sass']
+				tasks: ['sass','concat','cssmin']
 			},
 		    scripts: {
 		        files: ['js/libs/*.js'],
@@ -235,7 +232,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ftp-deploy');
 
     // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['concat','uglify','cssmin','watch']);
     grunt.registerTask('fin', ['concat','autoprefixer','uglify','cssmin','imagemin']);
     grunt.registerTask('ftp', ['ftp-deploy','ftpush']);
 
