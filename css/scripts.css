@@ -1,6 +1,6 @@
 body,button,input,textarea,.header .prich span{font-weight: 300;}
 .phone{font-weight: 500}
-.header .prich{padding: 13px 20px 6px 92px;width: 370px;margin-top: 180px;/* margin-top: 130px; *//* margin-top: 156px; */position: relative;left: 10px;}
+.header .prich{padding: 13px 20px 6px 92px;width: 370px;margin-top: 190px;/* margin-top: 130px; *//* margin-top: 156px; */position: relative;left: 10px;}
 section > div > div{
     height: 640px;
     padding: 20px 0;
@@ -447,8 +447,7 @@ width: 68px;
 height: 68px;
 left: 0;
 top: 0;
--webkit-border-radius: 40px;
-        border-radius: 40px;
+border-radius: 40px;
 background: rgba(0,0,0,0.73) url(../img/arr_d_w.png) no-repeat center;}
 .why .trigw .ico{
     /* background: none; */
@@ -656,11 +655,6 @@ background: rgba(0,0,0,0.73) url(../img/arr_d_w.png) no-repeat center;}
     animation-play-state: running;
     animation-timing-function: cubic-bezier(.7,.01,1,1);*/
 }
-
-@-webkit-keyframes draggable2{
-    0%{margin-top: -10px;}
-    100%{margin-top: 10px;}
-    }
 
 @keyframes draggable2{
     0%{margin-top: -10px;}
@@ -1329,7 +1323,7 @@ section>#map>div{
     font-size: 14px;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
-    margin-left: -250px;
+    margin-left: -50px;
 }
 .menu-btn_old:hover{
     -webkit-transform: rotate(-180deg);
@@ -1339,17 +1333,12 @@ section>#map>div{
 .menu-btn.active{
     margin-left: 0px;
 }
-.menu-btn.blacked{
-	-webkit-filter: invert(100%);
-}
 .menu-btn.as-close{
     background-image: url(../img/close_n.png);
     /*-webkit-transform: rotate(-360deg);
     -ms-transform: rotate(-360deg);
     transform: rotate(-360deg);*/
     color: transparent;
-    margin-left: 0!important;
-    -webkit-filter: none;
     }
 .menu{
     position: fixed;
@@ -1359,7 +1348,7 @@ section>#map>div{
     height: 100%;
     background: rgba(0, 0, 0, 0.25);
     z-index: 5;
-    padding: 80px 0px 15px;
+    padding: 116px 0px 15px;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
     -webkit-transform: translate3d(-100%,0,0);
@@ -1376,7 +1365,7 @@ section>#map>div{
     display: block;
     color: #1d1d1d;
     height: 50px;
-    font-size: 23px;
+    font-size: 30px;
     padding: 0px 25px 0px 149px;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
@@ -1407,7 +1396,6 @@ input{-webkit-transition: all 0.25s;transition: all 0.25s}
     display: none;
 
 }
-
 .about-us .trig:nth-of-type(2) p span{
     margin-bottom: 35px;
     display: inline-block;
@@ -1427,21 +1415,7 @@ input{-webkit-transition: all 0.25s;transition: all 0.25s}
         display: none;
     }
 }
-#new-smet-overlay{
-	position: fixed;
-	top: 0;
-	left: 100%;
-	width: 100%;
-	height: 100%;
-	z-index: 19;
-}
-#new-smet-overlay.active{
-	left: 0;
-}
-.right-pop.active{
-	left: 50%;
-}
-.right-pop {position: fixed;left: 250%;width: 100%;height: 100%;background: white;z-index: 20;top: 0;margin-left: -450px;padding-top: 125px;background: white;-webkit-transition: all 0.5s;transition: all 0.5s;}
+.right-pop {position: fixed;left: 150%;width: 100%;height: 100%;background: white;z-index: 20;top: 0;margin-left: -450px;padding-top: 125px;background: white;transition: all 0.5s;}
 .right-pop-close {position: absolute;width: 28px;height: 28px;background: url(../img/close_n.png);top: 37px;left: 44px;cursor: pointer;}
 .right-pop-h4 {text-align: left;padding-left: 118px;color: #1c1b1b;font-family: Roboto;font-size: 36px;width: 717px;line-height: 43px;position: relative;margin-bottom: 78px;}
 .right-pop-h4:after {
@@ -1460,5 +1434,4 @@ input{-webkit-transition: all 0.25s;transition: all 0.25s}
     margin-left: 50px;
     font-size: 19px;
     line-height: 23px;
-    margin-top: -4px;}
-    
+    margin-to
