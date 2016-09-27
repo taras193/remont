@@ -26,8 +26,7 @@ return $array;
 
 $xlsData = getXLS('track/multi.xls'); //извлеаем данные из XLS
 
-$type = 'kvart';
-$din_title = 'Ремонт под ключ от 8000';
+$din_title = 'Элитный ремонт под ключ от 5500';
 
 $p = $_GET['din_zag'];
 
@@ -39,7 +38,6 @@ for ($i=1; $i <=21 ; $i++) {
 $xlsData_colls = $xlsData[$i];
 if($p == $xlsData_colls[1]){
 $din_title = substr($xlsData_colls[2], 0, -11);
-$type = $xlsData_colls[4];
 }
 }
 }
@@ -61,7 +59,7 @@ $type = $xlsData_colls[4];
     <meta id="viewport" name="viewport" content="width=980">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
-<body class="<? echo $type; ?>">
+<body>
     <div id="loader"><div class="cssload-cube"><div class="cssload-plane-1"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div><div class="cssload-plane-2"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div><div class="cssload-plane-3"><div class="cssload-top-left"></div><div class="cssload-top-middle"></div><div class="cssload-top-right"></div><div class="cssload-middle-left"></div><div class="cssload-middle-middle"></div><div class="cssload-middle-right"></div><div class="cssload-bottom-left"></div><div class="cssload-bottom-middle"></div><div class="cssload-bottom-right"></div></div></div></div>
     <section class="header" id="sec1">
         <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
@@ -75,7 +73,10 @@ $type = $xlsData_colls[4];
                 <p class="desc"><? echo $din_title; ?> руб./м<sup>2</sup></p>
             </div>
             <div>
-                <h2 class="">Почему в половине случаев ремонт длится в 3 раза дольше, а смета в процессе становится в 2 раза больше?</h2>
+                <h2 class="animation">Мы уверены, что вы не хотите, чтобы ремонт длился в 3 раза дольше, а смета в процессе стала в 2 раза больше.</h2>
+                <p class="header-p">Максимальный срок работ 55 дней</p>
+                <p class="header-p">Точный расчет сметы за 48 часов</p>
+                <p class="header-p">Ежедневеные отчеты о проделанной работа</p>
                 <div class="prich">
                     <div class="smeta"></div>
                     <p>Наша смета не расширяется в процессе ремонта</p>
@@ -84,8 +85,7 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="gallery" id="sec4">
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Примеры наших работ «до» и «после»</h2>
@@ -207,15 +207,14 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="new-calc">
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Заполните форму и подберем <br>для вас лучшее решение!</h2>
                 <div class="calc-n-wrap">
                     <div class="squere">
                         <div class="left">
-                            <p class="slider-h">Выберите площадь <span class="kv-id dom">вашего дома</span><span class="kv-id kvart">вашей квартиры</span>:</p>
+                            <p class="slider-h">Выберите площадь вашего дома:</p>
                             <div class="slider" id="slider-range-min">
                                 <!--div class="slider-range"></div-->
                                 <!--div class="slider-handle"></div-->
@@ -249,12 +248,11 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="why" id="sec2">
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Причины, почему с нами выгодно работать</h2>
-                <div class="trigw">
+                <div class="trigw animation">
                     <div class="trig">
                         <div class="ico"><img src="img/blank.png" class="lazy" data-original="img/trig1_1.jpg" alt=""></div>
                         <p>Первоначальная смета<br>не увеличивается</p>
@@ -288,12 +286,11 @@ $type = $xlsData_colls[4];
             <div class="step-lint" data-step="2" data-choosen=""></div>
             <div class="step-lint" data-step="3" data-choosen=""></div>
         </div>
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Сделайте ориентировочный<br> просчет стоимости</h2>
-                <div class="step">
+                <div class="step animation">
                     <div class="stepw active" data-step="0">
                         <p>Что Вы хотите<br>отремонтировать?</p>
                         <a class="g-btn step-btn" data-nextstep="1" data-choise="0" href="">Дом</a>
@@ -340,8 +337,6 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="we-can" id="sec5">
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
         <div class="big-slides" data-sld="0">
             <div class="slide active" data-sld="0"></div>
             <div class="slide" data-sld="1"></div>
@@ -349,8 +344,7 @@ $type = $xlsData_colls[4];
             <div class="slide" data-sld="3"></div>
             <div class="slide" data-sld="4"></div>
         </div>
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Мы всегда находим наилучшее решение</h2>
@@ -441,8 +435,7 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="attention" id="sec6">
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>В процессе ремонта обязательно надо учитывать</h2>
@@ -468,8 +461,7 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="economy" id="sec7">
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Сэкономьте на ремонте, заказав дизайн-проект!</h2>
@@ -489,8 +481,7 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="problems" id="sec8">
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down blacked"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Проблемы, с которыми сталкиваются, работая<br>с частными бригадами</h2>
@@ -536,12 +527,11 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="about-us" id="sec9">
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Информация о нашей компании</h2>
-                <div class="trigw">
+                <div class="trigw animation">
                     <div class="trig">
                         <p>600</p>
                         <span class="green">крупных проектов</span>
@@ -567,8 +557,7 @@ $type = $xlsData_colls[4];
             <div class="choise-bg" data-choise="0"></div>
             <div class="choise-bg" data-choise="1"></div>
         </div>
-        <div class="site-nav lines down"></div>
-        <div class="site-nav lines up"></div>
+        <div class="site-nav down"><span>нажмите<br>чтобы перейти</span><p>ДАЛЕЕ</p></div>
         <div>
             <div>
                 <h2>Горят сроки?</h2>
@@ -589,7 +578,6 @@ $type = $xlsData_colls[4];
         </div>
     </section>
     <section class="contacts" id="sec12">
-        <div class="site-nav lines up"></div>
         <div id="map"></div>
         <h2>Контактная информация</h2>
         <form action="ajax/mail.php" method="post">
@@ -627,18 +615,18 @@ $type = $xlsData_colls[4];
                 <button>Отправить</button>
             </form>
         </div>
-        <div class="pop" id="smet">
+        <!--div class="pop" id="smet">
             <div class="close"></div>
-            <p>Выбирая подрядчика по принципу минимальной цены, знайте, что, скорее всего, вы переплатите в 2 , а то и в 3 раза.</p>
-            <h5>4 самых популярных трюка на рынке ремонта для увеличения сметы.</h5>
-            <ul>
-                <li><span>1.  Электрика </span>В первоначальную смету закладывается минимальное количество электрооборудования, а именно количество розеток и метров кабеля. В процессе ремонта в смете появляются дополнительные параметры: увеличивается длина кабеля и количество метров штробления.</li>
-                <li><span>2.  Поклейка обоев </span>Зачастую строительные компании закладывают в смету стоимость поклейки самых простых – бумажных обоев, и, если клиент купил виниловые (моющиеся) обои, цена на поклейку может вырасти в 1,5 – 2 раза.</li>
-                <li><span>3.  Выравнивание полов </span>При заливке армированной стяжки пола в смету могут занести минимальную толщину стяжки – 5 см. По факту стяжка может быть 10 и даже 12 см, вот еще одна статья расходов, которая вырастает в 2 раза.</li>
-                <li><span>4.  Выравнивание стен </span>Стоимость шпаклевки и штукатурки зависит от количества слоев. В смете может быть заложена толщина одного слоя, хотя по факту для качественного выравнивания поверхности нужно как минимум 2 а то и 3 слоя. </li>
-            </ul>
-            <h5>Нарываясь на подобного исполнителя, будьте готовы и к увеличению сроков работ. <br><br>Существуют еще десятки вариантов, как недобросовестные подрядчики завышают смету в процессе ремонта, будьте внимательны.</h5>
-        </div>
+            <p>Стоимость работ, просчитанная в смете, окончательная, прописывается в договоре и к изменению не подлежит.</p>
+            <span>Закажите выезд специалиста сметчика и узнайте точную стоимость ремонта уже завтра.</span>
+            <form action="ajax/mail.php" method="post">
+                <input name="name" placeholder="Введите имя" type="text">
+                <input name="phone" placeholder="Введите телефон" type="text">
+                <input type="hidden" name="frm" value="Смета">
+                <input type="hidden" name="event" value="smeta"> 
+                <button>Отправить</button>
+            </form>
+        </div-->
         <div class="pop" id="pop1">
             <div class="close"></div>
             <p>3D визуализация.</p>
@@ -662,10 +650,6 @@ $type = $xlsData_colls[4];
         <div class="pop" id="okgo">
             <div class="close"></div>
                 <p>Спасибо за заявку, наш менеджер свяжется с Вами в ближайшее время</p>
-        </div>
-        <div class="pop" id="error-pop">
-            <p>Пожалуйста, <br>введите правильное имя и телефон!</p>
-            <div class="close">закрыть окно и ввести правильно</div>
         </div>
     </div>
     <div class="menu-btn">Навигация по сайту</div>

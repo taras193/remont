@@ -26,8 +26,7 @@ return $array;
 
 $xlsData = getXLS('../track/multi.xls'); //извлеаем данные из XLS
 
-$type = 'kvart';
-$din_title = 'Ремонт под ключ от 8000';
+$din_title = 'Элитный ремонт под ключ от 5500';
 
 $p = $_GET['din_zag'];
 
@@ -39,7 +38,6 @@ for ($i=1; $i <=21 ; $i++) {
 $xlsData_colls = $xlsData[$i];
 if($p == $xlsData_colls[1]){
 $din_title = substr($xlsData_colls[2], 0, -11);
-$type = $xlsData_colls[4];
 }
 }
 }
@@ -61,7 +59,7 @@ $type = $xlsData_colls[4];
     <meta id="viewport" name="viewport" content="width=480">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
-<body class="<? echo $type; ?>">
+<body>
     <section class="header" id="sec1">
         <div>
             <div class="head">
@@ -72,7 +70,7 @@ $type = $xlsData_colls[4];
                 <div class="logo"></div>
             </div>
             <div>
-                <h2 class="animation">Почему в половине случаев ремонт длится в 3 раза дольше, а смета в процессе становится в 2 раза больше?</h2>
+                <h2>Хотите, чтобы<br>профессионалы своего<br>дела решили все<br>вопросы ремонта<br>вашего дома на высшем<br>уровне от А до Я?</h2>
                 <div class="prich">
                     <div class="smeta"></div>
                     <p>Наша смета не расширяется в процессе ремонта</p>
@@ -282,7 +280,7 @@ $type = $xlsData_colls[4];
                 <div class="calc-n-wrap">
                     <div class="squere">
                         <div class="left">
-                            <p class="slider-h">Выберите площадь <span class="kv-id dom">вашего дома</span><span class="kv-id kvart">вашей квартиры</span>:</p>
+                            <p class="slider-h">Выберите площадь вашего дома:</p>
                         </div>
                         <p class="rignt" id="squere-val"><span class="sq" id="squere">300</span> <span class="grey">м<sup>2</sup></span></p>
                     </div>
@@ -668,18 +666,18 @@ $type = $xlsData_colls[4];
                 <input type="hidden" name="event" value="zak_zvon"> 
                 <button>Отправить</button>
             </form>
-        </div>        
+        </div>
         <div class="pop" id="smet">
             <div class="close"></div>
-            <p>Выбирая подрядчика по принципу минимальной цены, знайте, что, скорее всего, вы переплатите в 2 , а то и в 3 раза.</p>
-            <h5>4 самых популярных трюка на рынке ремонта для увеличения сметы.</h5>
-            <ul>
-                <li><span>1.  Электрика </span>В первоначальную смету закладывается минимальное количество электрооборудования, а именно количество розеток и метров кабеля. В процессе ремонта в смете появляются дополнительные параметры: увеличивается длина кабеля и количество метров штробления.</li>
-                <li><span>2.  Поклейка обоев </span>Зачастую строительные компании закладывают в смету стоимость поклейки самых простых – бумажных обоев, и, если клиент купил виниловые (моющиеся) обои, цена на поклейку может вырасти в 1,5 – 2 раза.</li>
-                <li><span>3.  Выравнивание полов </span>При заливке армированной стяжки пола в смету могут занести минимальную толщину стяжки – 5 см. По факту стяжка может быть 10 и даже 12 см, вот еще одна статья расходов, которая вырастает в 2 раза.</li>
-                <li><span>4.  Выравнивание стен </span>Стоимость шпаклевки и штукатурки зависит от количества слоев. В смете может быть заложена толщина одного слоя, хотя по факту для качественного выравнивания поверхности нужно как минимум 2 а то и 3 слоя. </li>
-            </ul>
-            <h5>Нарываясь на подобного исполнителя, будьте готовы и к увеличению сроков работ. <br><br>Существуют еще десятки вариантов, как недобросовестные подрядчики завышают смету в процессе ремонта, будьте внимательны.</h5>
+            <p>Стоимость работ, просчитанная в смете, окончательная, прописывается в договоре и к изменению не подлежит.</p>
+            <span>Закажите выезд специалиста сметчика и узнайте точную стоимость ремонта уже завтра.</span>
+            <form action="ajax/mail.php" method="post">
+                <input name="name" placeholder="Введите имя" type="text">
+                <input name="phone" placeholder="Введите телефон" type="text">
+                <input type="hidden" name="frm" value="Смета">
+                <input type="hidden" name="event" value="smeta"> 
+                <button>Отправить</button>
+            </form>
         </div>
         <div class="pop" id="pop1">
             <div class="close"></div>
@@ -705,13 +703,9 @@ $type = $xlsData_colls[4];
             <div class="close"></div>
                 <p>Спасибо за заявку, наш менеджер свяжется с Вами в ближайшее время</p>
         </div>
-        <div class="pop" id="error-pop">
-            <p>Пожалуйста, <br>введите правильное имя и телефон!</p>
-            <div class="close">закрыть окно и ввести правильно</div>
-        </div>
         <div class="pop select-pop" id="squere-pop">
             <div class="close"></div>
-            <ul class="kv-id kvart" data-input="#squere">
+            <!--ul data-input="#squere">
                 <li>40</li>
                 <li>60</li>
                 <li>80</li>
@@ -724,8 +718,8 @@ $type = $xlsData_colls[4];
                 <li>220</li>
                 <li>240</li>
                 <li>260</li>
-            </ul>            
-            <ul class="kv-id dom" data-input="#squere">
+            </ul-->            
+            <ul data-input="#squere">
                 <li>60</li>
                 <li>120</li>
                 <li>180</li>
