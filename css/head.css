@@ -73,27 +73,55 @@ body:not(.loaded) .menu{display:none}
 .cssload-bottom-right{bottom:0;right:0}
 .loaded #loader{-webkit-transform:scale(1,0);-ms-transform:scale(1,0);transform:scale(1,0)}
 section,section>div{position:relative;z-index:2}
-*{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background-position:center;background-repeat:no-repeat}
-:after,:before{content:"";display:block;width:100%;height:0;clear:both}
-a:after,a:before,br:after,br:before,img:after,img:before,span:after,span:before,sup:after,sup:before,table:after,table:before,td:after,td:before,tr:after,tr:before{content:none}
-h1,h2,h3,h4,h5{font-size:1em;font-weight:inherit;text-align:center;font-family:Roboto;font-weight:300;letter-spacing:.01em}
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;background-position:50% 50%;background-repeat:no-repeat}
+::after,::before{content:"";display:block;width:100%;height:0;clear:both}
+a::after,a::before,br::after,br::before,img::after,img::before,span::after,span::before,sup::after,sup::before,table::after,table::before,td::after,td::before,tr::after,tr::before{content:none}
+h1,h2,h3,h4,h5{font-size:1em;text-align:center;font-family:Roboto;font-weight:300;letter-spacing:.01em}
 body{font-family:Roboto,sans-serif;font-weight:400;color:#141414}
+.header .phone,.header h2{font-family:Roboto}
 a{text-decoration:none;color:inherit;outline:0!important}
 button,input,textarea{outline:0}
-section{width:100%;min-width:980px;overflow:hidden;position:relative;z-index:2;min-height:600px;height:100vh;-webkit-background-size:cover!important;background-size:cover!important}
-section>div{max-width:980px;position:relative;z-index:2;height:100%;margin:0 auto}
-section>div>div{width:100%;position:absolute;height:600px;top:50%;margin-top:-300px}
-.header{background-image:url(img/bg1.jpg);color:#fff}
-.header .logo{background-image:url(img/logo.png);width:192px;height:83px;float:left;margin-left:75px;margin-top:-10px}
+section{width:100%;min-width:980px;overflow:hidden;min-height:600px;height:100vh;background-size:cover!important}
+section>div{max-width:980px;height:100%;margin:0 auto}
+section>div>div{height:600px;top:50%;margin-top:-300px}
+.header{background-image:url(img/bg1.jpg)}
+.header .logo{width:192px;height:83px;float:left;margin-left:75px;margin-top:-10px;background-image:url(img/logo.png)}
 .header .call{float:right;margin-right:77px;margin-top:-12px}
-.header .phone{float:right;font-family:Roboto;font-size:27px;margin-bottom:10px}
-.header .callback{width:199px;height:39px;background-color:#89a831;border:1px solid #7a9d17;display:block;clear:both;color:#fff;font-size:16px;text-align:center;line-height:34px;-webkit-border-radius:20px;border-radius:20px;position:relative;-webkit-transition:all .25s;transition:all .25s}
+.header .phone{float:right;font-size:27px;margin-bottom:10px}
+.header .callback{width:199px;height:39px;border:1px solid #7a9d17;display:block;clear:both;color:#fff;font-size:16px;text-align:center;line-height:34px;-webkit-border-radius:20px;border-radius:20px;position:relative;-webkit-transition:all .25s;transition:all .25s;background-color:#89a831}
 .header .callback:hover{background-color:#799821}
-.header .callback:hover:after{opacity:1}
-.header .callback:after{content:'';display:block;background-image:url(img/callbackico.png);width:19px;height:17px;position:absolute;left:10px;top:9px;-webkit-transition:all .25s;transition:all .25s;opacity:0}
-.header h2{clear:both;font-family:Roboto;font-size:54px;font-weight:300;line-height:67px;margin-top:68px}
-.header h2 span{display:inline-block;margin-left:-75px;padding-left:59px;margin-right:-55px;padding-right:55px;position:relative}
-.header h2 span:after{content:'';background:url(img/paint.png) no-repeat left 4px;position:absolute;left:0;top:0;width:0;width:100%;-webkit-transition:all .25s;transition:all .25s;height:100%;z-index:-1}
-.header .prich{width:405px;height:73px;background-color:#89a831;color:#fff;margin:223px auto 0;position:relative;padding-left:110px;padding:6px 0 6px 123px}
-.header .prich p{font-size:19px;font-weight:300;line-height:24px}
-.header .smeta{width:91px;height:135px;position:absolute;background-image:url(img/smeta.png);left:-8px;top:-23px}
+.header .callback:hover::after{opacity:1}
+.gallery .nav-s a::after,.header .callback::after{opacity:0;-webkit-transition:all .25s;transition:all .25s;content:""}
+.header .callback::after{display:block;width:19px;height:17px;position:absolute;left:10px;top:9px;background-image:url(img/callbackico.png)}
+.attention .trigw>*,.economy a,.header h2 span,.we-can .nav>*,.why .trigw>*,a.g-btn{display:inline-block}
+.header h2{clear:both;font-size:54px;font-weight:300;line-height:67px;margin-top:68px}
+.header h2 span{margin-left:-75px;padding-left:59px;margin-right:-55px;padding-right:55px;position:relative}
+.header h2 span::after{content:"";position:absolute;left:0;top:0;width:100%;-webkit-transition:all .25s;transition:all .25s;height:100%;z-index:-1;background:url(img/paint.png) 0 4px no-repeat}
+.header .prich{width:394px;height:96px;color:#fff;margin:223px auto 0;position:relative;padding:6px 0 6px 109px;background-color:#89a831}
+.header .prich p{font-size:27px;font-weight:700;line-height:32px}
+.header .prich span{font-size:19px;font-weight:400;line-height:23px}
+.header .smeta{width:122px;height:180px;position:absolute;left:-19px;top:-29px;background-image:url(img/smeta.png)}
+input{width:248px;height:47px;border:1px solid #c2c2c2;-webkit-box-shadow:rgba(0,0,0,.137255) 0 3px 5px inset;box-shadow:rgba(0,0,0,.137255) 0 3px 5px inset;-webkit-border-radius:50px;border-radius:50px;font-size:14px;font-style:italic;padding-left:40px;margin-right:32px}
+button,button:hover{font-size:20px;font-family:Roboto}
+button{width:198px;height:47px;border:3px solid #fff;color:#fff;-webkit-transition:all .25s;transition:all .25s;-webkit-border-radius:100px;border-radius:100px;background:0 0}
+.contacts div.callback{position:absolute;width:100%;top:348px;color:#fff;text-align:center;padding-top:20px;height:95px;background:rgba(0,0,0,.8)}
+.contacts .phone{display:block;font-family:Roboto;font-size:23px}
+.contacts a.callback{display:inline-block;font-size:17px;margin-top:1px;border-bottom-width:1px;border-bottom-style:dashed;border-bottom-color:#fff;-webkit-transition:all .25s;transition:all .25s;position:relative}
+.contacts a.callback::after{content:"";width:11px;height:16px;position:absolute;left:-16px;top:6px;background-image:url(img/call-f.png)}
+.contacts a.callback:hover{border-bottom-width:1px;border-bottom-style:dashed;border-bottom-color:transparent}
+.header .prich span,body,button,input,textarea{font-weight:300}
+.header .prich p,.phone{font-weight:500}
+.header .prich{padding:6px 0 6px 109px;width:350px;margin-top:190px}
+section>div>div{height:640px;padding:20px 0;margin-top:-320px}
+button{padding-bottom:3px;font-size:19px}
+button:hover{padding-bottom:3px;font-size:19px;background:#83b11a}
+.contacts a.callback{margin-left:15px}
+.header .head{height:100px;padding:6px 0 0;position:absolute;top:20px;margin-top:0;z-index:5;text-align:center}
+.header h2{margin-top:143px;text-shadow:#fff 0 0 2px;font-size:46px}
+.header h2.animation{opacity:1;-webkit-transition:opacity 1s,top .75s;transition:opacity 1s,top .75s;position:relative;top:0px}
+.header h2.animation.animated{opacity:1;top:0}
+.header h2.animation span::after{width:0;-webkit-transition:all .5s 1s;transition:all .5s 1s}
+.header h2.animation.animated span::after{width:100%}
+.header .logo{margin-right:-24px;width:227px;margin-left:20px}
+.header .head p.desc{margin:0 auto;width:420px;text-align:center;display:inline-block;font-size:20px;padding-top:20px}
+.header .call{margin-right:20px}

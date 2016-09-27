@@ -1,13 +1,13 @@
 body:not(.loaded) section:not(.header){display:none!important;background:0 0!important}
 body:not(.loaded) .menu{display:none}
-*{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background-position:50% 50%;background-repeat:no-repeat}
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;background-position:50% 50%;background-repeat:no-repeat}
 ::after,::before{content:"";display:block;width:100%;height:0;clear:both}
 a::after,a::before,br::after,br::before,img::after,img::before,span::after,span::before,sup::after,sup::before,table::after,table::before,td::after,td::before,tr::after,tr::before{content:none}
 h1,h2,h3,h4,h5{font-size:1em;text-align:center;font-family:Roboto;font-weight:300;letter-spacing:.01em}
 body{font-family:Roboto,sans-serif;font-weight:400;color:#141414;width:480px}
 a{text-decoration:none;color:inherit;outline:0!important}
 button,input,textarea{outline:0}
-section{width:480px;min-width:480px;overflow:hidden;position:relative;z-index:2;min-height:600px;margin:0 auto;-webkit-background-size:cover!important;background-size:cover!important}
+section{width:480px;min-width:480px;overflow:hidden;position:relative;z-index:2;min-height:600px;margin:0 auto;background-size:cover!important}
 section>div{max-width:480px;position:relative;z-index:2;height:100%;margin:0 auto}
 section>div>div{width:100%;position:absolute;height:100%}
 .header{height:870px;background-image:url(img/bg1.jpg)}

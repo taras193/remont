@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-       box-sizing: border-box;
+          box-sizing: border-box;
   background-position: center;
   background-repeat: no-repeat; }
 
@@ -46,8 +45,7 @@ section {
   z-index: 2;
   min-height: 600px;
   height: 100vh;
-  -webkit-background-size: cover !important;
-          background-size: cover !important; }
+  background-size: cover !important; }
   section > div {
     max-width: 980px;
     position: relative;

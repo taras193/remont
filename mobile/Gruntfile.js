@@ -72,9 +72,6 @@ module.exports = function(grunt) {
 		},
 		sass: {
 			dist: {
-				options: {            
-                    sourcemap: 'auto'
-		      	},
 				files: {
 					'css/style.css' : 'css/sass/style.scss'
 				}
@@ -99,14 +96,12 @@ module.exports = function(grunt) {
 		      authKey:"key2"		      
 		    },
 		    src: 'img/',
-		    dest: 'remont/img',
+		    dest: 'remont/mobile/img',
 		    exclusions: [
 		      '**/.DS_Store',
 		      '**/Thumbs.db',
 		      './node_modules/**',
 		      './node_modules',
-		      './mobile/**',
-		      './mobile',
 		      './.gitignore',
 		      './css/libs',
 		      './css/libs/**',
@@ -134,14 +129,12 @@ module.exports = function(grunt) {
 		      authKey:'key2'		      
 		    },
 		    src: './',
-		    dest: 'public_html/remont',
+		    dest: 'public_html/remont/mobile',
 		    exclusions: [
 		      '**/.DS_Store',
 		      '**/Thumbs.db',
 		      './node_modules/**',
 		      './node_modules',
-		      './mobile/**',
-		      './mobile',
 		      './.gitignore',
 		      './img/**',
 		      './css/libs',
@@ -186,10 +179,10 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-			sass: {
-				files: 'css/sass/*.scss',
-				tasks: ['sass']
-			},
+			//sass: {
+			//	files: 'css/sass/*.scss',
+			//	tasks: ['sass','concat','cssmin']
+			//},
 		    scripts: {
 		        files: ['js/libs/*.js'],
 		        tasks: ['concat', 'uglify'],
@@ -235,8 +228,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ftp-deploy');
 
     // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
-    grunt.registerTask('default', ['watch']);
-    grunt.registerTask('fin', ['concat','autoprefixer','uglify','cssmin']);
+    grunt.registerTask('default', ['concat','uglify','cssmin','watch']);
+    grunt.registerTask('fin', ['concat','autoprefixer','uglify','cssmin','imagemin']);
     grunt.registerTask('ftp', ['ftp-deploy','ftpush']);
 
 };
